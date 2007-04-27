@@ -1,0 +1,122 @@
+<!-- $Id$ -->
+
+<Chapter Label="Farey">
+<Heading>Farey symbols and their properties</Heading>
+
+<Index Key="IsFareySymbol"><C>IsFareySymbol</C></Index>
+<Index Key="IsFareySymbolDefaultRep"><C>IsFareySymbolDefaultRep</C></Index>
+
+The package &Congruence; provides functions to construct Farey symbols
+by the given generalised Farey sequence and corresponding list of
+labels. The returned Farey symbol will belong to the category
+<C>IsFareySymbol</C> and will have the representation
+<C>IsFareySymbolDefaultRep</C>.
+ 
+<Section Label="FareyConstr">
+<Heading>Construction of Farey symbols</Heading>
+            
+<ManSection>
+  <Func Name="FareySymbolByData" 
+         Arg="gfs labels"/>
+  <Description>
+  </Description>
+</ManSection>    
+
+<Example>
+<![CDATA[
+
+]]>
+</Example>
+
+
+<ManSection>
+  <Func Name="IsValidFareySymbol" 
+         Arg="fs"/>
+  <Description>
+  </Description>
+</ManSection>
+
+<Example>
+<![CDATA[
+
+]]>
+</Example>
+
+</Section>
+
+<!-- ********************************************************* -->
+
+<Section Label="FareyProperties">
+<Heading>Properties of Farey symbols</Heading>
+
+<ManSection>
+  <Attr Name="GeneralizedFareySequence" 
+         Arg="fs"/>
+  <Returns>
+    list of rationals with infinity in first and last positions
+  </Returns>
+  <Description>
+   
+  </Description>
+</ManSection> 
+
+<Example>
+<![CDATA[
+
+]]>
+</Example>
+
+
+<ManSection>
+  <Func Name="NumeratorOfGFSElement" 
+         Arg="gfs i"/>
+  <Description>
+
+  </Description>
+</ManSection>
+
+<Example>
+<![CDATA[
+
+]]>
+</Example>
+
+
+<ManSection>
+  <Func Name="DenominatorOfGFSElement" 
+         Arg="gfs i"/>
+  <Returns>
+    integer
+  </Returns>
+  <Description>
+
+  </Description>
+</ManSection>
+
+<Example>
+<![CDATA[
+
+]]>
+</Example>
+
+
+<ManSection>
+  <Attr Name="LabelsOfFareySymbol" 
+         Arg="fs"/>
+  <Returns>
+    list with entries "odd", "even" and paired integers
+  </Returns>
+  <Description>
+
+  </Description>
+</ManSection> 
+
+<Example>
+<![CDATA[
+
+]]>
+</Example>
+
+</Section>
+
+</Chapter>

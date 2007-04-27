@@ -1,0 +1,138 @@
+<!-- $Id$ -->
+
+<Chapter Label="Gens">
+<Heading>Farey symbols for congruence subgroups</Heading>
+
+The package &Congruence; provides functions to construct Farey symbols
+for finite index subgroups. The algorithm used in the package allows
+to construct a Farey symbol for any finite index subgroup of <M>SL_2(\Z)</M> 
+for which it is possible to check whether a given matrix belongs to this 
+subgroup or not. 
+ 
+<Section Label="CompFarey">
+<Heading>Computation of the Farey symbol for a finite index subgroup</Heading>
+            
+<ManSection>
+  <Attr Name="FareySymbol" 
+         Arg="G"  
+        Comm="" />
+  <Description>
+    The attribute stores one of the Farey symbols corresponding 
+    to the congruence subgroup <A>G</A>.
+  </Description>
+</ManSection>       
+
+<Example>
+<![CDATA[
+
+]]>
+</Example>
+
+</Section>
+
+<!-- ********************************************************* -->
+
+<Section Label="CompGens">
+<Heading>Computation of generators of a finite index subgroup from its Farey symbol</Heading>
+
+<ManSection>
+  <Func Name="MatrixByEvenInterval" 
+         Arg="gfs i"  
+        Comm="" />
+  <Description>
+  </Description>
+</ManSection> 
+
+<Example>
+<![CDATA[
+
+]]>
+</Example>
+
+
+<ManSection>
+  <Func Name="MatrixByOddInterval" 
+         Arg="gfs i"  
+        Comm="" />
+  <Description>
+  </Description>
+</ManSection> 
+
+<Example>
+<![CDATA[
+
+]]>
+</Example>
+
+
+<ManSection>
+  <Func Name="MatrixByFreePairOfIntervals" 
+         Arg="gfs k kp"  
+        Comm="" />
+  <Description>
+  </Description>
+</ManSection> 
+
+<Example>
+<![CDATA[
+
+]]>
+</Example>
+
+
+<ManSection>
+  <Func Name="GeneratorsByFareySymbol" 
+         Arg="fs"  
+        Comm="" />
+  <Returns>
+    Farey symbol
+  </Returns>
+  <Description>
+  </Description>
+</ManSection> 
+
+<Example>
+<![CDATA[
+
+]]>
+</Example>
+
+
+<ManSection>
+  <Func Name="GeneratorsOfGroup" 
+         Arg="fs"  
+        Comm="" />
+  <Description>
+  </Description>
+</ManSection> 
+
+<Example>
+<![CDATA[
+
+]]>
+</Example>
+
+</Section>
+
+<!-- ********************************************************* -->
+
+<Section Label="CompOther">
+<Heading>Other properties derived from Farey symbols</Heading>
+
+<ManSection>
+  <Func Name="IndexInPSL2ZByFareySymbol" 
+         Arg="fs"  
+        Comm="" />
+  <Description>
+  </Description>
+</ManSection> 
+
+<Example>
+<![CDATA[
+
+]]>
+</Example>
+
+</Section>
+ 
+</Chapter>
