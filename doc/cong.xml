@@ -68,6 +68,24 @@ where <M>a</M>,<M>b</M>,<M>c</M>,<M>d</M> are integers.
 <![CDATA[
 gap> G_8:=PrincipalCongruenceSubgroup(8);
 <principal congruence subgroup of level 8 in SL_2(Z)>
+gap> IsGroup(G_8);
+true
+gap> IsMatrixGroup(G_8);
+true
+gap> DimensionOfMatrixGroup(G_8);
+2
+gap> MultiplicativeNeutralElement(G_8);
+[ [ 1, 0 ], [ 0, 1 ] ]
+gap> One(G);
+[ [ 1, 0 ], [ 0, 1 ] ]
+gap> [[1,2],[3,4]] in G_8;
+false
+gap> [[1,8],[8,65]] in G_8;
+true
+gap> SL_2:=SL(2,Integers);
+SL(2,Integers)
+gap> IsSubgroup(SL_2,G_8);
+true
 ]]>
 </Example>
 
@@ -256,10 +274,10 @@ gap> GU1_4:=GammaUpper1(4);
 
 <Example>
 <![CDATA[
-gap> J:=IntersectionOfCongruenceSubgroups(G0_4,G1_6);
-<intersection of congruence subgroups of resulting level 12 in SL_2(Z)>
 gap> I:=IntersectionOfCongruenceSubgroups(G0_4,GU1_4);
 <principal congruence subgroup of level 4 in SL_2(Z)>
+gap> J:=IntersectionOfCongruenceSubgroups(G0_4,G1_6);
+<intersection of congruence subgroups of resulting level 12 in SL_2(Z)>
 ]]>
 </Example>
 
@@ -282,16 +300,17 @@ or not.
   <Description>
     For a congruence subgroup <A>G</A> in the category 
     <C>IsCongruenceSubgroup</C>, returns <K>true</K> if <A>G</A> was
-    constructed by <Ref Func="PrincipalCongruenceSubgroup" /> and 
+    constructed by <Ref Func="PrincipalCongruenceSubgroup" /> 
+    (or reduced to one as a result of an intersection) and 
     returns <K>false</K> otherwise. 
   </Description>
 </ManSection>
 
 <Example>
 <![CDATA[
-gap> IsPrincipalCongruenceSubgroup(G8);
+gap> IsPrincipalCongruenceSubgroup(G_8);
 true
-gap> IsPrincipalCongruenceSubgroup(G04);
+gap> IsPrincipalCongruenceSubgroup(G0_4);
 false
 gap> IsPrincipalCongruenceSubgroup(I);
 true
@@ -305,7 +324,7 @@ true
   <Description>
     For a congruence subgroup <A>G</A> in the category 
     <C>IsCongruenceSubgroup</C>, returns <K>true</K> if 
-    <A>G</A> was constructed by <Ref Func="Gamma0" /> 
+    <A>G</A> was constructed by <Ref Func="Gamma0" /> (or reduced to one as a result of an intersection)
     and returns <K>false</K> otherwise.  
   </Description>
 </ManSection>
@@ -317,7 +336,7 @@ true
   <Description>
     For a congruence subgroup <A>G</A> in the category 
     <C>IsCongruenceSubgroup</C>, returns <K>true</K> if 
-    <A>G</A> was constructed by <Ref Func="GammaUpper0" /> 
+    <A>G</A> was constructed by <Ref Func="GammaUpper0" /> (or reduced to one as a result of an intersection)
     and returns <K>false</K> otherwise.
   </Description>
 </ManSection>
@@ -329,7 +348,7 @@ true
   <Description>
     For a congruence subgroup <A>G</A> in the category 
     <C>IsCongruenceSubgroup</C>, returns <K>true</K> if
-    <A>G</A> was constructed by <Ref Func="Gamma1" /> 
+    <A>G</A> was constructed by <Ref Func="Gamma1" /> (or reduced to one as a result of an intersection)
     and returns <K>false</K> otherwise.
   </Description>
 </ManSection>
@@ -341,7 +360,7 @@ true
   <Description>
     For a congruence subgroup <A>G</A> in the category 
     <C>IsCongruenceSubgroup</C>, returns <K>true</K> if 
-    <A>G</A> was constructed by <Ref Func="GammaUpper1" /> 
+    <A>G</A> was constructed by <Ref Func="GammaUpper1" /> (or reduced to one as a result of an intersection)
     and returns <K>false</K> otherwise.
   </Description>
 </ManSection>
@@ -354,9 +373,9 @@ true
     For a congruence subgroup <A>G</A> in the category 
     <C>IsCongruenceSubgroup</C>, returns <K>true</K> if
     <A>G</A> was constructed by 
-    <Ref Func="IntersectionOfCongruenceSubgroups"/> 
-    without the reduction to one of the canonical congruence
-    subgroups, and returns <K>false</K> otherwise.
+    <Ref Func="IntersectionOfCongruenceSubgroups"/> and
+    without being one of the canonical congruence
+    subgroups, otherwise it returns <K>false</K>.
   </Description>
 </ManSection>
 
@@ -366,20 +385,6 @@ gap> IsIntersectionOfCongruenceSubgroups(I);
 false
 gap> IsIntersectionOfCongruenceSubgroups(J);
 true
-]]>
-</Example>
-
-
-<ManSection>
-  <Func Name="CanEasilyCompareCongruenceSubgroups" 
-         Arg="G H"/>                                    
-  <Description>
-  </Description>
-</ManSection>
-
-<Example>
-<![CDATA[
-
 ]]>
 </Example>
 
@@ -402,9 +407,9 @@ The next three attributes store key properties of congruence subgroups.
 
 <Example>
 <![CDATA[
-gap> LevelOfCongruenceSubgroup(G8);
+gap> LevelOfCongruenceSubgroup(G_8);
 8
-gap> LevelOfCongruenceSubgroup(G16);
+gap> LevelOfCongruenceSubgroup(G1_6);
 6
 gap> LevelOfCongruenceSubgroup(I);
 4
@@ -424,13 +429,13 @@ gap> LevelOfCongruenceSubgroup(J);
 
 <Example>
 <![CDATA[
-gap> IndexInSL2Z(G8);
+gap> IndexInSL2Z(G_8);
 384
-gap> G2:=PrincipalCongruenceSubgroup(2);
+gap> G_2:=PrincipalCongruenceSubgroup(2);
 <principal congruence subgroup of level 2 in SL_2(Z)>
-gap> IndexInSL2Z(G2);
+gap> IndexInSL2Z(G_2);
 12
-gap> IndexInSL2Z(G14);
+gap> IndexInSL2Z(G1_4);
 12
 ]]>
 </Example>
@@ -438,9 +443,6 @@ gap> IndexInSL2Z(G14);
 <ManSection>
   <Attr Name="DefiningCongruenceSubgroups" 
          Arg="G" />
-  <Returns>
-    list of matrix groups
-  </Returns>
   <Description>
     For an intersection of congruence subgroups, returns 
     the list of congruence subgroups forming this intersection. 
@@ -485,9 +487,9 @@ available in &GAP;.
 
 <Example>
 <![CDATA[
-gap> Random(G2);
+gap> Random(G_2);
 [ [ 21, 10 ], [ 2, 1 ] ]
-gap> Random(G8,2);
+gap> Random(G_8,2);
 [ [ 1, -16 ], [ 0, 1 ] ]
 ]]>
 </Example>
@@ -504,9 +506,9 @@ gap> Random(G8,2);
 
 <Example>
 <![CDATA[
-gap> \in([ [ 21, 10 ], [ 2, 1 ] ],G2);
+gap> \in([ [ 21, 10 ], [ 2, 1 ] ],G_2);
 true
-gap> \in([ [ 21, 10 ], [ 2, 1 ] ],G8);
+gap> \in([ [ 21, 10 ], [ 2, 1 ] ],G_8);
 false
 ]]>
 </Example>
@@ -517,7 +519,7 @@ false
          Arg="G H"/> 
   <Description>
     &Congruence; provides methods for <C>IsSubset</C>
-    for congruence subgroups. <C>IsSubset</C> return <K>true</K> 
+    for congruence subgroups. <C>IsSubset</C> returns <K>true</K> 
     if <A>H</A> is a subset of <A>G</A>. These methods make it possible
     to use <C>IsSubgroup</C> operation for congruence subgroups.
   </Description>
@@ -525,13 +527,48 @@ false
 
 <Example>
 <![CDATA[
-gap> IsSubset(G2,G8);
+gap> IsSubset(G_2,G_8);
 true
-gap> IsSubset(G8,G2);
+gap> IsSubset(G_8,G_2);
 false
+gap> f:=[PrincipalCongruenceSubgroup,Gamma1,GammaUpper1,Gamma0,GammaUpper0];;
+gap> g1:=List(f, t -> t(2));;
+gap> g2:=List(f, t -> t(4));;
+gap> for g in g2 do
+> Print( List( g1, x -> IsSubgroup(x,g) ), "\n");
+> od;
+[ true, true, true, true, true ]
+[ false, true, false, true, false ]
+[ false, false, true, false, true ]
+[ false, false, false, true, false ]
+[ false, false, false, false, true ]
 ]]>
 </Example>
 
+<ManSection>
+  <Func Name="CanEasilyCompareCongruenceSubgroups" 
+         Arg="G H"/>                                    
+  <Description>
+  For congruence subgroups <A>G,H</A> in the category 
+    <C>IsCongruenceSubgroup</C>, returns <K>true</K> if
+    <A>G</A> and <A>H</A> are of the same type listed in
+     <Ref Func="PrincipalCongruenceSubgroup" /> --> 
+    <Ref Func="GammaUpper1" />
+     and have the same
+    <Ref Func="LevelOfCongruenceSubgroup"/> or if <A>G</A> and <A>H</A> 
+    are of the type <Ref Func="IntersectionOfCongruenceSubgroups"/> and
+    the groups from  
+    <Ref Func="DefiningCongruenceSubgroups"/> are in one 
+    to one correspondence, otherwise it returns <K>false</K>. 
+  </Description>
+</ManSection>
+
+<Example>
+<![CDATA[
+gap> CanEasilyCompareCongruenceSubgroups(G_8,I);
+false
+]]>
+</Example>
 
 <ManSection>
   <Oper Name="Index" 
@@ -545,7 +582,7 @@ false
 
 <Example>
 <![CDATA[
-gap> Index(G2,G8);
+gap> Index(G_2,G_8);
 32
 ]]>
 </Example>
