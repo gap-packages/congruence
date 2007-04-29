@@ -12,7 +12,8 @@
 #
 # CanEasilyCompareCongruenceSubgroups( G, H )
 #
-CanEasilyCompareCongruenceSubgroups := function ( G, H )
+InstallGlobalFunction( "CanEasilyCompareCongruenceSubgroups",
+function ( G, H )
 local i;
 if ForAll( [ G, H ], IsPrincipalCongruenceSubgroup ) or
    ForAll( [ G, H ], IsGamma0 ) or
@@ -35,7 +36,7 @@ elif ForAll( [ G, H ], IsIntersectionOfCongruenceSubgroups ) then
 else
   return false;
 fi;
-end;
+end);
 
 
 #############################################################################
@@ -49,7 +50,8 @@ end;
 # This is used in IntersectionOfCongruenceSubgroups to reduce the list of
 # canonical subgroups forming the intersection.
 # 
-CanReduceIntersectionOfCongruenceSubgroups:=function( G, H )
+InstallGlobalFunction( "CanReduceIntersectionOfCongruenceSubgroups",
+function( G, H )
 #
 # Case 1 - at least one subgroup is an intersection of congruence subgroups
 #
@@ -90,7 +92,7 @@ elif IsGamma0(G) and IsGammaUpper0(H) or IsGammaUpper0(G) and IsGamma0(H) then
 else
   return true;
 fi;                                             
-end;
+end);
     
     
 #############################################################################
@@ -101,7 +103,8 @@ end;
 # gfs: for the 1st infinite entry returns -1, for the last one returns 1,
 # for all other entries returns usual numerator.
 #  
-NumeratorOfGFSElement := function(gfs,i)
+InstallGlobalFunction( "NumeratorOfGFSElement",
+function(gfs,i)
 if i in [ 2 .. Length(gfs)-1 ] then
   return NumeratorRat( gfs[i] ); 
 elif i=1 then
@@ -111,7 +114,7 @@ elif i=Length(gfs) then
 else
   Error("There is no entry number ", i, " in <gfs> !!! \n");  
 fi;
-end;
+end);
 
 
 #############################################################################
@@ -122,7 +125,8 @@ end;
 # gfs: for both infinite entries returns 0, for the other ones returns usual 
 # denominator.
 #  
-DenominatorOfGFSElement := function(gfs,i)
+InstallGlobalFunction( "DenominatorOfGFSElement",
+function(gfs,i)
 if i in [ 2 .. Length(gfs)-1 ] then
   return DenominatorRat( gfs[i] ); 
 elif i=1 or i=Length(gfs) then
@@ -130,7 +134,7 @@ elif i=1 or i=Length(gfs) then
 else
   Error("There is no entry number ", i, " in <gfs> !!! \n");   
 fi;
-end;
+end);
 
 
 #############################################################################
@@ -139,7 +143,8 @@ end;
 #
 # This function is used in FareySymbolByData to validate its output
 # 
-IsValidFareySymbol:=function( fs )
+InstallGlobalFunction( "IsValidFareySymbol" ,
+function( fs )
 local gfs, labels, n, i, t;
 gfs := GeneralizedFareySequence(fs);
 labels := LabelsOfFareySymbol(fs);
@@ -166,14 +171,15 @@ if ForAny( Collected(labels), t -> IsInt(t[1]) and t[2]<>2 ) then
   Error("<labels> are not properly paired !!! \n");
 fi;
 return true;
-end;
+end);
 
 
 #############################################################################
 #
 # MatrixByEvenInterval( gfs, i )
 #
-MatrixByEvenInterval := function(gfs,i)
+InstallGlobalFunction( "MatrixByEvenInterval",
+function(gfs,i)
 local ai, bi, ai1, bi1;
 ai  := NumeratorOfGFSElement(gfs,i);
 bi  := DenominatorOfGFSElement(gfs,i);
@@ -181,14 +187,15 @@ ai1 := NumeratorOfGFSElement(gfs,i+1);
 bi1 := DenominatorOfGFSElement(gfs,i+1);
 return [ [ ai1*bi1 + ai*bi, -ai^2 - ai1^2 ], 
          [    bi^2 + bi1^2, -ai1*bi1 - ai*bi ] ];
-end;
+end);
 
 
 #############################################################################
 #
 # MatrixByOddInterval( gfs, i ) 
 #
-MatrixByOddInterval := function(gfs,j)
+InstallGlobalFunction( "MatrixByOddInterval",
+function(gfs,j)
 local aj, bj, aj1, bj1;
 aj  := NumeratorOfGFSElement(gfs,j);
 bj  := DenominatorOfGFSElement(gfs,j);
@@ -196,14 +203,15 @@ aj1 := NumeratorOfGFSElement(gfs,j+1);
 bj1 := DenominatorOfGFSElement(gfs,j+1);
 return [ [ aj1*bj1 + aj*bj1 + aj*bj, -aj^2 - aj*aj1 - aj1^2 ], 
          [    bj^2 + bj*bj1 + bj1^2, -aj1*bj1 - aj1*bj - aj*bj ] ];
-end;
+end);
 
 
 #############################################################################
 #
 # MatrixByFreePairOfIntervals( gfs, k, kp )
 #
-MatrixByFreePairOfIntervals := function(gfs,k,kp)
+InstallGlobalFunction( "MatrixByFreePairOfIntervals",
+function(gfs,k,kp)
 local ak, bk, ak1, bk1, akp, bkp, akp1, bkp1;
 ak   := NumeratorOfGFSElement(gfs,k);
 bk   := DenominatorOfGFSElement(gfs,k);
@@ -215,7 +223,7 @@ akp1 := NumeratorOfGFSElement(gfs,kp+1);
 bkp1 := DenominatorOfGFSElement(gfs,kp+1);
 return [ [ akp1*bk1 + akp*bk, -akp*ak - akp1*ak1 ], 
          [ bkp*bk + bkp1*bk1, -ak1*bkp1 - ak*bkp ] ];
-end;
+end);
 
 
 #############################################################################
