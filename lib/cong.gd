@@ -148,6 +148,79 @@ DeclareAttribute( "IndexInSL2Z", IsCongruenceSubgroup );
 DeclareGlobalFunction("IntersectionOfCongruenceSubgroups");
 DeclareAttribute( "DefiningCongruenceSubgroups", 
                   IsIntersectionOfCongruenceSubgroups );
+                  
+#############################################################################
+#
+# CanEasilyCompareCongruenceSubgroups( G, H )
+#
+DeclareGlobalFunction( "CanEasilyCompareCongruenceSubgroups" );
+
+
+#############################################################################
+#
+# CanReduceIntersectionOfCongruenceSubgroups( G, H )
+#
+# This function mimics the structure of the method for Intersection for
+# congruence subgroups. It returns true, if their intersection can be reduced
+# to one of the canonical congruence subgroups, and false otherwise, i.e. the
+# intersection can be expressed only as IntersectionOfCongruenceSubgroups.
+# This is used in IntersectionOfCongruenceSubgroups to reduce the list of
+# canonical subgroups forming the intersection.
+#
+DeclareGlobalFunction( "CanReduceIntersectionOfCongruenceSubgroups" );
+
+
+#############################################################################
+#
+# NumeratorOfGFSElement( gfs, i )
+#
+# Returns the numerator of the i-th term of the generalised Farey sequence 
+# gfs: for the 1st infinite entry returns -1, for the last one returns 1,
+# for all other entries returns usual numerator.
+#  
+DeclareGlobalFunction( "NumeratorOfGFSElement" );
+
+
+#############################################################################
+#
+# DenominatorOfGFSElement( gfs, i )
+#
+# Returns the denominator of the i-th term of the generalised Farey sequence 
+# gfs: for both infinite entries returns 0, for the other ones returns usual 
+# denominator.
+# 
+DeclareGlobalFunction( "DenominatorOfGFSElement" );
+
+
+#############################################################################
+#
+# IsValidFareySymbol( fs )
+#
+# This function is used in FareySymbolByData to validate its output
+# 
+DeclareGlobalFunction( "IsValidFareySymbol" );
+
+
+#############################################################################
+#
+# MatrixByEvenInterval( gfs, i )
+#
+DeclareGlobalFunction( "MatrixByEvenInterval" );
+
+
+#############################################################################
+#
+# MatrixByOddInterval( gfs, i ) 
+#
+DeclareGlobalFunction( "MatrixByOddInterval" );
+
+
+#############################################################################
+#
+# MatrixByFreePairOfIntervals( gfs, k, kp )
+#
+DeclareGlobalFunction( "MatrixByFreePairOfIntervals" );
+
 
 #############################################################################
 ##
