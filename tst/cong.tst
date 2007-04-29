@@ -439,3 +439,14 @@ gap> GeneratorsOfGroup(G);
 [ [ [ 1, 2 ], [ 0, 1 ] ], [ [ 11, -2 ], [ 6, -1 ] ], 
   [ [ 19, -8 ], [ 12, -5 ] ], [ [ 17, -10 ], [ 12, -7 ] ], 
   [ [ 7, -6 ], [ 6, -5 ] ] ]
+gap> G16:=Gamma0(16);;
+gap> FS16:=FareySymbol(G16);;
+gap> gens:=GeneratorsByFareySymbol(FS16);;
+gap> glue_list:=gluing_matrices(FS16);    
+[ 1, 2, -2, 3, -3, 4, -4, 5, -5, -1 ]
+gap> for i in [1..10] do
+>      g:=Random(G16);
+>      w:=FactorizeMat( G16, g );
+>      h:=CheckFactorizeMat(gens,w);       
+>      Print(g," : ",h," : ", g=h or g=-h, "\n");
+>    od;
