@@ -401,7 +401,8 @@ The next three attributes store key properties of congruence subgroups.
   <Attr Name="LevelOfCongruenceSubgroup" 
          Arg="G"/>                                    
   <Description>
-    Stores the level of the congruence subgroup <A>G</A>.
+    Stores the level of the congruence subgroup <A>G</A>. The (arithmetic) level of a congruence subgroup G is the smallest positive
+number N such that G contains the principal congruence subgroup of level N.
   </Description>
 </ManSection>
 
@@ -515,6 +516,32 @@ false
 
 
 <ManSection>
+  <Oper Name="CanEasilyCompareCongruenceSubgroups" 
+         Arg="G H"/>                                    
+  <Description>
+  For congruence subgroups <A>G,H</A> in the category 
+    <C>IsCongruenceSubgroup</C>, returns <K>true</K> if
+    <A>G</A> and <A>H</A> are of the same type listed in
+     <Ref Func="PrincipalCongruenceSubgroup" /> --> 
+    <Ref Func="GammaUpper1" />
+     and have the same
+    <Ref Func="LevelOfCongruenceSubgroup"/> or if <A>G</A> and <A>H</A> 
+    are of the type <Ref Func="IntersectionOfCongruenceSubgroups"/> and
+    the groups from  
+    <Ref Func="DefiningCongruenceSubgroups"/> are in one 
+    to one correspondence, otherwise it returns <K>false</K>. 
+  </Description>
+</ManSection>
+
+
+<Example>
+<![CDATA[
+gap> CanEasilyCompareCongruenceSubgroups(G_8,I);
+false
+]]>
+</Example>
+
+<ManSection>
   <Oper Name="IsSubset" 
          Arg="G H"/> 
   <Description>
@@ -524,6 +551,7 @@ false
     to use <C>IsSubgroup</C> operation for congruence subgroups.
   </Description>
 </ManSection>
+
 
 <Example>
 <![CDATA[
@@ -545,30 +573,6 @@ gap> for g in g2 do
 ]]>
 </Example>
 
-<ManSection>
-  <Func Name="CanEasilyCompareCongruenceSubgroups" 
-         Arg="G H"/>                                    
-  <Description>
-  For congruence subgroups <A>G,H</A> in the category 
-    <C>IsCongruenceSubgroup</C>, returns <K>true</K> if
-    <A>G</A> and <A>H</A> are of the same type listed in
-     <Ref Func="PrincipalCongruenceSubgroup" /> --> 
-    <Ref Func="GammaUpper1" />
-     and have the same
-    <Ref Func="LevelOfCongruenceSubgroup"/> or if <A>G</A> and <A>H</A> 
-    are of the type <Ref Func="IntersectionOfCongruenceSubgroups"/> and
-    the groups from  
-    <Ref Func="DefiningCongruenceSubgroups"/> are in one 
-    to one correspondence, otherwise it returns <K>false</K>. 
-  </Description>
-</ManSection>
-
-<Example>
-<![CDATA[
-gap> CanEasilyCompareCongruenceSubgroups(G_8,I);
-false
-]]>
-</Example>
 
 <ManSection>
   <Oper Name="Index" 

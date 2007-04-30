@@ -33,7 +33,7 @@
 
     <Author>Alexander Konovalov
       <Email>konovalov@member.ams.org</Email>
-	  <Homepage>http://www.cs.st-andrews.ac.uk/&tilde;alexk/</Homepage>
+      <Homepage>http://www.cs.st-andrews.ac.uk/&tilde;alexk/</Homepage>
       <Address>
         School of Computer Science<Br/>
         University of St Andrews<Br/>
@@ -94,6 +94,7 @@
     <#Include SYSTEM "cong.xml">
     <#Include SYSTEM "farey.xml">
     <#Include SYSTEM "gens.xml">
+    <#Include SYSTEM "grprings.xml">
     <#Include SYSTEM "service.xml">
   </Body>
 
