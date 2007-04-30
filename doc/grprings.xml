@@ -1,0 +1,30 @@
+<!-- $Id$ -->
+
+<Chapter Label="Gens2">
+<Heading>Generators for U(ZG) up to finite index</Heading>
+
+See <Cite Key="DoJeKo" />.
+ 
+<Section Label="Comp">
+<Heading>Computation</Heading>
+            
+<ManSection>
+  <Attr Name="Test" 
+         Arg="G"  
+        Comm="" />
+  <Description>
+   
+  </Description>
+</ManSection>       
+
+<Example>
+<![CDATA[
+
+]]>
+</Example>
+
+</Section>
+
+<!-- ********************************************************* -->
+ 
+</Chapter>
