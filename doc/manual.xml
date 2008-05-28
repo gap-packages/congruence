@@ -10,7 +10,7 @@
 
   <TitlePage>
     <Title>&Congruence;</Title>
-    <Subtitle>Congruence subgroups of <M>SL_2(\Z)</M></Subtitle>
+    <Subtitle>Congruence subgroups of <M>SL_2(&ZZ;)</M></Subtitle>
     <Version>Version 1.0</Version>
 
     <Author>Ann Dooms
@@ -53,16 +53,16 @@
       </Address>
     </Author>
 
-    <Date>April 2007</Date>
+    <Date>May 2008</Date>
 
     <Abstract>
       <Index Key="Congruence package">&Congruence; package</Index>
       The &GAP; package &Congruence; provides functionality to
-      work with congruence subgroups of <M>SL_2(\Z)</M>.
+      work with congruence subgroups of <M>SL_2(&ZZ;)</M>.
     </Abstract>
 
     <Copyright>
-      &copyright; 2007 by Ann Dooms, Eric Jespers and Alexander Konovalov.<P/>
+      &copyright; 2008 by Ann Dooms, Eric Jespers and Alexander Konovalov.<P/>
 
       &Congruence; is free software; you can redistribute it and/or modify it
       under the terms of the GNU General Public License as published by
@@ -77,8 +77,8 @@
       &Congruence;, please cite it in the following form:<P/>
 
       A. Dooms, E. Jespers and A. Konovalov.
-      <E>Congruence --- Congruence subgroups of <M>SL_2(\Z)</M>, Version 1.0;</E>
-      2007 (<URL>http://www.cs.st-andrews.ac.uk/&tilde;alexk/congruence.htm</URL>).
+      <E>Congruence --- Congruence subgroups of <M>SL_2(&ZZ;)</M>, Version 1.0;</E>
+      2008 (<URL>http://www.cs.st-andrews.ac.uk/&tilde;alexk/congruence.htm</URL>).
     </Copyright>
 
     <Acknowledgements>

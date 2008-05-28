@@ -14,7 +14,7 @@ SetPackageInfo( rec(
 PackageName    := "Congruence",
 Subtitle       := "Congruence subgroups of SL(2,Integers)",
 Version        := "1.0",
-Date           := "18/04/2007",
+Date           := "29/05/2008",
 ArchiveURL := "http://www.cs.st-andrews.ac.uk/~alexk/congruence/congruence-1.0",
 ArchiveFormats := ".tar.gz .tar.bz2 -win.zip",
 
@@ -103,7 +103,7 @@ PackageDoc := rec(
 
 Dependencies := rec(
   GAP := ">=4.4",
-  NeededOtherPackages := [ ["GAPDoc", ">= 0.99999"] ],
+  NeededOtherPackages := [ ["GAPDoc", ">= 1.0"] ],
   SuggestedOtherPackages := [],
   ExternalConditions := []
 ),

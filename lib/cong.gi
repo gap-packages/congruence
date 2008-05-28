@@ -31,13 +31,14 @@ InstallGlobalFunction( PrincipalCongruenceSubgroup,
       LevelOfCongruenceSubgroup, n,
 	  IsPrincipalCongruenceSubgroup, true,
       IsIntersectionOfCongruenceSubgroups, false,
-      IsGamma0, false, IsGammaUpper0, false,
-      IsGamma1, false, IsGammaUpper1, false );
+      IsCongruenceSubgroupGamma0, false, IsCongruenceSubgroupGammaUpper0, false,
+      IsCongruenceSubgroupGamma1, false, IsCongruenceSubgroupGammaUpper1, false,
+      IsCongruenceSubgroupGammaMN, false );
     return G;
 	end);
 
 
-InstallGlobalFunction( Gamma0,
+InstallGlobalFunction( CongruenceSubgroupGamma0,
     function(n)
     local type, G;
     type := NewType( FamilyObj([[[1,0],[0,1]]]),
@@ -55,13 +56,14 @@ InstallGlobalFunction( Gamma0,
       LevelOfCongruenceSubgroup, n,
 	  IsPrincipalCongruenceSubgroup, false,
 	  IsIntersectionOfCongruenceSubgroups, false,
-      IsGamma0, true,  IsGammaUpper0, false,
-      IsGamma1, false, IsGammaUpper1, false );
+      IsCongruenceSubgroupGamma0, true,  IsCongruenceSubgroupGammaUpper0, false,
+      IsCongruenceSubgroupGamma1, false, IsCongruenceSubgroupGammaUpper1, false,
+      IsCongruenceSubgroupGammaMN, false );
     return G;
 	end);
 	
 
-InstallGlobalFunction( GammaUpper0,
+InstallGlobalFunction( CongruenceSubgroupGammaUpper0,
     function(n)
     local type, G;
     type := NewType( FamilyObj([[[1,0],[0,1]]]),
@@ -79,13 +81,14 @@ InstallGlobalFunction( GammaUpper0,
       LevelOfCongruenceSubgroup, n,
 	  IsPrincipalCongruenceSubgroup, false,
       IsIntersectionOfCongruenceSubgroups, false,
-      IsGamma0, false, IsGammaUpper0, true,
-      IsGamma1, false, IsGammaUpper1, false );
+      IsCongruenceSubgroupGamma0, false, IsCongruenceSubgroupGammaUpper0, true,
+      IsCongruenceSubgroupGamma1, false, IsCongruenceSubgroupGammaUpper1, false,
+      IsCongruenceSubgroupGammaMN, false );
     return G;
 	end);	
 	
 	
-InstallGlobalFunction( Gamma1,
+InstallGlobalFunction( CongruenceSubgroupGamma1,
     function(n)
     local type, G;
     type := NewType( FamilyObj([[[1,0],[0,1]]]),
@@ -103,13 +106,14 @@ InstallGlobalFunction( Gamma1,
       LevelOfCongruenceSubgroup, n,
 	  IsPrincipalCongruenceSubgroup, false,
 	  IsIntersectionOfCongruenceSubgroups, false,
-      IsGamma0, false, IsGammaUpper0, false,
-      IsGamma1, true, IsGammaUpper1, false );
+      IsCongruenceSubgroupGamma0, false, IsCongruenceSubgroupGammaUpper0, false,
+      IsCongruenceSubgroupGamma1, true, IsCongruenceSubgroupGammaUpper1, false,
+      IsCongruenceSubgroupGammaMN, false );
     return G;
 	end);
 	
 	
-InstallGlobalFunction( GammaUpper1,
+InstallGlobalFunction( CongruenceSubgroupGammaUpper1,
     function(n)
     local type, G;
     type := NewType( FamilyObj([[[1,0],[0,1]]]),
@@ -127,11 +131,38 @@ InstallGlobalFunction( GammaUpper1,
       LevelOfCongruenceSubgroup, n,
 	  IsPrincipalCongruenceSubgroup, false,
 	  IsIntersectionOfCongruenceSubgroups, false,
-      IsGamma0, false, IsGammaUpper0, false,
-      IsGamma1, false, IsGammaUpper1, true );
+      IsCongruenceSubgroupGamma0, false, IsCongruenceSubgroupGammaUpper0, false,
+      IsCongruenceSubgroupGamma1, false, IsCongruenceSubgroupGammaUpper1, true,
+      IsCongruenceSubgroupGammaMN, false );
     return G;
 	end);
 	
+
+InstallGlobalFunction( CongruenceSubgroupGammaMN,
+    function(m,n)
+    local type, G;
+    type := NewType( FamilyObj([[[1,0],[0,1]]]),
+                     IsGroup and 
+                     IsAttributeStoringRep and 
+                     IsFinitelyGeneratedGroup and 
+                     IsMatrixGroup and
+                     IsCongruenceSubgroup);
+    G := rec();                   
+    ObjectifyWithAttributes( G, type, 
+      DimensionOfMatrixGroup, 2,
+      OneImmutable, [[1,0],[0,1]],
+      IsIntegerMatrixGroup, true,
+      IsFinite, false,
+      LevelOfCongruenceSubgroup, m*n,
+      LevelOfCongruenceSubgroupGammaMN, [m,n],
+	  IsPrincipalCongruenceSubgroup, false,
+	  IsIntersectionOfCongruenceSubgroups, false,
+      IsCongruenceSubgroupGamma0, false, IsCongruenceSubgroupGammaUpper0, false,
+      IsCongruenceSubgroupGamma1, false, IsCongruenceSubgroupGammaUpper1, false,
+      IsCongruenceSubgroupGammaMN, true );
+    return G;
+	end);
+		
 
 InstallGlobalFunction( IntersectionOfCongruenceSubgroups,
     function( arg )
@@ -202,16 +233,16 @@ InstallGlobalFunction( IntersectionOfCongruenceSubgroups,
     fi; 
     # otherwise we sort the list of defining subgroups:
     # types of subgroups are sorted in the following way:
-    # - IsGamma0
-    # - IsGammaUpper0
-    # - IsGamma1
-    # - IsGammaUpper1
+    # - IsCongruenceSubgroupGamma0
+    # - IsCongruenceSubgroupGammaUpper0
+    # - IsCongruenceSubgroupGamma1
+    # - IsCongruenceSubgroupGammaUpper1
     # - IsPrincipalCongruenceSubgroup
     # and subgroups of the same type are sorted by ascending level
     Sort( arglist, 
           function(X,Y) 
           local f, t;
-          f:=[IsGamma0,IsGammaUpper0,IsGamma1,IsGammaUpper1,IsPrincipalCongruenceSubgroup];
+          f:=[IsCongruenceSubgroupGamma0,IsCongruenceSubgroupGammaUpper0,IsCongruenceSubgroupGamma1,IsCongruenceSubgroupGammaUpper1,IsPrincipalCongruenceSubgroup];
           return PositionProperty(f, t -> t(X)) < PositionProperty(f, t -> t(Y)) or
                ( PositionProperty(f, t -> t(X)) = PositionProperty(f, t -> t(Y)) and
                  LevelOfCongruenceSubgroup(X) < LevelOfCongruenceSubgroup(Y) ); 
@@ -226,8 +257,8 @@ InstallGlobalFunction( IntersectionOfCongruenceSubgroups,
       LevelOfCongruenceSubgroup, n,
 	  IsPrincipalCongruenceSubgroup, false,
 	  IsIntersectionOfCongruenceSubgroups, true,
-      IsGamma0, false, IsGammaUpper0, false,
-      IsGamma1, false, IsGammaUpper1, false,
+      IsCongruenceSubgroupGamma0, false, IsCongruenceSubgroupGammaUpper0, false,
+      IsCongruenceSubgroupGamma1, false, IsCongruenceSubgroupGammaUpper1, false,
       DefiningCongruenceSubgroups, arglist );
     return G;
 	end);
@@ -258,84 +289,106 @@ InstallMethod( PrintObj,
     
 
 InstallMethod( ViewObj,
-    "for Gamma0 congruence subgroup",
-    [ IsGamma0 ],
+    "for CongruenceSubgroupGamma0 congruence subgroup",
+    [ IsCongruenceSubgroupGamma0 ],
     0,
     function( G )
-      Print( "<congruence subgroup Gamma_0(", 
+      Print( "<congruence subgroup CongruenceSubgroupGamma_0(", 
              LevelOfCongruenceSubgroup(G), ") in SL_2(Z)>" );    
     end );
     
     
 InstallMethod( PrintObj,
-    "for Gamma0 congruence subgroup",
-    [ IsGamma0 ],
+    "for CongruenceSubgroupGamma0 congruence subgroup",
+    [ IsCongruenceSubgroupGamma0 ],
     0,
     function( G )
-      Print( "Gamma0(", 
+      Print( "CongruenceSubgroupGamma0(", 
              LevelOfCongruenceSubgroup(G), ")" );    
     end );     
     
 
 InstallMethod( ViewObj,
-    "for GammaUpper0 congruence subgroup",
-    [ IsGammaUpper0 ],
+    "for CongruenceSubgroupGammaUpper0 congruence subgroup",
+    [ IsCongruenceSubgroupGammaUpper0 ],
     0,
     function( G )
-      Print( "<congruence subgroup Gamma^0(", 
+      Print( "<congruence subgroup CongruenceSubgroupGamma^0(", 
              LevelOfCongruenceSubgroup(G), ") in SL_2(Z)>" );    
     end );
     
     
 InstallMethod( PrintObj,
-    "for GammaUpper0 congruence subgroup",
-    [ IsGammaUpper0 ],
+    "for CongruenceSubgroupGammaUpper0 congruence subgroup",
+    [ IsCongruenceSubgroupGammaUpper0 ],
     0,
     function( G )
-      Print( "GammaUpper0(", 
+      Print( "CongruenceSubgroupGammaUpper0(", 
              LevelOfCongruenceSubgroup(G), ")" );    
     end );    
     
 
 InstallMethod( ViewObj,
-    "for Gamma1 congruence subgroup",
-    [ IsGamma1 ],
+    "for CongruenceSubgroupGamma1 congruence subgroup",
+    [ IsCongruenceSubgroupGamma1 ],
     0,
     function( G )
-      Print( "<congruence subgroup Gamma_1(", 
+      Print( "<congruence subgroup CongruenceSubgroupGamma_1(", 
              LevelOfCongruenceSubgroup(G), ") in SL_2(Z)>" );    
     end );
     
     
 InstallMethod( PrintObj,
-    "for Gamma1 congruence subgroup",
-    [ IsGamma1 ],
+    "for CongruenceSubgroupGamma1 congruence subgroup",
+    [ IsCongruenceSubgroupGamma1 ],
     0,
     function( G )
-      Print( "Gamma1(", 
+      Print( "CongruenceSubgroupGamma1(", 
              LevelOfCongruenceSubgroup(G), ")" );    
     end );     
 
 
 InstallMethod( ViewObj,
-    "for GammaUpper1 congruence subgroup",
-    [ IsGammaUpper1 ],
+    "for CongruenceSubgroupGammaUpper1 congruence subgroup",
+    [ IsCongruenceSubgroupGammaUpper1 ],
     0,
     function( G )
-      Print( "<congruence subgroup Gamma^1(", 
+      Print( "<congruence subgroup CongruenceSubgroupGamma^1(", 
              LevelOfCongruenceSubgroup(G), ") in SL_2(Z)>" );    
     end );
     
     
 InstallMethod( PrintObj,
-    "for GammaUpper1 congruence subgroup",
-    [ IsGammaUpper1 ],
+    "for CongruenceSubgroupGammaUpper1 congruence subgroup",
+    [ IsCongruenceSubgroupGammaUpper1 ],
     0,
     function( G )
-      Print( "GammaUpper1(", 
+      Print( "CongruenceSubgroupGammaUpper1(", 
              LevelOfCongruenceSubgroup(G), ")" );    
     end );  
 
+
+InstallMethod( ViewObj,
+    "for CongruenceSubgroupGammaMN congruence subgroup",
+    [ IsCongruenceSubgroupGammaMN ],
+    0,
+    function( G )
+      Print( "<congruence subgroup CongruenceSubgroupGammaMN(", 
+             LevelOfCongruenceSubgroupGammaMN(G)[1], ",", 
+             LevelOfCongruenceSubgroupGammaMN(G)[2], ") in SL_2(Z)>" );    
+    end );
+    
+    
+InstallMethod( PrintObj,
+    "for CongruenceSubgroupGammaMN congruence subgroup",
+    [ IsCongruenceSubgroupGammaMN ],
+    0,
+    function( G )
+      Print( "CongruenceSubgroupGammaMN(", 
+              LevelOfCongruenceSubgroupGammaMN(G)[1], ",", 
+             LevelOfCongruenceSubgroupGammaMN(G)[2], ")" );    
+    end ); 
+    
 
 InstallMethod( ViewObj,
     "for intersection of congruence subgroups",
@@ -387,8 +440,8 @@ InstallMethod( \in,
 
 
 InstallMethod( \in,
-    "for a 2x2 matrix and a congruence subgroup Gamma0",
-    [ IsMatrix, IsGamma0 ],
+    "for a 2x2 matrix and a congruence subgroup CongruenceSubgroupGamma0",
+    [ IsMatrix, IsCongruenceSubgroupGamma0 ],
     0,
     function( m, G )
     local n;
@@ -404,8 +457,8 @@ InstallMethod( \in,
     
 
 InstallMethod( \in,
-    "for a 2x2 matrix and a congruence subgroup GammaUpper0",
-    [ IsMatrix, IsGammaUpper0 ],
+    "for a 2x2 matrix and a congruence subgroup CongruenceSubgroupGammaUpper0",
+    [ IsMatrix, IsCongruenceSubgroupGammaUpper0 ],
     0,
     function( m, G )
     local n;
@@ -421,8 +474,8 @@ InstallMethod( \in,
     
 
 InstallMethod( \in,
-    "for a 2x2 matrix and a congruence subgroup Gamma1",
-    [ IsMatrix, IsGamma1 ],
+    "for a 2x2 matrix and a congruence subgroup CongruenceSubgroupGamma1",
+    [ IsMatrix, IsCongruenceSubgroupGamma1 ],
     0,
     function( m, G )
     local n;
@@ -440,8 +493,8 @@ InstallMethod( \in,
   
 
 InstallMethod( \in,
-    "for a 2x2 matrix and a congruence subgroup GammaUpper1",
-    [ IsMatrix, IsGammaUpper1 ],
+    "for a 2x2 matrix and a congruence subgroup CongruenceSubgroupGammaUpper1",
+    [ IsMatrix, IsCongruenceSubgroupGammaUpper1 ],
     0,
     function( m, G )
     local n;
@@ -456,6 +509,27 @@ InstallMethod( \in,
              IsInt( (m[2][2]-1)/n );
     fi;  
     end);
+    
+
+InstallMethod( \in,
+    "for a 2x2 matrix and a congruence subgroup CongruenceSubgroupGammaMN",
+    [ IsMatrix, IsCongruenceSubgroupGammaMN ],
+    0,
+    function( mat, G )
+    local m, n;
+    if not DimensionsMat( mat ) = [2,2] then
+      return false;
+    elif DeterminantMat(mat)<>1 then
+      return false;  
+    else
+      m := LevelOfCongruenceSubgroupGammaMN(G)[1];
+      n := LevelOfCongruenceSubgroupGammaMN(G)[2];
+      return IsInt( (mat[1][1]-1)/m ) and 
+             IsInt(mat[1][2]/m) and 
+             IsInt(mat[2][1]/n) and 
+             IsInt( (mat[2][2]-1)/n );
+    fi;  
+    end);    
     
     
 InstallMethod( \in,
@@ -521,8 +595,8 @@ InstallMethod( IsSubset,
     if IsIntersectionOfCongruenceSubgroups(G) then
       return ForAll( DefiningCongruenceSubgroups(G), T -> IsSubset(T,H) );
     elif IsPrincipalCongruenceSubgroup(G) or 
-         IsGamma1(G) or IsGammaUpper1(G) or
-         IsGamma0(G) or IsGammaUpper0(G) then
+         IsCongruenceSubgroupGamma1(G) or IsCongruenceSubgroupGammaUpper1(G) or
+         IsCongruenceSubgroupGamma0(G) or IsCongruenceSubgroupGammaUpper0(G) then
       return IsInt( LevelOfCongruenceSubgroup(H) / LevelOfCongruenceSubgroup(G) ); 
     else
       # for a case of another type of congruence subgroup  
@@ -531,17 +605,17 @@ InstallMethod( IsSubset,
     end); 
     
 InstallMethod( IsSubset,
-    "for a congruence subgroup and Gamma1",
-    [ IsCongruenceSubgroup, IsGamma1 ],
+    "for a congruence subgroup and CongruenceSubgroupGamma1",
+    [ IsCongruenceSubgroup, IsCongruenceSubgroupGamma1 ],
     0,
     function( G, H )
     local T;
     if IsIntersectionOfCongruenceSubgroups(G) then
       return ForAll( DefiningCongruenceSubgroups(G), T -> IsSubset(T,H) );
     elif IsPrincipalCongruenceSubgroup(G) or 
-         IsGammaUpper1(G) or IsGammaUpper0(G) then
+         IsCongruenceSubgroupGammaUpper1(G) or IsCongruenceSubgroupGammaUpper0(G) then
       return false;
-    elif IsGamma1(G) or IsGamma0(G) then
+    elif IsCongruenceSubgroupGamma1(G) or IsCongruenceSubgroupGamma0(G) then
       return IsInt( LevelOfCongruenceSubgroup(H) / LevelOfCongruenceSubgroup(G) ); 
     else
       # for a case of another type of congruence subgroup  
@@ -550,17 +624,17 @@ InstallMethod( IsSubset,
     end); 
     
 InstallMethod( IsSubset,
-    "for a congruence subgroup and GammaUpper1",
-    [ IsCongruenceSubgroup, IsGammaUpper1 ],
+    "for a congruence subgroup and CongruenceSubgroupGammaUpper1",
+    [ IsCongruenceSubgroup, IsCongruenceSubgroupGammaUpper1 ],
     0,
     function( G, H )
     local T;
     if IsIntersectionOfCongruenceSubgroups(G) then
       return ForAll( DefiningCongruenceSubgroups(G), T -> IsSubset(T,H) );
     elif IsPrincipalCongruenceSubgroup(G) or 
-         IsGamma1(G) or IsGamma0(G) then
+         IsCongruenceSubgroupGamma1(G) or IsCongruenceSubgroupGamma0(G) then
       return false;
-    elif IsGammaUpper1(G) or IsGammaUpper0(G) then
+    elif IsCongruenceSubgroupGammaUpper1(G) or IsCongruenceSubgroupGammaUpper0(G) then
       return IsInt( LevelOfCongruenceSubgroup(H) / LevelOfCongruenceSubgroup(G) ); 
     else
       # for a case of another type of congruence subgroup  
@@ -569,17 +643,17 @@ InstallMethod( IsSubset,
     end); 
     
 InstallMethod( IsSubset,
-    "for a congruence subgroup and Gamma0",
-    [ IsCongruenceSubgroup, IsGamma0 ],
+    "for a congruence subgroup and CongruenceSubgroupGamma0",
+    [ IsCongruenceSubgroup, IsCongruenceSubgroupGamma0 ],
     0,
     function( G, H )
     local T;
     if IsIntersectionOfCongruenceSubgroups(G) then
       return ForAll( DefiningCongruenceSubgroups(G), T -> IsSubset(T,H) );
     elif IsPrincipalCongruenceSubgroup(G) or 
-         IsGamma1(G) or IsGammaUpper1(G) or IsGammaUpper0(G) then
+         IsCongruenceSubgroupGamma1(G) or IsCongruenceSubgroupGammaUpper1(G) or IsCongruenceSubgroupGammaUpper0(G) then
       return false;
-    elif IsGamma0(G) then
+    elif IsCongruenceSubgroupGamma0(G) then
       return IsInt( LevelOfCongruenceSubgroup(H) / LevelOfCongruenceSubgroup(G) ); 
     else
       # for a case of another type of congruence subgroup  
@@ -588,17 +662,17 @@ InstallMethod( IsSubset,
     end);     
     
 InstallMethod( IsSubset,
-    "for a congruence subgroup and GammaUpper0",
-    [ IsCongruenceSubgroup, IsGammaUpper0 ],
+    "for a congruence subgroup and CongruenceSubgroupGammaUpper0",
+    [ IsCongruenceSubgroup, IsCongruenceSubgroupGammaUpper0 ],
     0,
     function( G, H )
     local T;
     if IsIntersectionOfCongruenceSubgroups(G) then
       return ForAll( DefiningCongruenceSubgroups(G), T -> IsSubset(T,H) );
     elif IsPrincipalCongruenceSubgroup(G) or 
-         IsGamma1(G) or IsGammaUpper1(G) or IsGamma0(G) then
+         IsCongruenceSubgroupGamma1(G) or IsCongruenceSubgroupGammaUpper1(G) or IsCongruenceSubgroupGamma0(G) then
       return false;
-    elif IsGammaUpper0(G) then
+    elif IsCongruenceSubgroupGammaUpper0(G) then
       return IsInt( LevelOfCongruenceSubgroup(H) / LevelOfCongruenceSubgroup(G) ); 
     else
       # for a case of another type of congruence subgroup  
@@ -623,8 +697,8 @@ InstallMethod( IsSubset,
         TryNextMethod();
       fi;
     elif IsPrincipalCongruenceSubgroup(G) or 
-         IsGamma1(G) or IsGammaUpper1(G) or 
-         IsGamma0(G) or IsGammaUpper0(G) then
+         IsCongruenceSubgroupGamma1(G) or IsCongruenceSubgroupGammaUpper1(G) or 
+         IsCongruenceSubgroupGamma0(G) or IsCongruenceSubgroupGammaUpper0(G) then
       if ForAll( DefiningCongruenceSubgroups(H), DH -> IsSubset(G,DH) ) then
         return true;
       else
@@ -661,17 +735,17 @@ InstallMethod( Intersection2,
     elif IsPrincipalCongruenceSubgroup(G) and IsPrincipalCongruenceSubgroup(H) then
       return PrincipalCongruenceSubgroup( Lcm( LevelOfCongruenceSubgroup(G),
                                                LevelOfCongruenceSubgroup(H) ) );
-    elif IsGamma1(G) and IsGamma1(H) then
-      return Gamma1( Lcm( LevelOfCongruenceSubgroup(G),
+    elif IsCongruenceSubgroupGamma1(G) and IsCongruenceSubgroupGamma1(H) then
+      return CongruenceSubgroupGamma1( Lcm( LevelOfCongruenceSubgroup(G),
                           LevelOfCongruenceSubgroup(H) ) );
-    elif IsGammaUpper1(G) and IsGammaUpper1(H) then
-      return GammaUpper1( Lcm( LevelOfCongruenceSubgroup(G),
+    elif IsCongruenceSubgroupGammaUpper1(G) and IsCongruenceSubgroupGammaUpper1(H) then
+      return CongruenceSubgroupGammaUpper1( Lcm( LevelOfCongruenceSubgroup(G),
                           LevelOfCongruenceSubgroup(H) ) );
-    elif IsGamma0(G) and IsGamma0(H) then
-      return Gamma0( Lcm( LevelOfCongruenceSubgroup(G),
+    elif IsCongruenceSubgroupGamma0(G) and IsCongruenceSubgroupGamma0(H) then
+      return CongruenceSubgroupGamma0( Lcm( LevelOfCongruenceSubgroup(G),
                           LevelOfCongruenceSubgroup(H) ) );
-    elif IsGammaUpper0(G) and IsGammaUpper0(H) then
-      return GammaUpper0( Lcm( LevelOfCongruenceSubgroup(G),
+    elif IsCongruenceSubgroupGammaUpper0(G) and IsCongruenceSubgroupGammaUpper0(H) then
+      return CongruenceSubgroupGammaUpper0( Lcm( LevelOfCongruenceSubgroup(G),
                           LevelOfCongruenceSubgroup(H) ) );
     #
     # Case 3 - Subgroups has different level
@@ -681,15 +755,15 @@ InstallMethod( Intersection2,
     #
     # Now subgroups have the same level
     #
-    elif IsGamma1(G) and IsGamma0(H) then
+    elif IsCongruenceSubgroupGamma1(G) and IsCongruenceSubgroupGamma0(H) then
       return G; # so all properties and attributes of G will be preserved
-    elif IsGamma0(G) and IsGamma1(H) then
+    elif IsCongruenceSubgroupGamma0(G) and IsCongruenceSubgroupGamma1(H) then
       return H; 
-    elif IsGammaUpper1(G) and IsGammaUpper0(H) then
+    elif IsCongruenceSubgroupGammaUpper1(G) and IsCongruenceSubgroupGammaUpper0(H) then
       return G;
-    elif IsGammaUpper0(G) and IsGammaUpper1(H) then
+    elif IsCongruenceSubgroupGammaUpper0(G) and IsCongruenceSubgroupGammaUpper1(H) then
       return H;
-    elif IsGamma0(G) and IsGammaUpper0(H) or IsGammaUpper0(G) and IsGamma0(H) then
+    elif IsCongruenceSubgroupGamma0(G) and IsCongruenceSubgroupGammaUpper0(H) or IsCongruenceSubgroupGammaUpper0(G) and IsCongruenceSubgroupGamma0(H) then
       return IntersectionOfCongruenceSubgroups(G,H);
     else
       return PrincipalCongruenceSubgroup(LevelOfCongruenceSubgroup(G));
@@ -728,10 +802,10 @@ InstallMethod( Index,
         Assert( 1, IndexInPSL2ZByFareySymbol( FareySymbol ( H ) ) = r/2 );
         return r;
       fi;
-    elif ( HasIsGamma0( H ) and IsGamma0( H ) ) or 
-         ( HasIsGammaUpper0( H ) and IsGammaUpper0( H ) ) then
-      # for Gamma0 we use the formula
-      # [ SL_2(Z) : Gamma0(n) ] = n * "Product over prime p | n" ( 1 + 1/p )
+    elif ( HasIsCongruenceSubgroupGamma0( H ) and IsCongruenceSubgroupGamma0( H ) ) or 
+         ( HasIsCongruenceSubgroupGammaUpper0( H ) and IsCongruenceSubgroupGammaUpper0( H ) ) then
+      # for CongruenceSubgroupGamma0 we use the formula
+      # [ SL_2(Z) : CongruenceSubgroupGamma0(n) ] = n * "Product over prime p | n" ( 1 + 1/p )
       prdiv := Set( Factors( n ) );
       r := n; 
       for p in prdiv do
@@ -739,12 +813,12 @@ InstallMethod( Index,
       od;
       Assert( 1, IndexInPSL2ZByFareySymbol( FareySymbol ( H ) ) = r );
       return r;
-    elif ( HasIsGamma1( H ) and IsGamma1( H ) ) or 
-         ( HasIsGammaUpper1( H ) and IsGammaUpper1( H ) ) then 
-      # for Gamma1 we use the formula
-      # [ Gamma0(n) : Gamma1(n) ] = n * "Product over prime p | n" ( 1 - 1/p )
+    elif ( HasIsCongruenceSubgroupGamma1( H ) and IsCongruenceSubgroupGamma1( H ) ) or 
+         ( HasIsCongruenceSubgroupGammaUpper1( H ) and IsCongruenceSubgroupGammaUpper1( H ) ) then 
+      # for CongruenceSubgroupGamma1 we use the formula
+      # [ CongruenceSubgroupGamma0(n) : CongruenceSubgroupGamma1(n) ] = n * "Product over prime p | n" ( 1 - 1/p )
       # Combining with the previous case, we get that
-      # [ SL_2(Z) : Gamma1(n) ] = n^2 * "Product over prime p | n" ( 1 - 1/p^2 )
+      # [ SL_2(Z) : CongruenceSubgroupGamma1(n) ] = n^2 * "Product over prime p | n" ( 1 - 1/p^2 )
       prdiv := Set( Factors( n ) );
       r := n^2;
       for p in prdiv do

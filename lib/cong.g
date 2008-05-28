@@ -16,10 +16,10 @@ InstallGlobalFunction( "CanEasilyCompareCongruenceSubgroups",
 function ( G, H )
 local i;
 if ForAll( [ G, H ], IsPrincipalCongruenceSubgroup ) or
-   ForAll( [ G, H ], IsGamma0 ) or
-   ForAll( [ G, H ], IsGammaUpper0 ) or
-   ForAll( [ G, H ], IsGamma1 ) or
-   ForAll( [ G, H ], IsGammaUpper1 ) then
+   ForAll( [ G, H ], IsCongruenceSubgroupGamma0 ) or
+   ForAll( [ G, H ], IsCongruenceSubgroupGammaUpper0 ) or
+   ForAll( [ G, H ], IsCongruenceSubgroupGamma1 ) or
+   ForAll( [ G, H ], IsCongruenceSubgroupGammaUpper1 ) then
   return LevelOfCongruenceSubgroup(G)=LevelOfCongruenceSubgroup(H);
 elif ForAll( [ G, H ], IsIntersectionOfCongruenceSubgroups ) then
   # we use the canonical ordering of subgroups 
@@ -63,13 +63,13 @@ if IsIntersectionOfCongruenceSubgroups(G) or
 # 
 elif IsPrincipalCongruenceSubgroup(G) and IsPrincipalCongruenceSubgroup(H) then
   return true;
-elif IsGamma1(G) and IsGamma1(H) then
+elif IsCongruenceSubgroupGamma1(G) and IsCongruenceSubgroupGamma1(H) then
   return true;
-elif IsGammaUpper1(G) and IsGammaUpper1(H) then
+elif IsCongruenceSubgroupGammaUpper1(G) and IsCongruenceSubgroupGammaUpper1(H) then
   return true;
-elif IsGamma0(G) and IsGamma0(H) then
+elif IsCongruenceSubgroupGamma0(G) and IsCongruenceSubgroupGamma0(H) then
   return true;
-elif IsGammaUpper0(G) and IsGammaUpper0(H) then
+elif IsCongruenceSubgroupGammaUpper0(G) and IsCongruenceSubgroupGammaUpper0(H) then
   return true;
 #
 # Case 3 - Subgroups has different level
@@ -79,15 +79,15 @@ elif LevelOfCongruenceSubgroup(G) <> LevelOfCongruenceSubgroup(H) then
   #
   # Now subgroups have the same level
   #
-elif IsGamma1(G) and IsGamma0(H) then
+elif IsCongruenceSubgroupGamma1(G) and IsCongruenceSubgroupGamma0(H) then
   return true;
-elif IsGamma0(G) and IsGamma1(H) then
+elif IsCongruenceSubgroupGamma0(G) and IsCongruenceSubgroupGamma1(H) then
   return true; 
-elif IsGammaUpper1(G) and IsGammaUpper0(H) then
+elif IsCongruenceSubgroupGammaUpper1(G) and IsCongruenceSubgroupGammaUpper0(H) then
   return true;
-elif IsGammaUpper0(G) and IsGammaUpper1(H) then
+elif IsCongruenceSubgroupGammaUpper0(G) and IsCongruenceSubgroupGammaUpper1(H) then
   return true;
-elif IsGamma0(G) and IsGammaUpper0(H) or IsGammaUpper0(G) and IsGamma0(H) then
+elif IsCongruenceSubgroupGamma0(G) and IsCongruenceSubgroupGammaUpper0(H) or IsCongruenceSubgroupGammaUpper0(G) and IsCongruenceSubgroupGamma0(H) then
   return false;
 else
   return true;

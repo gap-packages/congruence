@@ -9,7 +9,7 @@
 #############################################################################
 ##
 ## This file contains implementations of methods to construct random elements
-## of congruence subgroups Gamma, Gamma0, GammaUpper0, Gamma1, GammaUpper1.
+## of congruence subgroups CongruenceSubgroupGamma, CongruenceSubgroupGamma0, CongruenceSubgroupGammaUpper0, CongruenceSubgroupGamma1, CongruenceSubgroupGammaUpper1.
 ## The idea is to select two random entries a and b in the same row or column
 ## of the matrix, such that a and b will satisfy the requirements arising 
 ## from the congruence subgroup. For example, for the principal congruence 
@@ -72,13 +72,13 @@ end);
 
 #############################################################################
 ##
-## The congruence subgroup Gamma0(N) consists of all matrices
+## The congruence subgroup CongruenceSubgroupGamma0(N) consists of all matrices
 ## of the form   [   *    * ]
 ##               [   N    * ]
 ##
 InstallMethod( Random,
-	"for a congruence subgroup Gamma0",
-	[ IsGamma0 ],
+	"for a congruence subgroup CongruenceSubgroupGamma0",
+	[ IsCongruenceSubgroupGamma0 ],
 	0,
 	function( G )
 	local n, a, b, gcd;
@@ -93,8 +93,8 @@ InstallMethod( Random,
 end);
 
 InstallOtherMethod( Random,
-	"for a congruence subgroup Gamma0",
-	[ IsGamma0, IsPosInt ],
+	"for a congruence subgroup CongruenceSubgroupGamma0",
+	[ IsCongruenceSubgroupGamma0, IsPosInt ],
 	0,
 	function( G, m )
 	local n, a, b, gcd;
@@ -111,13 +111,13 @@ end);
 
 #############################################################################
 ## 
-## The congruence subgroup GammaUpper0(N) consists of all matrices
+## The congruence subgroup CongruenceSubgroupGammaUpper0(N) consists of all matrices
 ## of the form   [   *    N ]
 ##               [   *    * ]
 ##
 InstallMethod( Random,
-	"for a congruence subgroup GammaUpper0",
-	[ IsGammaUpper0 ],
+	"for a congruence subgroup CongruenceSubgroupGammaUpper0",
+	[ IsCongruenceSubgroupGammaUpper0 ],
 	0,
 	function( G )
 	local n, a, b, gcd;
@@ -132,8 +132,8 @@ InstallMethod( Random,
 end);
 
 InstallOtherMethod( Random,
-	"for a congruence subgroup GammaUpper0",
-	[ IsGammaUpper0, IsPosInt ],
+	"for a congruence subgroup CongruenceSubgroupGammaUpper0",
+	[ IsCongruenceSubgroupGammaUpper0, IsPosInt ],
 	0,
 	function( G, m )
 	local n, a, b, gcd;
@@ -150,13 +150,13 @@ end);
 
 #############################################################################
 ## 
-## The congruence subgroup Gamma1(N) consists of all matrices
+## The congruence subgroup CongruenceSubgroupGamma1(N) consists of all matrices
 ## of the form   [ 1+N    * ]
 ##               [   N  1+N ]
 ##
 InstallMethod( Random,
-	"for a congruence subgroup Gamma1",
-	[ IsGamma1 ],
+	"for a congruence subgroup CongruenceSubgroupGamma1",
+	[ IsCongruenceSubgroupGamma1 ],
 	0,
 	function( G )
 	local n, a, b, gcd;
@@ -171,8 +171,8 @@ InstallMethod( Random,
 end);
 
 InstallOtherMethod( Random,
-	"for a congruence subgroup Gamma1",
-	[ IsGamma1, IsPosInt ],
+	"for a congruence subgroup CongruenceSubgroupGamma1",
+	[ IsCongruenceSubgroupGamma1, IsPosInt ],
 	0,
 	function( G, m )
 	local n, a, b, gcd;
@@ -189,13 +189,13 @@ end);
 
 #############################################################################
 ## 
-## The congruence subgroup GammaUpper1(N) consists of all matrices
+## The congruence subgroup CongruenceSubgroupGammaUpper1(N) consists of all matrices
 ## of the form   [ 1+N    N ]
 ##               [   *  1+N ]
 ##
 InstallMethod( Random,
-	"for a congruence subgroup GammaUpper1",
-	[ IsGammaUpper1 ],
+	"for a congruence subgroup CongruenceSubgroupGammaUpper1",
+	[ IsCongruenceSubgroupGammaUpper1 ],
 	0,
 	function( G )
 	local n, a, b, gcd;
@@ -210,8 +210,8 @@ InstallMethod( Random,
 end);
 
 InstallOtherMethod( Random,
-	"for a congruence subgroup GammaUpper1",
-	[ IsGammaUpper1, IsPosInt ],
+	"for a congruence subgroup CongruenceSubgroupGammaUpper1",
+	[ IsCongruenceSubgroupGammaUpper1, IsPosInt ],
 	0,
 	function( G, m )
 	local n, a, b, gcd;
