@@ -5,7 +5,7 @@
 
 <Index Key="IsCongruenceSubgroup"><C>IsCongruenceSubgroup</C></Index>
 The package &Congruence; provides functions to construct several
-types of canonical congruence subgroups in <M>SL_2(\Z)</M>, and also 
+types of canonical congruence subgroups in <M>SL_2(&ZZ;)</M>, and also 
 intersections of a finite number of such subgroups. They will return 
 a matrix group in the category <C>IsCongruenceSubgroup</C>,
 which is defined as a subcategory of <C>IsMatrixGroup</C>, and
@@ -39,7 +39,7 @@ true
         Comm="" />
   <Description>
     Returns the principal congruence subgroup <M>\Gamma(N)</M> of level <A>N</A> 
-    in <M>SL_2(\Z)</M>.<P/>
+    in <M>SL_2(&ZZ;)</M>.<P/>
     This subgroup consists of 
     all matrices of the form
 <Alt Only="LaTeX">
@@ -91,12 +91,12 @@ true
 
 
 <ManSection>
-  <Func Name="Gamma0" 
+  <Func Name="CongruenceSubgroupGamma0" 
          Arg="N"  
         Comm="" />
   <Description>
     Returns the congruence subgroup <M>\Gamma_0(N)</M> 
-    of level <A>N</A> in <M>SL_2(\Z)</M>.<P/>
+    of level <A>N</A> in <M>SL_2(&ZZ;)</M>.<P/>
     This subgroup consists of 
     all matrices of the form
 <Alt Only="LaTeX">
@@ -117,25 +117,25 @@ true
 ]]></Verb></Alt>   
 where <M>a</M>,<M>b</M>,<M>c</M>,<M>d</M> are integers. 
          The returned group will have the property
-    <Ref Prop="IsGamma0" />.   
+    <Ref Prop="IsCongruenceSubgroupGamma0" />.   
   </Description>
 </ManSection> 
 
 <Example>
 <![CDATA[
-gap> G0_4:=Gamma0(4);
-<congruence subgroup Gamma_0(4) in SL_2(Z)>
+gap> G0_4:=CongruenceSubgroupGamma0(4);
+<congruence subgroup CongruenceSubgroupGamma_0(4) in SL_2(Z)>
 ]]>
 </Example>
 
 
 <ManSection>
-  <Func Name="GammaUpper0" 
+  <Func Name="CongruenceSubgroupGammaUpper0" 
          Arg="N"  
         Comm="" />
   <Description>
     Returns the congruence subgroup <M>\Gamma^0(N)</M> 
-    of level <A>N</A> in <M>SL_2(\Z)</M>.<P/>
+    of level <A>N</A> in <M>SL_2(&ZZ;)</M>.<P/>
     This subgroup consists of 
     all matrices of the form
 <Alt Only="LaTeX">
@@ -156,25 +156,25 @@ gap> G0_4:=Gamma0(4);
 ]]></Verb></Alt>   
 where <M>a</M>,<M>b</M>,<M>c</M>,<M>d</M> are integers. 
              The returned group will have the property
-    <Ref Prop="IsGammaUpper0" />. 
+    <Ref Prop="IsCongruenceSubgroupGammaUpper0" />. 
   </Description>
 </ManSection>
 
 <Example>
 <![CDATA[
-gap> GU0_2:=GammaUpper0(2);
-<congruence subgroup Gamma^0(2) in SL_2(Z)>
+gap> GU0_2:=CongruenceSubgroupGammaUpper0(2);
+<congruence subgroup CongruenceSubgroupGamma^0(2) in SL_2(Z)>
 ]]>
 </Example>
 
 
 <ManSection>
-  <Func Name="Gamma1" 
+  <Func Name="CongruenceSubgroupGamma1" 
          Arg="N"  
         Comm="" />
   <Description>
     Returns the congruence subgroup <M>\Gamma_1(N)</M> 
-    of level <A>N</A> in <M>SL_2(\Z)</M>.<P/>
+    of level <A>N</A> in <M>SL_2(&ZZ;)</M>.<P/>
          This subgroup consists of 
     all matrices of the form
 <Alt Only="LaTeX">
@@ -195,25 +195,25 @@ gap> GU0_2:=GammaUpper0(2);
 ]]></Verb></Alt>   
 where <M>a</M>,<M>b</M>,<M>c</M>,<M>d</M> are integers. 
     The returned group will have the property
-    <Ref Prop="IsGamma1" />.            
+    <Ref Prop="IsCongruenceSubgroupGamma1" />.            
   </Description>
 </ManSection> 
 
 <Example>
 <![CDATA[
-gap> G1_6:=Gamma1(6);
-<congruence subgroup Gamma_1(6) in SL_2(Z)>
+gap> G1_6:=CongruenceSubgroupGamma1(6);
+<congruence subgroup CongruenceSubgroupGamma_1(6) in SL_2(Z)>
 ]]>
 </Example>
 
 
 <ManSection>
-  <Func Name="GammaUpper1" 
+  <Func Name="CongruenceSubgroupGammaUpper1" 
          Arg="N"  
         Comm="" />
   <Description>
     Returns the congruence subgroup <M>\Gamma^1(N)</M> 
-    of level <A>N</A> in <M>SL_2(\Z)</M>.<P/>
+    of level <A>N</A> in <M>SL_2(&ZZ;)</M>.<P/>
          This subgroup consists of 
     all matrices of the form
 <Alt Only="LaTeX">
@@ -234,14 +234,14 @@ gap> G1_6:=Gamma1(6);
 ]]></Verb></Alt>   
 where <M>a</M>,<M>b</M>,<M>c</M>,<M>d</M> are integers. 
     The returned group will have the property
-    <Ref Prop="IsGammaUpper1" />.               
+    <Ref Prop="IsCongruenceSubgroupGammaUpper1" />.               
   </Description>
 </ManSection>
 
 <Example>
 <![CDATA[
-gap> GU1_4:=GammaUpper1(4);
-<congruence subgroup Gamma^1(4) in SL_2(Z)>
+gap> GU1_4:=CongruenceSubgroupGammaUpper1(4);
+<congruence subgroup CongruenceSubgroupGamma^1(4) in SL_2(Z)>
 ]]>
 </Example>
 
@@ -319,48 +319,48 @@ true
 
 
 <ManSection>
-  <Prop Name="IsGamma0" 
+  <Prop Name="IsCongruenceSubgroupGamma0" 
          Arg="G"/>
   <Description>
     For a congruence subgroup <A>G</A> in the category 
     <C>IsCongruenceSubgroup</C>, returns <K>true</K> if 
-    <A>G</A> was constructed by <Ref Func="Gamma0" /> (or reduced to one as a result of an intersection)
+    <A>G</A> was constructed by <Ref Func="CongruenceSubgroupGamma0" /> (or reduced to one as a result of an intersection)
     and returns <K>false</K> otherwise.  
   </Description>
 </ManSection>
 
 
 <ManSection>
-  <Prop Name="IsGammaUpper0" 
+  <Prop Name="IsCongruenceSubgroupGammaUpper0" 
          Arg="G"/>
   <Description>
     For a congruence subgroup <A>G</A> in the category 
     <C>IsCongruenceSubgroup</C>, returns <K>true</K> if 
-    <A>G</A> was constructed by <Ref Func="GammaUpper0" /> (or reduced to one as a result of an intersection)
+    <A>G</A> was constructed by <Ref Func="CongruenceSubgroupGammaUpper0" /> (or reduced to one as a result of an intersection)
     and returns <K>false</K> otherwise.
   </Description>
 </ManSection>
 
 
 <ManSection>
-  <Prop Name="IsGamma1" 
+  <Prop Name="IsCongruenceSubgroupGamma1" 
          Arg="G"/>
   <Description>
     For a congruence subgroup <A>G</A> in the category 
     <C>IsCongruenceSubgroup</C>, returns <K>true</K> if
-    <A>G</A> was constructed by <Ref Func="Gamma1" /> (or reduced to one as a result of an intersection)
+    <A>G</A> was constructed by <Ref Func="CongruenceSubgroupGamma1" /> (or reduced to one as a result of an intersection)
     and returns <K>false</K> otherwise.
   </Description>
 </ManSection>
 
 
 <ManSection>
-  <Prop Name="IsGammaUpper1" 
+  <Prop Name="IsCongruenceSubgroupGammaUpper1" 
          Arg="G"/>                                    
   <Description>
     For a congruence subgroup <A>G</A> in the category 
     <C>IsCongruenceSubgroup</C>, returns <K>true</K> if 
-    <A>G</A> was constructed by <Ref Func="GammaUpper1" /> (or reduced to one as a result of an intersection)
+    <A>G</A> was constructed by <Ref Func="CongruenceSubgroupGammaUpper1" /> (or reduced to one as a result of an intersection)
     and returns <K>false</K> otherwise.
   </Description>
 </ManSection>
@@ -424,7 +424,7 @@ gap> LevelOfCongruenceSubgroup(J);
   <Attr Name="IndexInSL2Z" 
          Arg="G"/>                                    
   <Description>
-    Stores the index of the congruence subgroup <A>G</A> in <M>SL_2(\Z)</M>.
+    Stores the index of the congruence subgroup <A>G</A> in <M>SL_2(&ZZ;)</M>.
   </Description>
 </ManSection>
 
@@ -436,7 +436,7 @@ gap> G_2:=PrincipalCongruenceSubgroup(2);
 <principal congruence subgroup of level 2 in SL_2(Z)>
 gap> IndexInSL2Z(G_2);
 12
-gap> IndexInSL2Z(G1_4);
+gap> IndexInSL2Z(GU1_4);
 12
 ]]>
 </Example>
@@ -456,8 +456,8 @@ gap> IndexInSL2Z(G1_4);
 <Example>
 <![CDATA[
 gap> DefiningCongruenceSubgroups(J);
-[ <congruence subgroup Gamma_0(4) in SL_2(Z)>,
-  <congruence subgroup Gamma_1(6) in SL_2(Z)> ]
+[ <congruence subgroup CongruenceSubgroupGamma_0(4) in SL_2(Z)>,
+  <congruence subgroup CongruenceSubgroupGamma_1(6) in SL_2(Z)> ]
 ]]>
 </Example>
 
@@ -523,7 +523,7 @@ false
     <C>IsCongruenceSubgroup</C>, returns <K>true</K> if
     <A>G</A> and <A>H</A> are of the same type listed in
      <Ref Func="PrincipalCongruenceSubgroup" /> --> 
-    <Ref Func="GammaUpper1" />
+    <Ref Func="CongruenceSubgroupGammaUpper1" />
      and have the same
     <Ref Func="LevelOfCongruenceSubgroup"/> or if <A>G</A> and <A>H</A> 
     are of the type <Ref Func="IntersectionOfCongruenceSubgroups"/> and
@@ -559,7 +559,7 @@ gap> IsSubset(G_2,G_8);
 true
 gap> IsSubset(G_8,G_2);
 false
-gap> f:=[PrincipalCongruenceSubgroup,Gamma1,GammaUpper1,Gamma0,GammaUpper0];;
+gap> f:=[PrincipalCongruenceSubgroup,CongruenceSubgroupGamma1,CongruenceSubgroupGammaUpper1,CongruenceSubgroupGamma0,CongruenceSubgroupGammaUpper0];;
 gap> g1:=List(f, t -> t(2));;
 gap> g2:=List(f, t -> t(4));;
 gap> for g in g2 do
@@ -580,7 +580,7 @@ gap> for g in g2 do
   <Description>
     If a congruence subgroup <A>H</A> is a subgroup of a congruence 
     subgroup <A>G</A>, we can easily compute the index of <A>H</A> in
-    <A>G</A>, since we know the index of both subgroups in <M>SL_2(\Z)</M>.
+    <A>G</A>, since we know the index of both subgroups in <M>SL_2(&ZZ;)</M>.
   </Description>
 </ManSection>
 

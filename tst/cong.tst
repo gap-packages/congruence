@@ -26,26 +26,26 @@ gap> ForAll( List([1..100], k -> Random(G)), m -> m in G);
 true
 gap> ForAll( List([1..100], k -> Random(G,10*k)), m -> m in G);
 true
-gap> G:=Gamma0(3);
-<congruence subgroup Gamma_0(3) in SL_2(Z)>
+gap> G:=CongruenceSubgroupGamma0(3);
+<congruence subgroup CongruenceSubgroupGamma_0(3) in SL_2(Z)>
 gap> ForAll( List([1..100], k -> Random(G)), m -> m in G);
 true
 gap> ForAll( List([1..100], k -> Random(G,10*k)), m -> m in G);
 true
-gap> G:=GammaUpper0(3);
-<congruence subgroup Gamma^0(3) in SL_2(Z)>
+gap> G:=CongruenceSubgroupGammaUpper0(3);
+<congruence subgroup CongruenceSubgroupGamma^0(3) in SL_2(Z)>
 gap> ForAll( List([1..100], k -> Random(G)), m -> m in G);
 true
 gap> ForAll( List([1..100], k -> Random(G,10*k)), m -> m in G);
 true
-gap> G:=Gamma1(3);
-<congruence subgroup Gamma_1(3) in SL_2(Z)>
+gap> G:=CongruenceSubgroupGamma1(3);
+<congruence subgroup CongruenceSubgroupGamma_1(3) in SL_2(Z)>
 gap> ForAll( List([1..100], k -> Random(G)), m -> m in G);
 true
 gap> ForAll( List([1..100], k -> Random(G,10*k)), m -> m in G);
 true
-gap> G:=GammaUpper1(3);
-<congruence subgroup Gamma^1(3) in SL_2(Z)>
+gap> G:=CongruenceSubgroupGammaUpper1(3);
+<congruence subgroup CongruenceSubgroupGamma^1(3) in SL_2(Z)>
 gap> ForAll( List([1..100], k -> Random(G)), m -> m in G);
 true
 gap> ForAll( List([1..100], k -> Random(G,10*k)), m -> m in G);
@@ -70,7 +70,11 @@ gap> IndexInSL2Z(G6);
 144
 gap> Index(G3,G6);
 6
-gap> f:=[PrincipalCongruenceSubgroup,Gamma1,GammaUpper1,Gamma0,GammaUpper0];;
+gap> f:=[PrincipalCongruenceSubgroup,
+>        CongruenceSubgroupGamma1,
+>        CongruenceSubgroupGammaUpper1,
+>        CongruenceSubgroupGamma0,
+>        CongruenceSubgroupGammaUpper0];;
 gap> g1:=List(f, t -> t(2));;
 gap> g2:=List(f, t -> t(4));;
 gap> for g in g2 do
@@ -93,30 +97,33 @@ gap> for g in g2 do
 [ PrincipalCongruenceSubgroup(2), PrincipalCongruenceSubgroup(2), 
   PrincipalCongruenceSubgroup(2), PrincipalCongruenceSubgroup(2), 
   PrincipalCongruenceSubgroup(2) ]
-[ PrincipalCongruenceSubgroup(2), Gamma1(2), PrincipalCongruenceSubgroup(2), 
-  Gamma1(2), PrincipalCongruenceSubgroup(2) ]
+[ PrincipalCongruenceSubgroup(2), CongruenceSubgroupGamma1(2), 
+  PrincipalCongruenceSubgroup(2), CongruenceSubgroupGamma1(2), 
+  PrincipalCongruenceSubgroup(2) ]
 [ PrincipalCongruenceSubgroup(2), PrincipalCongruenceSubgroup(2), 
-  GammaUpper1(2), PrincipalCongruenceSubgroup(2), GammaUpper1(2) ]
-[ PrincipalCongruenceSubgroup(2), Gamma1(2), PrincipalCongruenceSubgroup(2), 
-  Gamma0(2), IntersectionOfCongruenceSubgroups( 
-      Gamma0(2),
-      GammaUpper0(2) ) ]
+  CongruenceSubgroupGammaUpper1(2), PrincipalCongruenceSubgroup(2), 
+  CongruenceSubgroupGammaUpper1(2) ]
+[ PrincipalCongruenceSubgroup(2), CongruenceSubgroupGamma1(2), 
+  PrincipalCongruenceSubgroup(2), CongruenceSubgroupGamma0(2), 
+  IntersectionOfCongruenceSubgroups(
+      CongruenceSubgroupGamma0(2),
+      CongruenceSubgroupGammaUpper0(2) ) ]
 [ PrincipalCongruenceSubgroup(2), PrincipalCongruenceSubgroup(2),
-  GammaUpper1(2), IntersectionOfCongruenceSubgroups(
-      Gamma0(2),
-      GammaUpper0(2) ), GammaUpper0(2) ]
-gap> G:=Intersection(Gamma0(4),Gamma1(3));
+  CongruenceSubgroupGammaUpper1(2), IntersectionOfCongruenceSubgroups(
+      CongruenceSubgroupGamma0(2),
+      CongruenceSubgroupGammaUpper0(2) ), CongruenceSubgroupGammaUpper0(2) ]  
+gap> G:=Intersection(CongruenceSubgroupGamma0(4),CongruenceSubgroupGamma1(3));
 <intersection of congruence subgroups of resulting level 12 in SL_2(Z)>
 gap> DefiningCongruenceSubgroups(G);
-[ <congruence subgroup Gamma_0(4) in SL_2(Z)>,
-  <congruence subgroup Gamma_1(3) in SL_2(Z)> ]
-gap> H:=Intersection(G,Gamma1(4));
+[ <congruence subgroup CongruenceSubgroupGamma_0(4) in SL_2(Z)>,
+  <congruence subgroup CongruenceSubgroupGamma_1(3) in SL_2(Z)> ]
+gap> H:=Intersection(G,CongruenceSubgroupGamma1(4));
 <intersection of congruence subgroups of resulting level 12 in SL_2(Z)>
 gap> DefiningCongruenceSubgroups(H);
-[ <congruence subgroup Gamma_1(3) in SL_2(Z)>,
-  <congruence subgroup Gamma_1(4) in SL_2(Z)> ]
-gap> K:=Intersection(H,Gamma0(3));
-<congruence subgroup Gamma_1(12) in SL_2(Z)>
+[ <congruence subgroup CongruenceSubgroupGamma_1(3) in SL_2(Z)>,
+  <congruence subgroup CongruenceSubgroupGamma_1(4) in SL_2(Z)> ]
+gap> K:=Intersection(H,CongruenceSubgroupGamma0(3));
+<congruence subgroup CongruenceSubgroupGamma_1(12) in SL_2(Z)>
 gap> List([1..6], n -> IndexInSL2Z(PrincipalCongruenceSubgroup(n)));
 [ 1, 12, 24, 48, 120, 144 ]
 gap> fs:=FareySymbolByData([infinity,0,1,2,infinity],[1,2,2,1]);                         
@@ -311,8 +318,8 @@ gap> GeneratorsByFareySymbol(last);
   [ [ 13, -4 ], [ 36, -11 ] ], [ [ 13, -6 ], [ 24, -11 ] ], 
   [ [ 85, -49 ], [ 144, -83 ] ], [ [ 25, -16 ], [ 36, -23 ] ], 
   [ [ 37, -27 ], [ 48, -35 ] ] ]
-gap> G:=Gamma0(20);
-<congruence subgroup Gamma_0(20) in SL_2(Z)>
+gap> G:=CongruenceSubgroupGamma0(20);
+<congruence subgroup CongruenceSubgroupGamma_0(20) in SL_2(Z)>
 gap> fs:=FareySymbol(G);
 [ infinity, 0, 1/5, 1/4, 2/7, 3/10, 1/3, 2/5, 1/2, 3/5, 2/3, 3/4, 4/5, 1, 
   infinity ]
@@ -324,15 +331,15 @@ gap> FareySymbol(G);
 [ 2, 1, 1, 2 ]
 gap> GeneratorsOfGroup(G);
 [ [ [ 1, 2 ], [ 0, 1 ] ], [ [ 3, -2 ], [ 2, -1 ] ] ]
-gap> G:=Gamma0(2);                               
-<congruence subgroup Gamma_0(2) in SL_2(Z)>
+gap> G:=CongruenceSubgroupGamma0(2);                               
+<congruence subgroup CongruenceSubgroupGamma_0(2) in SL_2(Z)>
 gap> FareySymbol(G);
 [ infinity, 0, 1, infinity ]
 [ 1, "even", 1 ]
 gap> GeneratorsOfGroup(G);
 [ [ [ 1, 1 ], [ 0, 1 ] ], [ [ 1, -1 ], [ 2, -1 ] ] ]
-gap> G:=Gamma0(3);        
-<congruence subgroup Gamma_0(3) in SL_2(Z)>
+gap> G:=CongruenceSubgroupGamma0(3);        
+<congruence subgroup CongruenceSubgroupGamma_0(3) in SL_2(Z)>
 gap> FareySymbol(G);      
 [ infinity, 0, 1, infinity ]
 [ 1, "odd", 1 ]
@@ -346,44 +353,44 @@ gap> FareySymbol(G);
 gap> GeneratorsOfGroup(G);             
 [ [ [ 1, 4 ], [ 0, 1 ] ], [ [ -15, 4 ], [ -4, 1 ] ], [ [ 5, -4 ], [ 4, -3 ] ], 
   [ [ 9, -16 ], [ 4, -7 ] ], [ [ 13, -36 ], [ 4, -11 ] ] ]
-gap> G:=Gamma0(4);                      
-<congruence subgroup Gamma_0(4) in SL_2(Z)>
+gap> G:=CongruenceSubgroupGamma0(4);                      
+<congruence subgroup CongruenceSubgroupGamma_0(4) in SL_2(Z)>
 gap> FareySymbol(G);
 [ infinity, 0, 1/2, 1, infinity ]
 [ 1, 2, 2, 1 ]
 gap> GeneratorsOfGroup(G);
 [ [ [ 1, 1 ], [ 0, 1 ] ], [ [ 3, -1 ], [ 4, -1 ] ] ]
-gap> G:=Gamma0(5);        
-<congruence subgroup Gamma_0(5) in SL_2(Z)>
+gap> G:=CongruenceSubgroupGamma0(5);        
+<congruence subgroup CongruenceSubgroupGamma_0(5) in SL_2(Z)>
 gap> FareySymbol(G);
 [ infinity, 0, 1/2, 1, infinity ]
 [ 1, "even", "even", 1 ]
 gap> GeneratorsOfGroup(G);
 [ [ [ 1, 1 ], [ 0, 1 ] ], [ [ 2, -1 ], [ 5, -2 ] ], [ [ 3, -2 ], [ 5, -3 ] ] ]
-gap> G:=Gamma0(6);        
-<congruence subgroup Gamma_0(6) in SL_2(Z)>
+gap> G:=CongruenceSubgroupGamma0(6);        
+<congruence subgroup CongruenceSubgroupGamma_0(6) in SL_2(Z)>
 gap> FareySymbol(G);
 [ infinity, 0, 1/3, 1/2, 2/3, 1, infinity ]
 [ 1, 3, 2, 2, 3, 1 ]
 gap> GeneratorsOfGroup(G);
 [ [ [ 1, 1 ], [ 0, 1 ] ], [ [ 5, -1 ], [ 6, -1 ] ], [ [ 7, -3 ], [ 12, -5 ] ] 
  ]
-gap> G:=Gamma0(7);        
-<congruence subgroup Gamma_0(7) in SL_2(Z)>
+gap> G:=CongruenceSubgroupGamma0(7);        
+<congruence subgroup CongruenceSubgroupGamma_0(7) in SL_2(Z)>
 gap> FareySymbol(G);
 [ infinity, 0, 1/2, 1, infinity ]
 [ 1, "odd", "odd", 1 ]
 gap> GeneratorsOfGroup(G);
 [ [ [ 1, 1 ], [ 0, 1 ] ], [ [ 2, -1 ], [ 7, -3 ] ], [ [ 4, -3 ], [ 7, -5 ] ] ]
-gap> G:=Gamma0(9);        
-<congruence subgroup Gamma_0(9) in SL_2(Z)>
+gap> G:=CongruenceSubgroupGamma0(9);        
+<congruence subgroup CongruenceSubgroupGamma_0(9) in SL_2(Z)>
 gap> FareySymbol(G);
 [ infinity, 0, 1/3, 1/2, 2/3, 1, infinity ]
 [ 1, 2, 2, 3, 3, 1 ]
 gap> GeneratorsOfGroup(G);
 [ [ [ 1, 1 ], [ 0, 1 ] ], [ [ 4, -1 ], [ 9, -2 ] ], [ [ 7, -4 ], [ 9, -5 ] ] ]
-gap> G:=Gamma0(10);       
-<congruence subgroup Gamma_0(10) in SL_2(Z)>
+gap> G:=CongruenceSubgroupGamma0(10);       
+<congruence subgroup CongruenceSubgroupGamma_0(10) in SL_2(Z)>
 gap> FareySymbol(G);
 [ infinity, 0, 1/3, 2/5, 1/2, 3/5, 2/3, 1, infinity ]
 [ 1, "even", 3, 2, 2, 3, "even", 1 ]
@@ -391,8 +398,8 @@ gap> GeneratorsOfGroup(G);
 [ [ [ 1, 1 ], [ 0, 1 ] ], [ [ 3, -1 ], [ 10, -3 ] ], 
   [ [ 19, -7 ], [ 30, -11 ] ], [ [ 11, -5 ], [ 20, -9 ] ], 
   [ [ 7, -5 ], [ 10, -7 ] ] ]
-gap> G:=Gamma0(13);       
-<congruence subgroup Gamma_0(13) in SL_2(Z)>
+gap> G:=CongruenceSubgroupGamma0(13);       
+<congruence subgroup CongruenceSubgroupGamma_0(13) in SL_2(Z)>
 gap> FareySymbol(G);
 [ infinity, 0, 1/3, 1/2, 2/3, 1, infinity ]
 [ 1, "odd", "even", "even", "odd", 1 ]
@@ -400,8 +407,8 @@ gap> GeneratorsOfGroup(G);
 [ [ [ 1, 1 ], [ 0, 1 ] ], [ [ 3, -1 ], [ 13, -4 ] ], 
   [ [ 5, -2 ], [ 13, -5 ] ], [ [ 8, -5 ], [ 13, -8 ] ],
   [ [ 9, -7 ], [ 13, -10 ] ] ]
-gap> G:=Gamma0(18);       
-<congruence subgroup Gamma_0(18) in SL_2(Z)>
+gap> G:=CongruenceSubgroupGamma0(18);       
+<congruence subgroup CongruenceSubgroupGamma_0(18) in SL_2(Z)>
 gap> FareySymbol(G);
 [ infinity, 0, 1/6, 1/5, 2/9, 1/4, 1/3, 1/2, 2/3, 3/4, 7/9, 4/5, 5/6, 1, 
   infinity ]
@@ -411,8 +418,8 @@ gap> GeneratorsOfGroup(G);
   [ [ 71, -15 ], [ 90, -19 ] ], [ [ 55, -13 ], [ 72, -17 ] ], 
   [ [ 7, -2 ], [ 18, -5 ] ], [ [ 13, -8 ], [ 18, -11 ] ], 
   [ [ 31, -25 ], [ 36, -29 ] ] ]
-gap> G:=Gamma0(25);       
-<congruence subgroup Gamma_0(25) in SL_2(Z)>
+gap> G:=CongruenceSubgroupGamma0(25);       
+<congruence subgroup CongruenceSubgroupGamma_0(25) in SL_2(Z)>
 gap> FareySymbol(G);
 [ infinity, 0, 1/5, 1/4, 1/3, 2/5, 1/2, 3/5, 2/3, 3/4, 4/5, 1, infinity ]
 [ 1, 2, 2, "even", 3, 3, 4, 4, "even", 5, 5, 1 ]
@@ -421,7 +428,7 @@ gap> GeneratorsOfGroup(G);
   [ [ 7, -2 ], [ 25, -7 ] ], [ [ 11, -4 ], [ 25, -9 ] ], 
   [ [ 16, -9 ], [ 25, -14 ] ], [ [ 18, -13 ], [ 25, -18 ] ], 
   [ [ 21, -16 ], [ 25, -19 ] ] ]
-gap> G:=IntersectionOfCongruenceSubgroups(PrincipalCongruenceSubgroup(2),Gamma0(4));      
+gap> G:=IntersectionOfCongruenceSubgroups(PrincipalCongruenceSubgroup(2),CongruenceSubgroupGamma0(4));      
 <intersection of congruence subgroups of resulting level 4 in SL_2(Z)>
 gap> FareySymbol(G);
 [ infinity, 0, 1/2, 1, 3/2, 2, infinity ]
@@ -429,7 +436,7 @@ gap> FareySymbol(G);
 gap> GeneratorsOfGroup(G);
 #I  Using the Congruence package for GeneratorsOfGroup ...
 [ [ [ 1, 2 ], [ 0, 1 ] ], [ [ 7, -2 ], [ 4, -1 ] ], [ [ 5, -4 ], [ 4, -3 ] ] ]
-gap> G:=IntersectionOfCongruenceSubgroups(PrincipalCongruenceSubgroup(2),Gamma0(3));
+gap> G:=IntersectionOfCongruenceSubgroups(PrincipalCongruenceSubgroup(2),CongruenceSubgroupGamma0(3));
 <intersection of congruence subgroups of resulting level 6 in SL_2(Z)>
 gap> FareySymbol(G);
 [ infinity, 0, 1/3, 1/2, 2/3, 1, 4/3, 3/2, 5/3, 2, infinity ]
@@ -439,7 +446,7 @@ gap> GeneratorsOfGroup(G);
 [ [ [ 1, 2 ], [ 0, 1 ] ], [ [ 11, -2 ], [ 6, -1 ] ], 
   [ [ 19, -8 ], [ 12, -5 ] ], [ [ 17, -10 ], [ 12, -7 ] ], 
   [ [ 7, -6 ], [ 6, -5 ] ] ]
-gap> G16:=Gamma0(16);;
+gap> G16:=CongruenceSubgroupGamma0(16);;
 gap> FS16:=FareySymbol(G16);;
 gap> gens:=GeneratorsByFareySymbol(FS16);;
 gap> glue_list:=gluing_matrices(FS16);    

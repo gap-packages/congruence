@@ -7,7 +7,7 @@
 <Index Key="IsFareySymbolDefaultRep"><C>IsFareySymbolDefaultRep</C></Index>
 
 A Farey symbol is a compact and useful way to represent a subgroup 
-of finite index in <M>SL_2(\Z)</M> from which one can deduce 
+of finite index in <M>SL_2(&ZZ;)</M> from which one can deduce 
 independent generators for this subgroup. It consists of two 
 components, namely a so-called generalised Farey sequence 
 (<A>gfs</A>) and an ordered list of labels, giving additional 

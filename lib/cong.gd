@@ -43,46 +43,57 @@ DeclareProperty( "IsPrincipalCongruenceSubgroup", IsCongruenceSubgroup );
 
 #############################################################################
 ##
-## IsGamma0( <G> )
+## IsCongruenceSubgroupGamma0( <G> )
 ## 
-## The congruence subgroup Gamma0(N) consists of all matrices
+## The congruence subgroup CongruenceSubgroupGamma0(N) consists of all matrices
 ## of the form   [   *    * ]
 ##               [   N    * ]
 ##
-DeclareProperty( "IsGamma0", IsCongruenceSubgroup );
+DeclareProperty( "IsCongruenceSubgroupGamma0", IsCongruenceSubgroup );
 
 
 #############################################################################
 ##
-## IsGammaUpper0( <G> )
+## IsCongruenceSubgroupGammaUpper0( <G> )
 ## 
-## The congruence subgroup GammaUpper0(N) consists of all matrices
+## The congruence subgroup CongruenceSubgroupGammaUpper0(N) consists of all matrices
 ## of the form   [   *    N ]
 ##               [   *    * ]
 ##
-DeclareProperty( "IsGammaUpper0", IsCongruenceSubgroup );
+DeclareProperty( "IsCongruenceSubgroupGammaUpper0", IsCongruenceSubgroup );
 
 
 #############################################################################
 ##
-## IsGamma1( <G> )
+## IsCongruenceSubgroupGamma1( <G> )
 ## 
-## The congruence subgroup Gamma1(N) consists of all matrices
+## The congruence subgroup CongruenceSubgroupGamma1(N) consists of all matrices
 ## of the form   [ 1+N    * ]
 ##               [   N  1+N ]
 ##
-DeclareProperty( "IsGamma1", IsCongruenceSubgroup );
+DeclareProperty( "IsCongruenceSubgroupGamma1", IsCongruenceSubgroup );
 
 
 #############################################################################
 ##
-## IsGammaUpper1( <G> )
+## IsCongruenceSubgroupGammaUpper1( <G> )
 ## 
-## The congruence subgroup GammaUpper1(N) consists of all matrices
+## The congruence subgroup CongruenceSubgroupGammaUpper1(N) consists of all matrices
 ## of the form   [ 1+N    N ]
 ##               [   *  1+N ]
 ##
-DeclareProperty( "IsGammaUpper1", IsCongruenceSubgroup );
+DeclareProperty( "IsCongruenceSubgroupGammaUpper1", IsCongruenceSubgroup );
+
+
+#############################################################################
+##
+## IsCongruenceSubgroupGammaMN( <G> )
+## 
+## The congruence subgroup CongruenceSubgroupGammaMN(M,N) consists of all matrices 
+## of the form   [ 1+M    M ]
+##               [   N  1+N ]
+##
+DeclareProperty( "IsCongruenceSubgroupGammaMN", IsCongruenceSubgroup );
 
 
 #############################################################################
@@ -91,7 +102,9 @@ DeclareProperty( "IsGammaUpper1", IsCongruenceSubgroup );
 ## 
 ## This property will be uses for subgroups of SL_2(Z) that were constructed
 ## as intersection of a finite number of congruence subgroups of types 
-## Gamma, Gamma_0, Gamma^0, Gamma_1 and Gamma^1
+## CongruenceSubgroupGamma, CongruenceSubgroupGamma_0, 
+## CongruenceSubgroupGamma^0, CongruenceSubgroupGamma_1,
+## CongruenceSubgroupGamma^1 and CongruenceSubgroupGammaMN
 ##
 DeclareProperty( "IsIntersectionOfCongruenceSubgroups", IsCongruenceSubgroup );
 
@@ -99,18 +112,20 @@ DeclareProperty( "IsIntersectionOfCongruenceSubgroups", IsCongruenceSubgroup );
 #############################################################################
 ##
 ## PrincipalCongruenceSubgroup( n )
-## Gamma0( n )
-## GammaUpper0( n )
-## Gamma1( n )
-## GammaUpper1( n )
+## CongruenceSubgroupGamma0( n )
+## CongruenceSubgroupGammaUpper0( n )
+## CongruenceSubgroupGamma1( n )
+## CongruenceSubgroupGammaUpper1( n )
+## CongruenceSubgroupGammaMN( m, n )
 ##
 ## Declaration of global functions - constructors of congruence subgroups
 ##
 DeclareGlobalFunction("PrincipalCongruenceSubgroup");
-DeclareGlobalFunction("Gamma0");
-DeclareGlobalFunction("GammaUpper0");
-DeclareGlobalFunction("Gamma1");
-DeclareGlobalFunction("GammaUpper1");
+DeclareGlobalFunction("CongruenceSubgroupGamma0");
+DeclareGlobalFunction("CongruenceSubgroupGammaUpper0");
+DeclareGlobalFunction("CongruenceSubgroupGamma1");
+DeclareGlobalFunction("CongruenceSubgroupGammaUpper1");
+DeclareGlobalFunction("CongruenceSubgroupGammaMN");
 
 
 #############################################################################
@@ -121,6 +136,16 @@ DeclareGlobalFunction("GammaUpper1");
 ## number N such that G contains the principal congruence subgroup of level N
 ##
 DeclareAttribute( "LevelOfCongruenceSubgroup", IsCongruenceSubgroup );
+
+
+#############################################################################
+##
+## LevelOfCongruenceSubgroupGammaMN( <G> )
+##
+## For the congruence subgroup GammaMN we need to store additionally
+## two integers determining the 1st and 2nd lines of the matrix
+##
+DeclareAttribute( "LevelOfCongruenceSubgroupGammaMN", IsCongruenceSubgroup );
 
 
 #############################################################################
@@ -141,8 +166,8 @@ DeclareAttribute( "IndexInSL2Z", IsCongruenceSubgroup );
 ## IntersectionOfCongruenceSubgroups( <list of subgroups> )
 ##
 ## We declare special type of congruence subgroups that are intersections of
-## a finite number congruence subgroups of types Gamma, Gamma_0, Gamma^0, 
-## Gamma_1 and Gamma^1. The list of subgroups defining this intersection will
+## a finite number congruence subgroups of types CongruenceSubgroupGamma, CongruenceSubgroupGamma_0, CongruenceSubgroupGamma^0, 
+## CongruenceSubgroupGamma_1 and CongruenceSubgroupGamma^1. The list of subgroups defining this intersection will
 ## be stored in the attribute "DefiningCongruenceSubgroups" 
 ##
 DeclareGlobalFunction("IntersectionOfCongruenceSubgroups");
