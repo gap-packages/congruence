@@ -14,12 +14,18 @@ SetPackageInfo( rec(
 PackageName    := "Congruence",
 Subtitle       := "Congruence subgroups of SL(2,Integers)",
 Version        := "1.0",
-Date           := "29/05/2008",
-ArchiveURL := "http://www.cs.st-andrews.ac.uk/~alexk/congruence/congruence-1.0",
-ArchiveFormats := ".tar.gz .tar.bz2 -win.zip",
+Date           := "03/08/2012",
+##  <#GAPDoc Label="PKGVERSIONDATA">
+##  <!ENTITY VERSION "1.0">
+##  <!ENTITY RELEASEDATE "3 August 2012">
+##  <!ENTITY RELEASEYEAR "2012">
+##  <#/GAPDoc>
 
-#TextFiles := ["init.g", ......],
-#BinaryFiles := ["doc/manual.dvi", ......],
+PackageWWWHome := "http://www.cs.st-andrews.ac.uk/~alexk/congruence/",
+
+ArchiveURL := Concatenation( ~.PackageWWWHome, "congruence-", ~.Version ),
+ArchiveFormats := ".tar.gz",
+
 
 Persons := [
   rec(
@@ -55,7 +61,7 @@ Persons := [
     FirstNames    := "Alexander",
     IsAuthor      := true,
     IsMaintainer  := true,
-    Email         := "konovalov@member.ams.org",
+    Email         := "alexk@mcs.st-andrews.ac.uk",
     WWWHome       := "http://www.cs.st-andrews.ac.uk/~alexk/",
     PostalAddress := Concatenation( [
                      "School of Computer Science\n",
@@ -86,10 +92,12 @@ Status := "dev",
 #CommunicatedBy := "",
 #AcceptDate := "",
 
-README_URL := "http://www.cs.st-andrews.ac.uk/~alexk/congruence/README.congruence",
-PackageInfoURL := "http://www.cs.st-andrews.ac.uk/~alexk/congruence/PackageInfo.g",
+README_URL := 
+  Concatenation( ~.PackageWWWHome, "README" ),
+PackageInfoURL := 
+  Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
+  
 AbstractHTML := "The <span class=\"pkgname\">Congruence </span> package ...",
-PackageWWWHome := "http://www.cs.st-andrews.ac.uk/~alexk/congruence.htm",
                   
 PackageDoc := rec(
   BookName := "Congruence",
@@ -102,15 +110,14 @@ PackageDoc := rec(
 ),
 
 Dependencies := rec(
-  GAP := ">=4.4",
-  NeededOtherPackages := [ ["GAPDoc", ">= 1.0"] ],
+  GAP := ">=4.5",
+  NeededOtherPackages := [ ["GAPDoc", ">= 1.5.1"] ],
   SuggestedOtherPackages := [],
   ExternalConditions := []
 ),
 
 AvailabilityTest := ReturnTrue,
-Autoload := false,
-TestFile := "tst/cong.tst",
+TestFile := "tst/testall.g",
 
 Keywords := ["congruence subgroup", "Farey symbol"]
 ));
