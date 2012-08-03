@@ -1,17 +1,16 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-
-<!-- $Id$ -->
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!DOCTYPE Book SYSTEM "gapdoc.dtd"
-
-[<!ENTITY Congruence "<Package>Congruence</Package>">] >
-
+    [ <!ENTITY Congruence "<Package>Congruence</Package>">
+      <#Include Label="PKGVERSIONDATA">      
+    ] >
+    
 <Book Name="Congruence">
 
   <TitlePage>
     <Title>&Congruence;</Title>
     <Subtitle>Congruence subgroups of <M>SL_2(&ZZ;)</M></Subtitle>
-    <Version>Version 1.0</Version>
+    <Version>Version &VERSION;</Version>
 
     <Author>Ann Dooms
       <Email>andooms@vub.ac.be</Email>
@@ -32,7 +31,7 @@
     </Author>
 
     <Author>Alexander Konovalov
-      <Email>konovalov@member.ams.org</Email>
+      <Email>alexk@mcs.st-andrews.ac.uk</Email>
       <Homepage>http://www.cs.st-andrews.ac.uk/&tilde;alexk/</Homepage>
       <Address>
         School of Computer Science<Br/>
@@ -53,7 +52,7 @@
       </Address>
     </Author>
 
-    <Date>May 2008</Date>
+  <Date>&RELEASEDATE;</Date>
 
     <Abstract>
       <Index Key="Congruence package">&Congruence; package</Index>
@@ -62,7 +61,7 @@
     </Abstract>
 
     <Copyright>
-      &copyright; 2008 by Ann Dooms, Eric Jespers and Alexander Konovalov.<P/>
+      &copyright; 2006-&RELEASEYEAR; by Ann Dooms, Eric Jespers and Alexander Konovalov.<P/>
 
       &Congruence; is free software; you can redistribute it and/or modify it
       under the terms of the GNU General Public License as published by
@@ -77,8 +76,8 @@
       &Congruence;, please cite it in the following form:<P/>
 
       A. Dooms, E. Jespers and A. Konovalov.
-      <E>Congruence --- Congruence subgroups of <M>SL_2(&ZZ;)</M>, Version 1.0;</E>
-      2008 (<URL>http://www.cs.st-andrews.ac.uk/&tilde;alexk/congruence.htm</URL>).
+      <E>Congruence --- Congruence subgroups of <M>SL_2(&ZZ;)</M>, Version &VERSION;;</E>
+      &RELEASEYEAR; (<URL>http://www.cs.st-andrews.ac.uk/&tilde;alexk/congruence.htm</URL>).
     </Copyright>
 
     <Acknowledgements>
