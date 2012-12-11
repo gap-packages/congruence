@@ -1,6 +1,6 @@
 #############################################################################
 #
-# ann.g                  The Congruence package                     Ann Dooms
+# units.g                  The Congruence package                   Ann Dooms
 #                                                                Eric Jespers
 #                                                         Alexander Konovalov
 #

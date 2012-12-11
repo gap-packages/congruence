@@ -4,12 +4,13 @@
 #W                                                               Eric Jespers
 #W                                                        Alexander Konovalov
 ##
-#H $Id$
 ##
 #############################################################################
 ##
 ## This file contains implementations of methods to construct random elements
-## of congruence subgroups CongruenceSubgroupGamma, CongruenceSubgroupGamma0, CongruenceSubgroupGammaUpper0, CongruenceSubgroupGamma1, CongruenceSubgroupGammaUpper1.
+## of congruence subgroups CongruenceSubgroupGamma, CongruenceSubgroupGamma0, 
+## CongruenceSubgroupGammaUpper0, CongruenceSubgroupGamma1 and
+## CongruenceSubgroupGammaUpper1.
 ## The idea is to select two random entries a and b in the same row or column
 ## of the matrix, such that a and b will satisfy the requirements arising 
 ## from the congruence subgroup. For example, for the principal congruence 
