@@ -9,8 +9,6 @@ testfiles := [
 "congruence02.tst",
 "congruence03.tst",
 "congruence04.tst",
-"congruence05.tst",
-"congruence06.tst"
 ];
 
 testresult:=true;
