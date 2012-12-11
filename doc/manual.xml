@@ -61,7 +61,8 @@
     </Abstract>
 
     <Copyright>
-      &copyright; 2006-&RELEASEYEAR; by Ann Dooms, Eric Jespers and Alexander Konovalov.<P/>
+      &copyright; 2006-&RELEASEYEAR; by Ann Dooms, Eric Jespers, 
+                  Alexander Konovalov and Helena Verrill.<P/>
 
       &Congruence; is free software; you can redistribute it and/or modify it
       under the terms of the GNU General Public License as published by
@@ -75,13 +76,16 @@
       If you publish a result which was partially obtained with the usage of
       &Congruence;, please cite it in the following form:<P/>
 
-      A. Dooms, E. Jespers and A. Konovalov.
+      A. Dooms, E. Jespers, A. Konovalov and H. Verrill.
       <E>Congruence --- Congruence subgroups of <M>SL_2(&ZZ;)</M>, Version &VERSION;;</E>
-      &RELEASEYEAR; (<URL>http://www.cs.st-andrews.ac.uk/&tilde;alexk/congruence.htm</URL>).
+      &RELEASEYEAR; (<URL>http://www.cs.st-andrews.ac.uk/&tilde;alexk/congruence/</URL>).
     </Copyright>
 
     <Acknowledgements>
-      We are very grateful to ...  LLT ... Francqui Schtichting
+      We are very grateful to Mong-Lung Lang, Chong-Hai Lim and Ser Peow Tan
+      for their comments provided while implementing the algorithm from 
+      <Cite Key="LLT-Algorithm" />, and to Francqui Stichting (Belgium)
+      for the support of the third author.
     </Acknowledgements>
 
   </TitlePage>
@@ -93,7 +97,6 @@
     <#Include SYSTEM "cong.xml">
     <#Include SYSTEM "farey.xml">
     <#Include SYSTEM "gens.xml">
-    <#Include SYSTEM "grprings.xml">
     <#Include SYSTEM "service.xml">
   </Body>
 
