@@ -2,7 +2,6 @@
 ##
 #W factor.gi               The Congruence package              Helena Verrill
 ##
-#H $Id$
 ##
 #############################################################################
 

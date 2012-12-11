@@ -5,7 +5,6 @@
 #W                                                        Alexander Konovalov
 #W                                                             Helena Verrill
 ##
-#H $Id$
 ##
 #############################################################################
 
@@ -13,11 +12,11 @@ SetPackageInfo( rec(
 
 PackageName    := "Congruence",
 Subtitle       := "Congruence subgroups of SL(2,Integers)",
-Version        := "1.0",
-Date           := "03/08/2012",
+Version        := "1.0.1",
+Date           := "12/12/2012",
 ##  <#GAPDoc Label="PKGVERSIONDATA">
-##  <!ENTITY VERSION "1.0">
-##  <!ENTITY RELEASEDATE "3 August 2012">
+##  <!ENTITY VERSION "1.0.1">
+##  <!ENTITY RELEASEDATE "12 December 2012">
 ##  <!ENTITY RELEASEYEAR "2012">
 ##  <#/GAPDoc>
 
