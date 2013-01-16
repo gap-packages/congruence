@@ -4,11 +4,19 @@
 <Section Label="IntroAims">
 <Heading>General aims of &Congruence; package</Heading>
 
-The &GAP; package &Congruence; ...
-<Cite Key="LLT-Hecke" />
-<Cite Key="LLT-Algorithm" />
-<Cite Key="CLT" />
-<Cite Key="Kulkarni" />
+<Index Key="IsCongruenceSubgroup"><C>IsCongruenceSubgroup</C></Index>
+The &GAP; package &Congruence; provides functions to construct several
+types of canonical congruence subgroups in <M>SL_2(&ZZ;)</M>, and also 
+intersections of a finite number of such subgroups. 
+<P/>
+
+Furthermore, it implements the algorithm for generating Farey symbols for
+congruence subgroups and using them to produce a system of independent
+generators for these subgroups. 
+<P/>
+
+For the theoretical backround, we refer to <Cite Key="LLT-Hecke" />,
+<Cite Key="LLT-Algorithm" />, <Cite Key="CLT" /> and <Cite Key="Kulkarni" />.
 
 
 </Section>
@@ -18,30 +26,29 @@ The &GAP; package &Congruence; ...
 <Section Label="IntroInstall">
 <Heading>Installation and system requirements</Heading>
 
-&Congruence; does not use external binaries and, therefore, works without
-restrictions on the type of the operating system. It is designed for &GAP;4.4  
-and no compatibility with previous releases of &GAP;4 is guaranteed. <P/>
+&Congruence; is distributed in standard formats (<File>tar.gz</File>, 
+<File>tar.bz2</File>, <File>-win.zip</File>) and can be obtained from 
+<URL>http://www.cs.st-andrews.ac.uk/~alexk/congruence/</URL>. 
+<P/>
 
-To use the &Congruence; online help it is necessary to install 
-the &GAP;4 package &GAPDoc; by Frank L\"ubeck and Max Neunh\"offer, 
-which is available from the &GAP; site or from 
-<URL>http://www.math.rwth-aachen.de/&tilde;Frank.Luebeck/GAPDoc/</URL>.<P/> 
+&Congruence; does not  use  external  binaries and,  therefore,  works  without 
+restrictions on the operating system.  
+It requires at least version  &GAP;&nbsp;4.5, and no compatibility with 
+previous releases of &GAP;&nbsp;4 is guaranteed.
+<P/>
 
-&Congruence; is distributed in standard formats
-(<File>zoo</File>, <File>tar.gz</File>, <File>tar.bz2</File>, 
-<File>-win.zip</File>) and can be obtained from 
-<URL>http://www.cs.st-andrews.ac.uk/&tilde;alexk/congruence.htm</URL>.
-To unpack the archive <File>congruence-1.0.zoo</File> you need the 
-program <File>unzoo</File>, which can be obtained from the &GAP; 
-homepage <URL>http://www.gap-system.org/</URL> (see section 
-`Distribution'). To install &Congruence;, copy this archive into 
-the <File>pkg</File> subdirectory of your &GAP;4.4 installation. 
-The subdirectory <File>congruence</File> will be created in the 
-<File>pkg</File> directory after the following command: <P/>
-    
-<C>unzoo -x congruence-1.0.zoo</C>
+Installation of the package is standard and follows the guidelines from the 
+&GAP; manual (see <Ref Sect="Installing a GAP Package" BookName="ref"/>.  
+After the package is installed, you can start &GAP; and load 
+the &Congruence; package using the command:
 
-Installation using other archive formats is performed in a similar way.
+<Log>
+<![CDATA[
+gap> LoadPackage("congruence");
+]]>
+</Log>
+
+
 
 </Section>
 

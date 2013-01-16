@@ -12,36 +12,33 @@
                            The Congruence Package
                            ----------------------
 
-The package ...
+The GAP package Congruence  provides functions to construct several types of 
+canonical  congruence  subgroups  in  SL_2(Z),  and  also intersections of a 
+finite number of such subgroups.
 
+Furthermore,  it implements  the algorithm  for generating  Farey symbols for 
+congruence  subgroups  and  using  them  to produce  a system  of independent 
+generators for these subgroups.
 
 
 Installation and system requirements:
 -------------------------------------
 
+Congruence is distributed in standard formats (tar.gz, tar.bz2, -win.zip) and 
+can be obtained from http://www.cs.st-andrews.ac.uk/~alexk/congruence/. 
+
 Congruence does not  use  external  binaries and,  therefore,  works  without 
-restrictions on  the type  of the operating system. It is designed for GAP4.4 
-and no compatibility with previous releases of GAP4 is guaranteed.
+restrictions on the operating system.  It requires at least version  GAP 4.5, 
+and no compatibility with previous releases of GAP 4 is guaranteed.
 
-To use the Congruence online help it is necessary to install the GAP4 package 
-GAPDoc by Frank LŸbeck  and  Max Neunhšffer,  which is available from the GAP 
-site or from http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc/.
-
-Congruence is distributed in standard formats (zoo, tar.gz, tar.bz2,-win.zip) 
-and can be obtained from http://www.cs.st-andrews.ac.uk/~alexk/congruence.htm
-(to unpack the archive congruence-1.0.zoo you need  the program  unzoo, which 
-can be obtained from the GAP homepage http://www.gap-system.org, see  section 
-`Distribution').  To install  Congruence, copy  this  archive  into the 'pkg' 
-subdirectory of your GAP4.4 installation.  The  subdirectory  congruence will 
-be  created in the pkg directory after the following command:
-
-unzoo -x congruence-1.0.zoo
-
-Now you can start GAP and load the Congruence package using the command:
+Installation of the package is standard  and follows  the guidelines from the 
+"GAP Packages" chapter of the GAP Reference manual (to read it, you may enter 
+`?Installing a GAP Package' in GAP).  After the package is installed, you can 
+start GAP and load the Congruence package using the command:
 
 gap> LoadPackage("congruence");
 
 
 Ann Dooms, Eric Jespers, Alexander Konovalov, Helena Verrill
 
-May 2008
+January 2013

@@ -12,12 +12,12 @@ SetPackageInfo( rec(
 
 PackageName    := "Congruence",
 Subtitle       := "Congruence subgroups of SL(2,Integers)",
-Version        := "1.0.1",
-Date           := "12/12/2012",
+Version        := "1.0.2",
+Date           := "16/01/2013",
 ##  <#GAPDoc Label="PKGVERSIONDATA">
-##  <!ENTITY VERSION "1.0.1">
-##  <!ENTITY RELEASEDATE "12 December 2012">
-##  <!ENTITY RELEASEYEAR "2012">
+##  <!ENTITY VERSION "1.0.2">
+##  <!ENTITY RELEASEDATE "16 January 2013">
+##  <!ENTITY RELEASEYEAR "2013">
 ##  <#/GAPDoc>
 
 PackageWWWHome := "http://www.cs.st-andrews.ac.uk/~alexk/congruence/",
@@ -96,7 +96,7 @@ README_URL :=
 PackageInfoURL := 
   Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
   
-AbstractHTML := "The <span class=\"pkgname\">Congruence </span> package ...",
+AbstractHTML := "The <span class=\"pkgname\">Congruence </span> package provides functions to construct several types of canonical congruence subgroups in SL_2(Z), and also intersections of a finite number of such subgroups. Furthermore, it implements the algorithm for generating Farey symbols for congruence subgroups and using them to produce a system of independent generators for these subgroups",
                   
 PackageDoc := rec(
   BookName := "Congruence",

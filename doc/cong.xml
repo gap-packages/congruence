@@ -14,11 +14,11 @@ canonical congruence subgroups).
 
 To start to work with the package, you need first to load it as follows:
 
-<Example>
+<Log>
 <![CDATA[
 gap> LoadPackage("congruence");
 -----------------------------------------------------------------------------
-Loading  Congruence 1.0 (Congruence subgroups of SL(2,Integers))
+Loading  Congruence 1.0.2 (Congruence subgroups of SL(2,Integers))
 by Ann Dooms (http://homepages.vub.ac.be/~andooms),
    Eric Jespers (http://homepages.vub.ac.be/~efjesper),
    Alexander Konovalov (http://www.cs.st-andrews.ac.uk/~alexk/), and
@@ -26,7 +26,7 @@ by Ann Dooms (http://homepages.vub.ac.be/~andooms),
 -----------------------------------------------------------------------------
 true
 ]]>
-</Example>
+</Log>
  
 <Section Label="CongConstr">
 <Heading>Construction of congruence subgroups</Heading>
@@ -464,7 +464,7 @@ gap> DefiningCongruenceSubgroups(J);
 <!-- ********************************************************* -->
 
 <Section Label="CongMethods">
-<Heading>Operations over congruence subgroups</Heading>
+<Heading>Operations for congruence subgroups</Heading>
 
 &Congruence; installs several special methods for operations already 
 available in &GAP;.
@@ -486,10 +486,10 @@ available in &GAP;.
 
 <Example>
 <![CDATA[
-gap> Random(G_2);
-[ [ 21, 10 ], [ 2, 1 ] ]
-gap> Random(G_8,2);
-[ [ 1, -16 ], [ 0, 1 ] ]
+gap> Random(G_2) in G_2;
+true
+gap> Random(G_8,2) in G_8;
+true
 ]]>
 </Example>
 
