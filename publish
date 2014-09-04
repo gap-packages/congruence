@@ -2,7 +2,7 @@
 #############################################################################
 
 export PKGNAME="congruence"
-export PKGVERSION="1.0.3"
+export PKGVERSION="1.1.0"
 export TOOLPATH="/Users/alexk/HGREPS/gap/dev/DistributionUpdate/dist45"
 
 cp ${TOOLPATH}/classifyfiles.py ../
