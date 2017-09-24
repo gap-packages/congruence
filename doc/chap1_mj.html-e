@@ -55,7 +55,7 @@
 
 <p><strong class="pkg">Congruence</strong> does not use external binaries and, therefore, works without restrictions on the operating system. It requires at least version <strong class="pkg">GAP</strong> 4.5, and no compatibility with previous releases of <strong class="pkg">GAP</strong> 4 is guaranteed.</p>
 
-<p>Installation of the package is standard and follows the guidelines from the <strong class="pkg">GAP</strong> manual (see <a href="https://www.gap-system.org/Manuals/doc/ref/chap76_mj.html#X82473E4B8756C6CD"><span class="RefLink">Reference: Installing a GAP Package</span></a>. After the package is installed, you can start <strong class="pkg">GAP</strong> and load the <strong class="pkg">Congruence</strong> package using the command:</p>
+<p>Installation of the package is standard and follows the guidelines from the <strong class="pkg">GAP</strong> manual (see <a href="../../../doc/ref/chap76_mj.html#X82473E4B8756C6CD"><span class="RefLink">Reference: Installing a GAP Package</span></a>. After the package is installed, you can start <strong class="pkg">GAP</strong> and load the <strong class="pkg">Congruence</strong> package using the command:</p>
 
 
 <div class="example"><pre>

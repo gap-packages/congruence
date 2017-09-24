@@ -12,20 +12,20 @@ SetPackageInfo( rec(
 
 PackageName    := "Congruence",
 Subtitle       := "Congruence subgroups of SL(2,Integers)",
-Version        := "1.1.1",
-Date           := "28/10/2014",
+Version        := "1.2.0",
+Date           := "24/09/2017",
 ##  <#GAPDoc Label="PKGVERSIONDATA">
-##  <!ENTITY VERSION "1.1.1">
-##  <!ENTITY RELEASEDATE "28 October 2014">
-##  <!ENTITY RELEASEYEAR "2014">
+##  <!ENTITY VERSION "1.2.0">
+##  <!ENTITY RELEASEDATE "24 September 2017">
+##  <!ENTITY RELEASEYEAR "2017">
 ##  <#/GAPDoc>
 
 SourceRepository := rec(
     Type := "git",
-    URL := Concatenation( "https://github.com/gap-packages/", LowercaseString(~.PackageName) ),
+    URL := Concatenation( "https://github.com/alex-konovalov/", LowercaseString(~.PackageName) ),
 ),
 IssueTrackerURL := Concatenation( ~.SourceRepository.URL, "/issues" ),
-PackageWWWHome  := Concatenation( "https://gap-packages.github.io/", LowercaseString(~.PackageName) ),
+PackageWWWHome  := Concatenation( "https://alex-konovalov.github.io/", LowercaseString(~.PackageName) ),
 README_URL      := Concatenation( ~.PackageWWWHome, "/README.md" ),
 PackageInfoURL  := Concatenation( ~.PackageWWWHome, "/PackageInfo.g" ),
 ArchiveURL      := Concatenation( ~.SourceRepository.URL,
@@ -68,8 +68,8 @@ Persons := [
     FirstNames    := "Alexander",
     IsAuthor      := true,
     IsMaintainer  := true,
-    Email         := "alexk@mcs.st-andrews.ac.uk",
-    WWWHome       := "http://www.cs.st-andrews.ac.uk/~alexk/",
+    Email         := "alexander.konovalov@st-andrews.ac.uk",
+    WWWHome       := "https://alexk.host.cs.st-andrews.ac.uk",
     PostalAddress := Concatenation( [
                      "School of Computer Science\n",
                      "University of St Andrews\n",
