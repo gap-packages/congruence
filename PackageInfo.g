@@ -1,102 +1,125 @@
 #############################################################################
-##  
-##  Demo PackageInfo.g for the GitHubPagesForGAP
 ##
+#W PackageInfo.g           The Congruence package                   Ann Dooms
+#W                                                               Eric Jespers
+#W                                                        Alexander Konovalov
+#W                                                             Helena Verrill
+##
+##
+#############################################################################
 
 SetPackageInfo( rec(
 
-PackageName := "GitHubPagesForGAP",
+PackageName    := "Congruence",
+Subtitle       := "Congruence subgroups of SL(2,Integers)",
+Version        := "1.1.1",
+Date           := "28/10/2014",
+##  <#GAPDoc Label="PKGVERSIONDATA">
+##  <!ENTITY VERSION "1.1.1">
+##  <!ENTITY RELEASEDATE "28 October 2014">
+##  <!ENTITY RELEASEYEAR "2014">
+##  <#/GAPDoc>
 
-Subtitle := "A GitHub Pages generator for GAP packages",
-Version := "0.2",
-Date := "04/02/2017", # dd/mm/yyyy format
+SourceRepository := rec(
+    Type := "git",
+    URL := Concatenation( "https://github.com/gap-packages/", LowercaseString(~.PackageName) ),
+),
+IssueTrackerURL := Concatenation( ~.SourceRepository.URL, "/issues" ),
+PackageWWWHome  := Concatenation( "https://gap-packages.github.io/", LowercaseString(~.PackageName) ),
+README_URL      := Concatenation( ~.PackageWWWHome, "/README.md" ),
+PackageInfoURL  := Concatenation( ~.PackageWWWHome, "/PackageInfo.g" ),
+ArchiveURL      := Concatenation( ~.SourceRepository.URL,
+                                 "/releases/download/v", ~.Version,
+                                 "/", LowercaseString(~.PackageName), "-", ~.Version ),
+
+ArchiveFormats := ".tar.gz",
 
 Persons := [
   rec(
-    LastName      := "Horn",
-    FirstNames    := "Max",
+    LastName      := "Dooms",
+    FirstNames    := "Ann",
     IsAuthor      := true,
     IsMaintainer  := true,
-    Email         := "max.horn@math.uni-giessen.de",
-    WWWHome       := "http://www.quendi.de/math",
-    PostalAddress := Concatenation(
-                       "AG Algebra\n",
-                       "Mathematisches Institut\n",
-                       "Justus-Liebig-Universität Gießen\n",
-                       "Arndtstraße 2\n",
-                       "35392 Gießen\n",
-                       "Germany" ),
-    Place         := "Gießen",
-    Institution   := "Justus-Liebig-Universität Gießen"
-  ),
-
+    Email         := "andooms@vub.ac.be",
+    WWWHome       := "http://homepages.vub.ac.be/~andooms",
+    PostalAddress := Concatenation( [
+                     "Department of Mathematics\n",
+                     "Vrije Universiteit Brussel\n", 
+                     "Pleinlaan 2, Brussels, B-1050 Belgium" ] ),
+    Place         := "Brussels",
+    Institution   := "Vrije Universiteit Brussel"
+     ),     
   rec(
-    LastName      := "Thor",
-    FirstNames    := "A. U.",
+    LastName      := "Jespers",
+    FirstNames    := "Eric",
     IsAuthor      := true,
     IsMaintainer  := false,
-    #Email         := "author@example.com",
-  ),
-
+    Email         := "efjesper@vub.ac.be",
+    WWWHome       := "http://homepages.vub.ac.be/~efjesper",
+    PostalAddress := Concatenation( [
+                     "Department of Mathematics\n",
+                     "Vrije Universiteit Brussel\n", 
+                     "Pleinlaan 2, Brussels, B-1050 Belgium" ] ),
+    Place         := "Brussels",
+    Institution   := "Vrije Universiteit Brussel"
+     ),
   rec(
-    LastName      := "Itor",
-    FirstNames    := "Jan",
-    IsAuthor      := false,
+    LastName      := "Konovalov",
+    FirstNames    := "Alexander",
+    IsAuthor      := true,
     IsMaintainer  := true,
-    #Email         := "janitor@example.com",
-  ),
+    Email         := "alexk@mcs.st-andrews.ac.uk",
+    WWWHome       := "http://www.cs.st-andrews.ac.uk/~alexk/",
+    PostalAddress := Concatenation( [
+                     "School of Computer Science\n",
+                     "University of St Andrews\n",
+                     "Jack Cole Building, North Haugh,\n",
+                     "St Andrews, Fife, KY16 9SX, Scotland" ] ),
+    Place         := "St Andrews",
+    Institution   := "University of St Andrews"
+     ),
+  rec(    
+    LastName      := "Verrill",
+    FirstNames    := "Helena",
+    IsAuthor      := true,
+    IsMaintainer  := true,
+    Email         := "verrill@math.lsu.edu",
+    WWWHome       := "http://www.math.lsu.edu/~verrill",
+    PostalAddress := Concatenation( [
+                     "Department of Mathematics\n",
+                     "Louisiana State University\n",
+                     "Baton Rouge, Louisiana, 70803-4918\n",
+                     "USA" ] ),
+    Place         := "Baton Rouge",
+    Institution   := "Louisiana State University"
+     )      
 ],
 
-Status := "other",
+Status := "accepted",
+CommunicatedBy := "Graham Ellis (Galway)",
+AcceptDate := "09/2014",
 
-# The following are not strictly necessary in your own PackageInfo.g
-# (in the sense that update.g only looks at the usual fields
-# like PackageWWWHome, ArchiveURL etc.). But they are convenient
-# if you use exactly the scheme for your package website that we propose.
-GithubUser := "gap-system",
-GithubRepository := ~.PackageName,
-GithubWWW := Concatenation("https://github.com/", ~.GithubUser, "/", ~.GithubRepository),
-
-PackageWWWHome := Concatenation("https://", ~.GithubUser, ".github.io/", ~.GithubRepository, "/"),
-README_URL     := Concatenation( ~.PackageWWWHome, "README.md" ),
-PackageInfoURL := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
-# The following assumes you are using the Github releases system. If not, adjust
-# it accordingly.
-ArchiveURL     := Concatenation(~.GithubWWW,
-                    "/releases/download/v", ~.Version, "/",
-                    ~.GithubRepository, "-", ~.Version),
-
-ArchiveFormats := ".tar.gz .tar.bz2",
-
-AbstractHTML := 
-  "This is a pseudo package that contains no actual\
-  <span class=\"pkgname\">GAP</span> code. Instead, it is a template for other\
-  GAP packages that allows to quickly setup GitHub Pages.",
-
+AbstractHTML := "The <span class=\"pkgname\">Congruence </span> package provides functions to construct several types of canonical congruence subgroups in SL_2(Z), and also intersections of a finite number of such subgroups. Furthermore, it implements the algorithm for generating Farey symbols for congruence subgroups and using them to produce a system of independent generators for these subgroups",
+                  
 PackageDoc := rec(
-  BookName  := "GitHubPagesForGAP",
+  BookName := "Congruence",
   ArchiveURLSubset := ["doc"],
   HTMLStart := "doc/chap0.html",
-  PDFFile   := "doc/manual.pdf",
-  SixFile   := "doc/manual.six",
-  LongTitle := "A GitHub Pages generator for GAP packages",
+  PDFFile := "doc/manual.pdf",
+  SixFile := "doc/manual.six",
+  LongTitle := "Congruence subgroups of SL(2,Integers)",
+  Autoload := true
 ),
 
-# The following dependencies are fake and for testing / demo purposes
 Dependencies := rec(
-  GAP := ">=4.8.1",
-  NeededOtherPackages := [
-    ["GAPDoc", ">= 1.2"],
-    ["IO", ">= 4.1"],
-  ],
-  SuggestedOtherPackages := [["orb", ">= 4.2"]],
+  GAP := ">=4.8",
+  NeededOtherPackages := [ ["GAPDoc", ">= 1.5.1"] ],
+  SuggestedOtherPackages := [],
   ExternalConditions := []
 ),
 
 AvailabilityTest := ReturnTrue,
+TestFile := "tst/testall.g",
 
-Keywords := ["GitHub Pages", "GAP"]
-
+Keywords := ["congruence subgroup", "Farey symbol"]
 ));
-
-
