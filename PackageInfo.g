@@ -12,19 +12,27 @@ SetPackageInfo( rec(
 
 PackageName    := "Congruence",
 Subtitle       := "Congruence subgroups of SL(2,Integers)",
-Version        := "1.1.1",
-Date           := "28/10/2014",
+Version        := "1.2.0",
+Date           := "24/09/2017",
 ##  <#GAPDoc Label="PKGVERSIONDATA">
-##  <!ENTITY VERSION "1.1.1">
-##  <!ENTITY RELEASEDATE "28 October 2014">
-##  <!ENTITY RELEASEYEAR "2014">
+##  <!ENTITY VERSION "1.2.0">
+##  <!ENTITY RELEASEDATE "24 September 2017">
+##  <!ENTITY RELEASEYEAR "2017">
 ##  <#/GAPDoc>
 
-PackageWWWHome := "http://www.cs.st-andrews.ac.uk/~alexk/congruence/",
+SourceRepository := rec(
+    Type := "git",
+    URL := Concatenation( "https://github.com/alex-konovalov/", LowercaseString(~.PackageName) ),
+),
+IssueTrackerURL := Concatenation( ~.SourceRepository.URL, "/issues" ),
+PackageWWWHome  := Concatenation( "https://alex-konovalov.github.io/", LowercaseString(~.PackageName) ),
+README_URL      := Concatenation( ~.PackageWWWHome, "/README.md" ),
+PackageInfoURL  := Concatenation( ~.PackageWWWHome, "/PackageInfo.g" ),
+ArchiveURL      := Concatenation( ~.SourceRepository.URL,
+                                 "/releases/download/v", ~.Version,
+                                 "/", LowercaseString(~.PackageName), "-", ~.Version ),
 
-ArchiveURL := Concatenation( ~.PackageWWWHome, "congruence-", ~.Version ),
 ArchiveFormats := ".tar.gz",
-
 
 Persons := [
   rec(
@@ -60,8 +68,8 @@ Persons := [
     FirstNames    := "Alexander",
     IsAuthor      := true,
     IsMaintainer  := true,
-    Email         := "alexk@mcs.st-andrews.ac.uk",
-    WWWHome       := "http://www.cs.st-andrews.ac.uk/~alexk/",
+    Email         := "alexander.konovalov@st-andrews.ac.uk",
+    WWWHome       := "https://alexk.host.cs.st-andrews.ac.uk",
     PostalAddress := Concatenation( [
                      "School of Computer Science\n",
                      "University of St Andrews\n",
@@ -91,11 +99,6 @@ Status := "accepted",
 CommunicatedBy := "Graham Ellis (Galway)",
 AcceptDate := "09/2014",
 
-README_URL := 
-  Concatenation( ~.PackageWWWHome, "README" ),
-PackageInfoURL := 
-  Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
-  
 AbstractHTML := "The <span class=\"pkgname\">Congruence </span> package provides functions to construct several types of canonical congruence subgroups in SL_2(Z), and also intersections of a finite number of such subgroups. Furthermore, it implements the algorithm for generating Farey symbols for congruence subgroups and using them to produce a system of independent generators for these subgroups",
                   
 PackageDoc := rec(
@@ -109,7 +112,7 @@ PackageDoc := rec(
 ),
 
 Dependencies := rec(
-  GAP := ">=4.7",
+  GAP := ">=4.8",
   NeededOtherPackages := [ ["GAPDoc", ">= 1.5.1"] ],
   SuggestedOtherPackages := [],
   ExternalConditions := []
