@@ -1,6 +1,6 @@
 name: Congruence
-version: 1.2.0
-date: 24/09/2017
+version: 1.2.1
+date: 26/09/2017
 description: |
     Congruence subgroups of SL(2,Integers)
 
@@ -29,13 +29,13 @@ needed-pkgs:
       version: ">= 1.5.1"
       url: "http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc"
 
-www: https://alex-konovalov.github.io/congruence
+www: https://gap-packages.github.io/congruence
 readme: README.md
-packageinfo: https://alex-konovalov.github.io/congruence/PackageInfo.g
+packageinfo: https://gap-packages.github.io/congruence/PackageInfo.g
 
 downloads:
     - name: .tar.gz
-      url: https://github.com/alex-konovalov/congruence/releases/download/v1.2.0/congruence-1.2.0.tar.gz
+      url: https://github.com/gap-packages/congruence/releases/download/v1.2.1/congruence-1.2.1.tar.gz
 
 abstract: |
     The <span class="pkgname">Congruence </span> package provides functions to construct several types of canonical congruence subgroups in SL_2(Z), and also intersections of a finite number of such subgroups. Furthermore, it implements the algorithm for generating Farey symbols for congruence subgroups and using them to produce a system of independent generators for these subgroups

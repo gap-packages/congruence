@@ -12,20 +12,20 @@ SetPackageInfo( rec(
 
 PackageName    := "Congruence",
 Subtitle       := "Congruence subgroups of SL(2,Integers)",
-Version        := "1.2.0",
-Date           := "24/09/2017",
+Version        := "1.2.1",
+Date           := "26/09/2017",
 ##  <#GAPDoc Label="PKGVERSIONDATA">
-##  <!ENTITY VERSION "1.2.0">
-##  <!ENTITY RELEASEDATE "24 September 2017">
+##  <!ENTITY VERSION "1.2.1">
+##  <!ENTITY RELEASEDATE "26 September 2017">
 ##  <!ENTITY RELEASEYEAR "2017">
 ##  <#/GAPDoc>
 
 SourceRepository := rec(
     Type := "git",
-    URL := Concatenation( "https://github.com/alex-konovalov/", LowercaseString(~.PackageName) ),
+    URL := Concatenation( "https://github.com/gap-packages/", LowercaseString(~.PackageName) ),
 ),
 IssueTrackerURL := Concatenation( ~.SourceRepository.URL, "/issues" ),
-PackageWWWHome  := Concatenation( "https://alex-konovalov.github.io/", LowercaseString(~.PackageName) ),
+PackageWWWHome  := Concatenation( "https://gap-packages.github.io/", LowercaseString(~.PackageName) ),
 README_URL      := Concatenation( ~.PackageWWWHome, "/README.md" ),
 PackageInfoURL  := Concatenation( ~.PackageWWWHome, "/PackageInfo.g" ),
 ArchiveURL      := Concatenation( ~.SourceRepository.URL,
