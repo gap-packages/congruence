@@ -9,6 +9,6 @@
 #############################################################################
 
 # read the implementation part of the Congruence package
-ReadPackage( "congruence/lib/cong.gi" );
-ReadPackage( "congruence/lib/farey.gi" );
-ReadPackage( "congruence/lib/random.gi" );
+ReadPackage( "congruence", "lib/cong.gi" );
+ReadPackage( "congruence", "lib/farey.gi" );
+ReadPackage( "congruence", "lib/random.gi" );
