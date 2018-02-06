@@ -59,16 +59,16 @@ generators for <M>G</M>. These matrices are constructed as follows:<P/>
 
 for each even interval <M>[x_i, x_{i+1}]</M>, take the matrix
 <Alt Only="LaTeX">
-  <Display>
   <![CDATA[
+  \[
         A=\left( 
            \begin{array}{rr}
               a_{i+1} b_{i+1} + a_i b_i & -a_i^2 - a_{i+1}^2 \\ 
               b_i^2 + b_{i+1}^2   & -a_{i+1} b_{i+1} - a_i b_i
            \end{array} 
         \right)
+  \]
   ]]>
-  </Display>
 </Alt>
 <Alt Only="Text,HTML"><Verb><![CDATA[
                        A=  [a_{i+1} b_{i+1} + a_i b_i    -a_i^2 - a_{i+1}^2        ]
@@ -78,8 +78,8 @@ for each even interval <M>[x_i, x_{i+1}]</M>, take the matrix
 
 for each odd interval <M>[x_j,x_{j+1}]</M>, take the matrix
 <Alt Only="LaTeX">
-  <Display>
   <![CDATA[
+  \[
         B=\left( 
            \begin{array}{rr}
               a_{j+1} b_{j+1} + a_j b_{j+1} + a_j b_j & -a_j^2 - a_j a_{j+1} -
@@ -87,8 +87,8 @@ a_{j+1}^2 \\ b_j^2 + b_j b_{j+1} + b_{j+1}^2         & -a_{j+1}
 b_{j+1} - a_{j+1} b_j - a_j b_j
            \end{array} 
         \right)
+  \]
   ]]>
-  </Display>
 </Alt>
 <Alt Only="Text,HTML"><Verb><![CDATA[
                         B=  [a_{j+1} b_{j+1} + a_j b_{j+1} + a_j b_j      -a_j^2 - a_j a_{j+1} -a_{j+1}^2]
@@ -99,16 +99,16 @@ b_{j+1} - a_{j+1} b_j - a_j b_j
 for each pair of free intervals <M>[x_k,x_{k+1}]</M> and
 <M>[x_s,x_{s+1}]</M>, take the matrix
 <Alt Only="LaTeX">
-  <Display>
   <![CDATA[
+  \[
         \left( 
            \begin{array}{rr}
               a_{s+1} b_{k+1} + a_s b_k & -a_s a_k - a_{s+1} a_{k+1} \\ b_s b_k
 - b_{s+1} b_{k+1}  & -a_{k+1} b_{s+1} - a_k b_s
            \end{array} 
         \right)
+  \]
   ]]>
-  </Display>
 </Alt>
 <Alt Only="Text,HTML"><Verb><![CDATA[
                         C=  [a_{s+1} b_{k+1} + a_s b_k    -a_s a_k - a_{s+1} a_{k+1}]

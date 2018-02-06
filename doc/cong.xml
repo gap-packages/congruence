@@ -41,16 +41,16 @@ true
     This subgroup consists of 
     all matrices of the form
 <Alt Only="LaTeX">
-  <Display>
   <![CDATA[
+  \[
         \left( 
            \begin{array}{rr}
               1+N a & N b \\
               N c   & 1+N d
            \end{array} 
         \right)
+  \]
   ]]>
-  </Display>
 </Alt>
 <Alt Only="Text,HTML"><Verb><![CDATA[
                          [1+N*a    N*b]
@@ -98,16 +98,16 @@ true
     This subgroup consists of 
     all matrices of the form
 <Alt Only="LaTeX">
-  <Display>
   <![CDATA[
+  \[
         \left( 
            \begin{array}{rr}
               a & b \\
               N c   & d
            \end{array} 
         \right)
+  \]
   ]]>
-  </Display>
 </Alt>
 <Alt Only="Text,HTML"><Verb><![CDATA[
                          [a    b]
@@ -137,16 +137,16 @@ gap> G0_4:=CongruenceSubgroupGamma0(4);
     This subgroup consists of 
     all matrices of the form
 <Alt Only="LaTeX">
-  <Display>
   <![CDATA[
+  \[
         \left( 
            \begin{array}{rr}
               a & N b \\
               c   & d
            \end{array} 
         \right)
+  \]
   ]]>
-  </Display>
 </Alt>
 <Alt Only="Text,HTML"><Verb><![CDATA[
                          [a  N*b]
@@ -176,16 +176,16 @@ gap> GU0_2:=CongruenceSubgroupGammaUpper0(2);
          This subgroup consists of 
     all matrices of the form
 <Alt Only="LaTeX">
-  <Display>
   <![CDATA[
+  \[
         \left( 
            \begin{array}{rr}
               1+N a & b \\
               N c   & 1+N d
            \end{array} 
         \right)
+  \]
   ]]>
-  </Display>
 </Alt>
 <Alt Only="Text,HTML"><Verb><![CDATA[
                          [1+N*a      b]
@@ -215,16 +215,16 @@ gap> G1_6:=CongruenceSubgroupGamma1(6);
          This subgroup consists of 
     all matrices of the form
 <Alt Only="LaTeX">
-  <Display>
   <![CDATA[
+  \[
         \left( 
            \begin{array}{rr}
               1+N a & N b \\
                c   & 1+N d
            \end{array} 
         \right)
+  \]
   ]]>
-  </Display>
 </Alt>
 <Alt Only="Text,HTML"><Verb><![CDATA[
                          [1+N*a    N*b]
