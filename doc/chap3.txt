@@ -43,7 +43,7 @@
   
   [1X3.1-1 FareySymbolByData[101X
   
-  [29X[2XFareySymbolByData[102X( [3Xgfs[103X, [3Xlabels[103X ) [32X function
+  [33X[1;0Y[29X[2XFareySymbolByData[102X( [3Xgfs[103X, [3Xlabels[103X ) [32X function[133X
   
   [33X[0;0YThis  constructor  creates the Farey symbol with the given generalized Farey
   sequence  and  list of labels. It also checks conditions from the definition
@@ -61,7 +61,7 @@
   
   [1X3.1-2 IsValidFareySymbol[101X
   
-  [29X[2XIsValidFareySymbol[102X( [3Xfs[103X ) [32X function
+  [33X[1;0Y[29X[2XIsValidFareySymbol[102X( [3Xfs[103X ) [32X function[133X
   
   [33X[0;0YThis function is used in [2XFareySymbolByData[102X ([14X3.1-1[114X) to validate its output.[133X
   
@@ -77,7 +77,7 @@
   
   [1X3.2-1 GeneralizedFareySequence[101X
   
-  [29X[2XGeneralizedFareySequence[102X( [3Xfs[103X ) [32X attribute
+  [33X[1;0Y[29X[2XGeneralizedFareySequence[102X( [3Xfs[103X ) [32X attribute[133X
   
   [33X[0;0YReturns the generalized Farey sequence [3Xgfs[103X of the Farey symbol.[133X
   
@@ -90,7 +90,7 @@
   
   [1X3.2-2 NumeratorOfGFSElement[101X
   
-  [29X[2XNumeratorOfGFSElement[102X( [3Xgfs[103X, [3Xi[103X ) [32X function
+  [33X[1;0Y[29X[2XNumeratorOfGFSElement[102X( [3Xgfs[103X, [3Xi[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Yinteger[133X
   
   [33X[0;0YReturns  the  numerator  of  the i-th term of the generalised Farey sequence
@@ -106,7 +106,7 @@
   
   [1X3.2-3 DenominatorOfGFSElement[101X
   
-  [29X[2XDenominatorOfGFSElement[102X( [3Xgfs[103X, [3Xi[103X ) [32X function
+  [33X[1;0Y[29X[2XDenominatorOfGFSElement[102X( [3Xgfs[103X, [3Xi[103X ) [32X function[133X
   [6XReturns:[106X  [33X[0;10Yinteger[133X
   
   [33X[0;0YReturns  the  denominator of the i-th term of the generalised Farey sequence
@@ -122,7 +122,7 @@
   
   [1X3.2-4 LabelsOfFareySymbol[101X
   
-  [29X[2XLabelsOfFareySymbol[102X( [3Xfs[103X ) [32X attribute
+  [33X[1;0Y[29X[2XLabelsOfFareySymbol[102X( [3Xfs[103X ) [32X attribute[133X
   
   [33X[0;0YReturns  the list of labels of the Farey symbol. This list has "odd", "even"
   and paired integers as entries.[133X

@@ -17,7 +17,7 @@
   
   [1X4.1-1 FareySymbol[101X
   
-  [29X[2XFareySymbol[102X( [3XG[103X ) [32X attribute
+  [33X[1;0Y[29X[2XFareySymbol[102X( [3XG[103X ) [32X attribute[133X
   
   [33X[0;0YFor  a  subgroup of a finite index G, this attribute stores one of the Farey
   symbols  corresponding  to  the congruence subgroup [3XG[103X. The algorithm for its
@@ -69,7 +69,7 @@
   
   [1X4.2-1 MatrixByEvenInterval[101X
   
-  [29X[2XMatrixByEvenInterval[102X( [3Xgfs[103X, [3Xi[103X ) [32X function
+  [33X[1;0Y[29X[2XMatrixByEvenInterval[102X( [3Xgfs[103X, [3Xi[103X ) [32X function[133X
   
   [33X[0;0YReturns  the  matrix corresponding to the even interval i in the generalized
   Farey sequence [3Xgfs[103X.[133X
@@ -90,7 +90,7 @@
   
   [1X4.2-2 MatrixByOddInterval[101X
   
-  [29X[2XMatrixByOddInterval[102X( [3Xgfs[103X, [3Xi[103X ) [32X function
+  [33X[1;0Y[29X[2XMatrixByOddInterval[102X( [3Xgfs[103X, [3Xi[103X ) [32X function[133X
   
   [33X[0;0YReturns  the  matrix  corresponding to the odd interval i in the generalized
   Farey sequence [3Xgfs[103X.[133X
@@ -107,7 +107,7 @@
   
   [1X4.2-3 MatrixByFreePairOfIntervals[101X
   
-  [29X[2XMatrixByFreePairOfIntervals[102X( [3Xgfs[103X, [3Xk[103X, [3Xkp[103X ) [32X function
+  [33X[1;0Y[29X[2XMatrixByFreePairOfIntervals[102X( [3Xgfs[103X, [3Xk[103X, [3Xkp[103X ) [32X function[133X
   
   [33X[0;0YReturns  the  matrix corresponding to the pair of free intervals k and kp in
   the generalized Farey sequence [3Xgfs[103X.[133X
@@ -123,7 +123,7 @@
   
   [1X4.2-4 GeneratorsByFareySymbol[101X
   
-  [29X[2XGeneratorsByFareySymbol[102X( [3Xfs[103X ) [32X function
+  [33X[1;0Y[29X[2XGeneratorsByFareySymbol[102X( [3Xfs[103X ) [32X function[133X
   
   [33X[0;0YReturns a set of matrices constructed as above.[133X
   
@@ -143,7 +143,7 @@
   
   [1X4.2-5 GeneratorsOfGroup[101X
   
-  [29X[2XGeneratorsOfGroup[102X( [3XG[103X ) [32X function
+  [33X[1;0Y[29X[2XGeneratorsOfGroup[102X( [3XG[103X ) [32X function[133X
   
   [33X[0;0YReturns a set of generators for the finite index group G in [22XSL_2(Z)[122X.[133X
   
@@ -180,7 +180,7 @@
   
   [1X4.3-1 IndexInPSL2ZByFareySymbol[101X
   
-  [29X[2XIndexInPSL2ZByFareySymbol[102X( [3Xfs[103X ) [32X function
+  [33X[1;0Y[29X[2XIndexInPSL2ZByFareySymbol[102X( [3Xfs[103X ) [32X function[133X
   
   [33X[0;0YBy  Proposition  7.2  in  [Kulkarni],  for  the Farey symbol with underlying
   generalized  Farey sequence [infinity, x0, x1, ..., xn, infinity], the index

@@ -75,7 +75,7 @@
 
 <h5>3.1-1 FareySymbolByData</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; FareySymbolByData</code>( <var class="Arg">gfs</var>, <var class="Arg">labels</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; FareySymbolByData</code>( <var class="Arg">gfs</var>, <var class="Arg">labels</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>This constructor creates the Farey symbol with the given generalized Farey sequence and list of labels. It also checks conditions from the definition of Farey symbol and returns an error if they are not satisfied. The data used to create the Farey symbol are stored as its attributes <code class="func">GeneralizedFareySequence</code> (<a href="chap3_mj.html#X8245766978F02751"><span class="RefLink">3.2-1</span></a>) and <code class="func">LabelsOfFareySymbol</code> (<a href="chap3_mj.html#X83C941047D486000"><span class="RefLink">3.2-4</span></a>).</p>
 
 
@@ -91,7 +91,7 @@
 
 <h5>3.1-2 IsValidFareySymbol</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsValidFareySymbol</code>( <var class="Arg">fs</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsValidFareySymbol</code>( <var class="Arg">fs</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>This function is used in <code class="func">FareySymbolByData</code> (<a href="chap3_mj.html#X7F8F5919870A46FE"><span class="RefLink">3.1-1</span></a>) to validate its output.</p>
 
 
@@ -110,7 +110,7 @@ true
 
 <h5>3.2-1 GeneralizedFareySequence</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GeneralizedFareySequence</code>( <var class="Arg">fs</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; GeneralizedFareySequence</code>( <var class="Arg">fs</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns the generalized Farey sequence <var class="Arg">gfs</var> of the Farey symbol.</p>
 
 
@@ -125,7 +125,7 @@ true
 
 <h5>3.2-2 NumeratorOfGFSElement</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; NumeratorOfGFSElement</code>( <var class="Arg">gfs</var>, <var class="Arg">i</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; NumeratorOfGFSElement</code>( <var class="Arg">gfs</var>, <var class="Arg">i</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: integer</p>
 
 <p>Returns the numerator of the i-th term of the generalised Farey sequence <var class="Arg">gfs</var>: for the 1st infinite entry returns -1, for the last one returns 1, for all other entries returns the usual numerator.</p>
@@ -142,7 +142,7 @@ true
 
 <h5>3.2-3 DenominatorOfGFSElement</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; DenominatorOfGFSElement</code>( <var class="Arg">gfs</var>, <var class="Arg">i</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; DenominatorOfGFSElement</code>( <var class="Arg">gfs</var>, <var class="Arg">i</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>Returns: integer</p>
 
 <p>Returns the denominator of the i-th term of the generalised Farey sequence <var class="Arg">gfs</var>: for both infinite entries returns 0, for the other ones returns the usual denominator.</p>
@@ -159,7 +159,7 @@ true
 
 <h5>3.2-4 LabelsOfFareySymbol</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LabelsOfFareySymbol</code>( <var class="Arg">fs</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LabelsOfFareySymbol</code>( <var class="Arg">fs</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Returns the list of labels of the Farey symbol. This list has "odd", "even" and paired integers as entries.</p>
 
 
