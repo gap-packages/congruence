@@ -38,6 +38,7 @@ DeclareCategory( "IsCongruenceSubgroup", IsMatrixGroup );
 ##               [   N  1+N ]
 ##
 DeclareProperty( "IsPrincipalCongruenceSubgroup", IsCongruenceSubgroup );
+InstallTrueMethod(IsCongruenceSubgroup, IsPrincipalCongruenceSubgroup);
 
 
 #############################################################################
@@ -49,6 +50,7 @@ DeclareProperty( "IsPrincipalCongruenceSubgroup", IsCongruenceSubgroup );
 ##               [   N    * ]
 ##
 DeclareProperty( "IsCongruenceSubgroupGamma0", IsCongruenceSubgroup );
+InstallTrueMethod(IsCongruenceSubgroup, IsCongruenceSubgroupGamma0);
 
 
 #############################################################################
@@ -60,6 +62,7 @@ DeclareProperty( "IsCongruenceSubgroupGamma0", IsCongruenceSubgroup );
 ##               [   *    * ]
 ##
 DeclareProperty( "IsCongruenceSubgroupGammaUpper0", IsCongruenceSubgroup );
+InstallTrueMethod(IsCongruenceSubgroup, IsCongruenceSubgroupGammaUpper0);
 
 
 #############################################################################
@@ -71,6 +74,7 @@ DeclareProperty( "IsCongruenceSubgroupGammaUpper0", IsCongruenceSubgroup );
 ##               [   N  1+N ]
 ##
 DeclareProperty( "IsCongruenceSubgroupGamma1", IsCongruenceSubgroup );
+InstallTrueMethod(IsCongruenceSubgroup, IsCongruenceSubgroupGamma1);
 
 
 #############################################################################
@@ -82,6 +86,7 @@ DeclareProperty( "IsCongruenceSubgroupGamma1", IsCongruenceSubgroup );
 ##               [   *  1+N ]
 ##
 DeclareProperty( "IsCongruenceSubgroupGammaUpper1", IsCongruenceSubgroup );
+InstallTrueMethod(IsCongruenceSubgroup, IsCongruenceSubgroupGammaUpper1);
 
 
 #############################################################################
@@ -93,6 +98,7 @@ DeclareProperty( "IsCongruenceSubgroupGammaUpper1", IsCongruenceSubgroup );
 ##               [   N  1+N ]
 ##
 DeclareProperty( "IsCongruenceSubgroupGammaMN", IsCongruenceSubgroup );
+InstallTrueMethod(IsCongruenceSubgroup, IsCongruenceSubgroupGammaMN);
 
 
 #############################################################################
@@ -106,6 +112,7 @@ DeclareProperty( "IsCongruenceSubgroupGammaMN", IsCongruenceSubgroup );
 ## CongruenceSubgroupGamma^1 and CongruenceSubgroupGammaMN
 ##
 DeclareProperty( "IsIntersectionOfCongruenceSubgroups", IsCongruenceSubgroup );
+InstallTrueMethod(IsCongruenceSubgroup, IsIntersectionOfCongruenceSubgroups);
 
 
 #############################################################################
