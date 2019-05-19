@@ -6,10 +6,10 @@
                         [1XCongruence subgroups of [22XSL_2(ℤ)[122X[101X
   
   
-                                 Version 1.2.2
+                                 Version 1.2.3
   
   
-                                6 February 2018
+                                  19 May 2019
   
   
                                    Ann Dooms
@@ -63,7 +63,7 @@
   
   -------------------------------------------------------
   [1XCopyright[101X
-  [33X[0;0Y©  2006-2018  by  Ann  Dooms,  Eric  Jespers, Alexander Konovalov and Helena
+  [33X[0;0Y©  2006-2019  by  Ann  Dooms,  Eric  Jespers, Alexander Konovalov and Helena
   Verrill.[133X
   
   [33X[0;0Y[5XCongruence[105X  is free software; you can redistribute it and/or modify it under
@@ -79,7 +79,7 @@
   [5XCongruence[105X, please cite it in the following form:[133X
   
   [33X[0;0YA. Dooms, E. Jespers, A. Konovalov and H. Verrill. [13XCongruence --- Congruence
-  subgroups        of        [22XSL_2(ℤ)[122X,        Version        1.2.2;[113X        2018
+  subgroups        of        [22XSL_2(ℤ)[122X,        Version        1.2.3;[113X        2019
   ([7Xhttp://www.cs.st-andrews.ac.uk/~alexk/congruence/[107X).[133X
   
   
