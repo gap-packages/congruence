@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/gap-packages/congruence.svg?branch=master)](https://travis-ci.org/gap-packages/congruence)
+[![Build Status](https://github.com/gap-packages/congruence/workflows/CI/badge.svg?branch=master)](https://github.com/gap-packages/congruence/actions?query=workflow%3ACI+branch%3Amaster)
 [![Code Coverage](https://codecov.io/github/gap-packages/congruence/coverage.svg?branch=master&token=)](https://codecov.io/gh/gap-packages/congruence)
 
 # GAP package Congruence
