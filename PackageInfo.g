@@ -2,7 +2,7 @@
 ##
 #W PackageInfo.g           The Congruence package                   Ann Dooms
 #W                                                               Eric Jespers
-#W                                                        Alexander Konovalov
+#W                                                         Olexandr Konovalov
 #W                                                             Helena Verrill
 ##
 ##
@@ -66,11 +66,11 @@ Persons := [
      ),
   rec(
     LastName      := "Konovalov",
-    FirstNames    := "Alexander",
+    FirstNames    := "Olexandr",
     IsAuthor      := true,
     IsMaintainer  := true,
-    Email         := "alexander.konovalov@st-andrews.ac.uk",
-    WWWHome       := "https://alexk.host.cs.st-andrews.ac.uk",
+    Email         := "obk1@st-andrews.ac.uk",
+    WWWHome       := "https://alex-konovalov.github.io/",
     PostalAddress := Concatenation( [
                      "School of Computer Science\n",
                      "University of St Andrews\n",

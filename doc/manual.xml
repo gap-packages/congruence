@@ -30,9 +30,9 @@
       </Address>
     </Author>
 
-    <Author>Alexander Konovalov
-      <Email>alexander.konovalov@st-andrews.ac.uk</Email>
-      <Homepage>https://alexk.host.cs.st-andrews.ac.uk</Homepage>
+    <Author>Olexandr Konovalov
+      <Email>obk1@st-andrews.ac.uk</Email>
+      <Homepage>https://alex-konovalov.github.io/</Homepage>
       <Address>
         School of Computer Science<Br/>
         University of St Andrews<Br/>
@@ -62,7 +62,7 @@
 
     <Copyright>
       &copyright; 2006-&RELEASEYEAR; by Ann Dooms, Eric Jespers, 
-                  Alexander Konovalov and Helena Verrill.<P/>
+                  Olexandr Konovalov and Helena Verrill.<P/>
 
       &Congruence; is free software; you can redistribute it and/or modify it
       under the terms of the GNU General Public License as published by
@@ -76,9 +76,9 @@
       If you publish a result which was partially obtained with the usage of
       &Congruence;, please cite it in the following form:<P/>
 
-      A. Dooms, E. Jespers, A. Konovalov and H. Verrill.
+      A. Dooms, E. Jespers, O. Konovalov and H. Verrill.
       <E>Congruence --- Congruence subgroups of <M>SL_2(&ZZ;)</M>, Version &VERSION;;</E>
-      &RELEASEYEAR; (<URL>http://www.cs.st-andrews.ac.uk/&tilde;alexk/congruence/</URL>).
+      &RELEASEYEAR; (<URL>https://gap-packages.github.io/congruence/</URL>).
     </Copyright>
 
     <Acknowledgements>

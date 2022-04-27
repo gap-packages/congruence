@@ -2,7 +2,7 @@
 ##
 #W random.gi               The Congruence package                   Ann Dooms
 #W                                                               Eric Jespers
-#W                                                        Alexander Konovalov
+#W                                                         Olexandr Konovalov
 ##
 ##
 #############################################################################

@@ -19,4 +19,4 @@ need to load it using the following command:
     gap> LoadPackage("congruence");
 
 
-Ann Dooms, Eric Jespers, Alexander Konovalov, Helena Verrill
+Ann Dooms, Eric Jespers, Olexandr Konovalov, Helena Verrill

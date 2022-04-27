@@ -1,6 +1,6 @@
 ###########################################################################
 ##
-#W makedoc.g              The Congruence package        Alexander Konovalov
+#W makedoc.g              The Congruence package         Olexandr Konovalov
 ##
 ###########################################################################
 

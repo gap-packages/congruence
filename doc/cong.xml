@@ -18,11 +18,17 @@ To start to work with the package, you need first to load it as follows:
 <![CDATA[
 gap> LoadPackage("congruence");
 -----------------------------------------------------------------------------
-Loading  Congruence 1.1.0 (Congruence subgroups of SL(2,Integers))
+Loading  Congruence 1.2.3 (Congruence subgroups of SL(2,Integers))
 by Ann Dooms (http://homepages.vub.ac.be/~andooms),
    Eric Jespers (http://homepages.vub.ac.be/~efjesper),
-   Alexander Konovalov (http://www.cs.st-andrews.ac.uk/~alexk/), and
+   Olexandr Konovalov (https://alex-konovalov.github.io/), and
    Helena Verrill (http://www.math.lsu.edu/~verrill).
+maintained by:
+   Ann Dooms (http://homepages.vub.ac.be/~andooms),
+   Olexandr Konovalov (https://alex-konovalov.github.io/), and
+   Helena Verrill (http://www.math.lsu.edu/~verrill).
+Homepage: https://gap-packages.github.io/congruence
+Report issues at https://github.com/gap-packages/congruence/issues
 -----------------------------------------------------------------------------
 true
 ]]>

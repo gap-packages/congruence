@@ -35,7 +35,7 @@ For the theoretical backround, we refer to <Cite Key="LLT-Hecke" />,
 
 &Congruence; is distributed in standard formats (<File>tar.gz</File>, 
 <File>tar.bz2</File>, <File>-win.zip</File>) and can be obtained from 
-<URL>http://www.cs.st-andrews.ac.uk/~alexk/congruence/</URL>. 
+<URL>https://gap-packages.github.io/congruence/</URL>. 
 <P/>
 
 &Congruence; does not  use  external  binaries and,  therefore,  works  without 

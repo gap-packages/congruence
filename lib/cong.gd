@@ -2,7 +2,7 @@
 ##
 #W cong.gd                 The Congruence package                   Ann Dooms
 #W                                                               Eric Jespers
-#W                                                        Alexander Konovalov
+#W                                                         Olexandr Konovalov
 ##
 ##
 #############################################################################
