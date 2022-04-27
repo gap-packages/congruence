@@ -12,13 +12,13 @@ SetPackageInfo( rec(
 
 PackageName    := "Congruence",
 Subtitle       := "Congruence subgroups of SL(2,Integers)",
-Version        := "1.2.3",
-Date           := "19/05/2019", # dd/mm/yyyy format
+Version        := "1.2.4",
+Date           := "27/04/2022", # dd/mm/yyyy format
 License        := "GPL-2.0-or-later",
 ##  <#GAPDoc Label="PKGVERSIONDATA">
-##  <!ENTITY VERSION "1.2.3">
-##  <!ENTITY RELEASEDATE "19 May 2019">
-##  <!ENTITY RELEASEYEAR "2019">
+##  <!ENTITY VERSION "1.2.4">
+##  <!ENTITY RELEASEDATE "27 April 2022">
+##  <!ENTITY RELEASEYEAR "2022">
 ##  <#/GAPDoc>
 
 SourceRepository := rec(

@@ -8,7 +8,7 @@
 #
 gap> START_TEST( "congruence02.tst");
 
-# doc/cong.xml:65-88
+# doc/cong.xml:71-94
 
 gap> G_8:=PrincipalCongruenceSubgroup(8);
 <principal congruence subgroup of level 8 in SL_2(Z)>
@@ -31,34 +31,34 @@ SL(2,Integers)
 gap> IsSubgroup(SL_2,G_8);
 true
 
-# doc/cong.xml:122-127
+# doc/cong.xml:128-133
 
 gap> G0_4:=CongruenceSubgroupGamma0(4);
 <congruence subgroup CongruenceSubgroupGamma_0(4) in SL_2(Z)>
 
-# doc/cong.xml:161-166
+# doc/cong.xml:167-172
 
 gap> GU0_2:=CongruenceSubgroupGammaUpper0(2);
 <congruence subgroup CongruenceSubgroupGamma^0(2) in SL_2(Z)>
 
-# doc/cong.xml:200-205
+# doc/cong.xml:206-211
 
 gap> G1_6:=CongruenceSubgroupGamma1(6);
 <congruence subgroup CongruenceSubgroupGamma_1(6) in SL_2(Z)>
 
-# doc/cong.xml:239-244
+# doc/cong.xml:245-250
 
 gap> GU1_4:=CongruenceSubgroupGammaUpper1(4);
 <congruence subgroup CongruenceSubgroupGamma^1(4) in SL_2(Z)>
 
-# doc/cong.xml:273-280
+# doc/cong.xml:279-286
 
 gap> I:=IntersectionOfCongruenceSubgroups(G0_4,GU1_4);
 <principal congruence subgroup of level 4 in SL_2(Z)>
 gap> J:=IntersectionOfCongruenceSubgroups(G0_4,G1_6);
 <intersection of congruence subgroups of resulting level 12 in SL_2(Z)>
 
-# doc/cong.xml:307-316
+# doc/cong.xml:313-322
 
 gap> IsPrincipalCongruenceSubgroup(G_8);
 true
@@ -67,14 +67,14 @@ false
 gap> IsPrincipalCongruenceSubgroup(I);
 true
 
-# doc/cong.xml:380-387
+# doc/cong.xml:386-393
 
 gap> IsIntersectionOfCongruenceSubgroups(I);
 false
 gap> IsIntersectionOfCongruenceSubgroups(J);
 true
 
-# doc/cong.xml:407-418
+# doc/cong.xml:413-424
 
 gap> LevelOfCongruenceSubgroup(G_8);
 8
@@ -85,7 +85,7 @@ gap> LevelOfCongruenceSubgroup(I);
 gap> LevelOfCongruenceSubgroup(J);
 12
 
-# doc/cong.xml:429-440
+# doc/cong.xml:435-446
 
 gap> IndexInSL2Z(G_8);
 384
@@ -96,7 +96,7 @@ gap> IndexInSL2Z(G_2);
 gap> IndexInSL2Z(GU1_4);
 12
 
-# doc/cong.xml:456-470
+# doc/cong.xml:462-476
 
 gap> DefiningCongruenceSubgroups(J);
 [ <congruence subgroup CongruenceSubgroupGamma_0(4) in SL_2(Z)>,
@@ -110,26 +110,26 @@ gap> G:=IntersectionOfCongruenceSubgroups(Q,P);
 gap> DefiningCongruenceSubgroups(G);
 [ <principal congruence subgroup of level 30 in SL_2(Z)> ] 
 
-# doc/cong.xml:497-504
+# doc/cong.xml:503-510
 
 gap> Random(G_2) in G_2;
 true
 gap> Random(G_8,2) in G_8;
 true
 
-# doc/cong.xml:516-523
+# doc/cong.xml:522-529
 
 gap> \in([ [ 21, 10 ], [ 2, 1 ] ],G_2);
 true
 gap> \in([ [ 21, 10 ], [ 2, 1 ] ],G_8);
 false
 
-# doc/cong.xml:545-550
+# doc/cong.xml:551-556
 
 gap> CanEasilyCompareCongruenceSubgroups(G_8,I);
 false
 
-# doc/cong.xml:564-582
+# doc/cong.xml:570-588
 
 gap> IsSubset(G_2,G_8);
 true
@@ -147,7 +147,7 @@ gap> for g in g2 do
 [ false, false, false, true, false ]
 [ false, false, false, false, true ]
 
-# doc/cong.xml:595-600
+# doc/cong.xml:601-606
 
 gap> Index(G_2,G_8);
 32
