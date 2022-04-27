@@ -2,7 +2,7 @@
 ##
 #W PackageInfo.g           The Congruence package                   Ann Dooms
 #W                                                               Eric Jespers
-#W                                                        Alexander Konovalov
+#W                                                         Olexandr Konovalov
 #W                                                             Helena Verrill
 ##
 ##
@@ -12,13 +12,13 @@ SetPackageInfo( rec(
 
 PackageName    := "Congruence",
 Subtitle       := "Congruence subgroups of SL(2,Integers)",
-Version        := "1.2.3",
-Date           := "19/05/2019", # dd/mm/yyyy format
+Version        := "1.2.4",
+Date           := "27/04/2022", # dd/mm/yyyy format
 License        := "GPL-2.0-or-later",
 ##  <#GAPDoc Label="PKGVERSIONDATA">
-##  <!ENTITY VERSION "1.2.3">
-##  <!ENTITY RELEASEDATE "19 May 2019">
-##  <!ENTITY RELEASEYEAR "2019">
+##  <!ENTITY VERSION "1.2.4">
+##  <!ENTITY RELEASEDATE "27 April 2022">
+##  <!ENTITY RELEASEYEAR "2022">
 ##  <#/GAPDoc>
 
 SourceRepository := rec(
@@ -66,11 +66,11 @@ Persons := [
      ),
   rec(
     LastName      := "Konovalov",
-    FirstNames    := "Alexander",
+    FirstNames    := "Olexandr",
     IsAuthor      := true,
     IsMaintainer  := true,
-    Email         := "alexander.konovalov@st-andrews.ac.uk",
-    WWWHome       := "https://alexk.host.cs.st-andrews.ac.uk",
+    Email         := "obk1@st-andrews.ac.uk",
+    WWWHome       := "https://alex-konovalov.github.io/",
     PostalAddress := Concatenation( [
                      "School of Computer Science\n",
                      "University of St Andrews\n",

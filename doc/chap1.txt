@@ -25,7 +25,7 @@
   [1X1.2 [33X[0;0YInstallation and system requirements[133X[101X
   
   [33X[0;0Y[5XCongruence[105X  is  distributed  in standard formats ([11Xtar.gz[111X, [11Xtar.bz2[111X, [11X-win.zip[111X)
-  and can be obtained from [7Xhttp://www.cs.st-andrews.ac.uk/~alexk/congruence/[107X.[133X
+  and can be obtained from [7Xhttps://gap-packages.github.io/congruence/[107X.[133X
   
   [33X[0;0Y[5XCongruence[105X  does  not  use  external  binaries and, therefore, works without
   restrictions  on the operating system. It requires at least version [5XGAP[105X 4.5,

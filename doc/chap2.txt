@@ -15,11 +15,17 @@
     [4X[28X[128X[104X
     [4X[25Xgap>[125X [27XLoadPackage("congruence");[127X[104X
     [4X[28X-----------------------------------------------------------------------------[128X[104X
-    [4X[28XLoading  Congruence 1.1.0 (Congruence subgroups of SL(2,Integers))[128X[104X
+    [4X[28XLoading  Congruence 1.2.4 (Congruence subgroups of SL(2,Integers))[128X[104X
     [4X[28Xby Ann Dooms (http://homepages.vub.ac.be/~andooms),[128X[104X
     [4X[28X   Eric Jespers (http://homepages.vub.ac.be/~efjesper),[128X[104X
-    [4X[28X   Alexander Konovalov (http://www.cs.st-andrews.ac.uk/~alexk/), and[128X[104X
+    [4X[28X   Olexandr Konovalov (https://alex-konovalov.github.io/), and[128X[104X
     [4X[28X   Helena Verrill (http://www.math.lsu.edu/~verrill).[128X[104X
+    [4X[28Xmaintained by:[128X[104X
+    [4X[28X   Ann Dooms (http://homepages.vub.ac.be/~andooms),[128X[104X
+    [4X[28X   Olexandr Konovalov (https://alex-konovalov.github.io/), and[128X[104X
+    [4X[28X   Helena Verrill (http://www.math.lsu.edu/~verrill).[128X[104X
+    [4X[28XHomepage: https://gap-packages.github.io/congruence[128X[104X
+    [4X[28XReport issues at https://github.com/gap-packages/congruence/issues[128X[104X
     [4X[28X-----------------------------------------------------------------------------[128X[104X
     [4X[28Xtrue[128X[104X
     [4X[28X[128X[104X
