@@ -105,7 +105,7 @@ AbstractHTML := "The <span class=\"pkgname\">Congruence </span> package provides
 PackageDoc := rec(
   BookName := "Congruence",
   ArchiveURLSubset := ["doc"],
-  HTMLStart := "doc/chap0.html",
+  HTMLStart := "doc/chap0_mj.html",
   PDFFile := "doc/manual.pdf",
   SixFile := "doc/manual.six",
   LongTitle := "Congruence subgroups of SL(2,Integers)",
