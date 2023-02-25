@@ -12,13 +12,13 @@ SetPackageInfo( rec(
 
 PackageName    := "Congruence",
 Subtitle       := "Congruence subgroups of SL(2,Integers)",
-Version        := "1.2.4",
-Date           := "27/04/2022", # dd/mm/yyyy format
+Version        := "1.2.5",
+Date           := "25/02/2023", # dd/mm/yyyy format
 License        := "GPL-2.0-or-later",
 ##  <#GAPDoc Label="PKGVERSIONDATA">
-##  <!ENTITY VERSION "1.2.4">
-##  <!ENTITY RELEASEDATE "27 April 2022">
-##  <!ENTITY RELEASEYEAR "2022">
+##  <!ENTITY VERSION "1.2.5">
+##  <!ENTITY RELEASEDATE "25 February 2023">
+##  <!ENTITY RELEASEYEAR "2023">
 ##  <#/GAPDoc>
 
 SourceRepository := rec(
@@ -70,7 +70,7 @@ Persons := [
     IsAuthor      := true,
     IsMaintainer  := true,
     Email         := "obk1@st-andrews.ac.uk",
-    WWWHome       := "https://alex-konovalov.github.io/",
+    WWWHome       := "https://olexandr-konovalov.github.io/",
     PostalAddress := Concatenation( [
                      "School of Computer Science\n",
                      "University of St Andrews\n",
@@ -105,7 +105,7 @@ AbstractHTML := "The <span class=\"pkgname\">Congruence </span> package provides
 PackageDoc := rec(
   BookName := "Congruence",
   ArchiveURLSubset := ["doc"],
-  HTMLStart := "doc/chap0.html",
+  HTMLStart := "doc/chap0_mj.html",
   PDFFile := "doc/manual.pdf",
   SixFile := "doc/manual.six",
   LongTitle := "Congruence subgroups of SL(2,Integers)",

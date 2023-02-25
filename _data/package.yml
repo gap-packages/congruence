@@ -1,6 +1,6 @@
 name: Congruence
-version: 1.2.4
-date: 2022-04-27
+version: 1.2.5
+date: 2023-02-25
 description: |
     Congruence subgroups of SL(2,Integers)
 
@@ -10,7 +10,7 @@ authors:
     - name: Eric Jespers
       url: http://homepages.vub.ac.be/~efjesper
     - name: Olexandr Konovalov
-      url: https://alex-konovalov.github.io/
+      url: https://olexandr-konovalov.github.io/
     - name: Helena Verrill
       url: http://www.math.lsu.edu/~verrill
 
@@ -18,7 +18,7 @@ maintainers:
     - name: Ann Dooms
       url: http://homepages.vub.ac.be/~andooms
     - name: Olexandr Konovalov
-      url: https://alex-konovalov.github.io/
+      url: https://olexandr-konovalov.github.io/
     - name: Helena Verrill
       url: http://www.math.lsu.edu/~verrill
 
@@ -35,11 +35,11 @@ packageinfo: https://gap-packages.github.io/congruence/PackageInfo.g
 
 downloads:
     - name: .tar.gz
-      url: https://github.com/gap-packages/congruence/releases/download/v1.2.4/congruence-1.2.4.tar.gz
+      url: https://github.com/gap-packages/congruence/releases/download/v1.2.5/congruence-1.2.5.tar.gz
 
 abstract: |
     The <span class="pkgname">Congruence </span> package provides functions to construct several types of canonical congruence subgroups in SL_2(Z), and also intersections of a finite number of such subgroups. Furthermore, it implements the algorithm for generating Farey symbols for congruence subgroups and using them to produce a system of independent generators for these subgroups
 
 status: accepted
-doc-html: doc/chap0.html
+doc-html: doc/chap0_mj.html
 doc-pdf: doc/manual.pdf

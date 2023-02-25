@@ -6,10 +6,10 @@
                         [1XCongruence subgroups of [22XSL_2(ℤ)[122X[101X
   
   
-                                 Version 1.2.4
+                                 Version 1.2.5
   
   
-                                 27 April 2022
+                                25 February 2023
   
   
                                    Ann Dooms
@@ -63,14 +63,14 @@
   
   -------------------------------------------------------
   [1XCopyright[101X
-  [33X[0;0Y©  2006-2022  by  Ann  Dooms,  Eric  Jespers,  Olexandr Konovalov and Helena
+  [33X[0;0Y©  2006-2023  by  Ann  Dooms,  Eric  Jespers,  Olexandr Konovalov and Helena
   Verrill.[133X
   
   [33X[0;0Y[5XCongruence[105X  is free software; you can redistribute it and/or modify it under
   the  terms  of  the  GNU  General  Public  License  as published by the Free
   Software  Foundation;  either  version 2 of the License, or (at your option)
   any    later    version.    For    details,   see   the   FSF's   own   site
-  [7Xhttp://www.gnu.org/licenses/gpl.html[107X.[133X
+  [7Xhttps://www.gnu.org/licenses/gpl.html[107X.[133X
   
   [33X[0;0YIf  you  obtained  [5XCongruence[105X, we would be grateful for a short notification
   sent to one of the authors.[133X
@@ -79,7 +79,7 @@
   [5XCongruence[105X, please cite it in the following form:[133X
   
   [33X[0;0YA. Dooms, E. Jespers, O. Konovalov and H. Verrill. [13XCongruence --- Congruence
-  subgroups        of        [22XSL_2(ℤ)[122X,        Version        1.2.4;[113X        2022
+  subgroups        of        [22XSL_2(ℤ)[122X,        Version        1.2.5;[113X        2023
   ([7Xhttps://gap-packages.github.io/congruence/[107X).[133X
   
   
