@@ -143,7 +143,7 @@ gap> fs:=FareySymbolByData([infinity,0,1,infinity],[1,"even",1]);
 [ infinity, 0, 1, infinity ]
 [ 1, "even", 1 ]
 gap> Print(fs); Print("\n");
-FareySymbolByData( [ infinity, 0, 1, infinity ], [ 1, "even", 1 ] ] 
+FareySymbolByData( [ infinity, 0, 1, infinity ], [ 1, "even", 1 ] ) 
 gap> SetInfoLevel(InfoCongruence,1);
 gap> fs1_1:=FareySymbolByData([infinity,0,infinity],["even","odd"]);; 
 gap> GeneratorsByFareySymbol(last);
