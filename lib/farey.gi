@@ -79,7 +79,7 @@ InstallMethod( PrintObj,
     0,
     function(fs)
     Print( "FareySymbolByData( ", GeneralizedFareySequence(fs), 
-           ", ", LabelsOfFareySymbol(fs), " ] " );
+           ", ", LabelsOfFareySymbol(fs), " ) " );
     end);    
    
     
