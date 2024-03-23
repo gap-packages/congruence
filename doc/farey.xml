@@ -56,13 +56,11 @@ Attr="LabelsOfFareySymbol"/>.
   </Description>
 </ManSection>    
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> fs:=FareySymbolByData([infinity,0,1,2,infinity],[1,2,2,1]);                         
 [ infinity, 0, 1, 2, infinity ]
 [ 1, 2, 2, 1 ]
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -73,12 +71,10 @@ This function is used in  <Ref Func="FareySymbolByData"/> to validate its output
   </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> IsValidFareySymbol(fs);
 true
-]]>
-</Example>
+]]></Example>
 
 </Section>
 
@@ -96,12 +92,10 @@ symbol.
   </Description>
 </ManSection> 
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> GeneralizedFareySequence(fs);
 [ infinity, 0, 1, 2, infinity ]
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -118,12 +112,10 @@ numerator.
   </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> List([1..5], i -> NumeratorOfGFSElement(GeneralizedFareySequence(fs),i));
 [ -1, 0, 1, 2, 1 ]
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -139,12 +131,10 @@ other ones returns the usual denominator.
   </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> List([1..5], i -> DenominatorOfGFSElement(GeneralizedFareySequence(fs),i));         
 [ 0, 1, 1, 1, 0 ]
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -156,12 +146,10 @@ Returns the list of labels of the Farey symbol. This list has "odd",
   </Description>
 </ManSection> 
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> LabelsOfFareySymbol(fs);
 [ 1, 2, 2, 1 ]
-]]>
-</Example>
+]]></Example>
 
 </Section>
 
