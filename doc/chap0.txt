@@ -6,10 +6,10 @@
                         [1XCongruence subgroups of [22XSL_2(ℤ)[122X[101X
   
   
-                                 Version 1.2.5
+                                 Version 1.2.6
   
   
-                                25 February 2023
+                                 23 March 2024
   
   
                                    Ann Dooms
@@ -38,7 +38,7 @@
   
   Olexandr Konovalov
       Email:    [7Xmailto:obk1@st-andrews.ac.uk[107X
-      Homepage: [7Xhttps://alex-konovalov.github.io/[107X
+      Homepage: [7Xhttps://olexandr-konovalov.github.io/[107X
       Address:  [33X[0;14YSchool of Computer Science[133X
                 [33X[0;14YUniversity of St Andrews[133X
                 [33X[0;14YJack Cole Building, North Haugh,[133X
@@ -63,7 +63,7 @@
   
   -------------------------------------------------------
   [1XCopyright[101X
-  [33X[0;0Y©  2006-2023  by  Ann  Dooms,  Eric  Jespers,  Olexandr Konovalov and Helena
+  [33X[0;0Y©  2006-2024  by  Ann  Dooms,  Eric  Jespers,  Olexandr Konovalov and Helena
   Verrill.[133X
   
   [33X[0;0Y[5XCongruence[105X  is free software; you can redistribute it and/or modify it under
@@ -79,7 +79,7 @@
   [5XCongruence[105X, please cite it in the following form:[133X
   
   [33X[0;0YA. Dooms, E. Jespers, O. Konovalov and H. Verrill. [13XCongruence --- Congruence
-  subgroups        of        [22XSL_2(ℤ)[122X,        Version        1.2.5;[113X        2023
+  subgroups        of        [22XSL_2(ℤ)[122X,        Version        1.2.6;[113X        2024
   ([7Xhttps://gap-packages.github.io/congruence/[107X).[133X
   
   

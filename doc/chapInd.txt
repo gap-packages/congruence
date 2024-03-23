@@ -4,7 +4,7 @@
   
   [2X\in[102X 2.4-2 
   [2XCanEasilyCompareCongruenceSubgroups[102X 2.4-3 
-  [5XCongruence[105X package .-1 
+  [5XCongruence[105X package 0.0-1 
   [2XCongruenceSubgroupGamma0[102X 2.1-2 
   [2XCongruenceSubgroupGamma1[102X 2.1-4 
   [2XCongruenceSubgroupGammaUpper0[102X 2.1-3 
@@ -22,13 +22,13 @@
   [2XInfoCongruence[102X 5.1-1 
   [2XIntersection[102X 2.1-6 
   [2XIntersectionOfCongruenceSubgroups[102X 2.1-6 
-  [10XIsCongruenceSubgroup[110X 1.1  2. 
+  [10XIsCongruenceSubgroup[110X 1.1  2.0 
   [2XIsCongruenceSubgroupGamma0[102X 2.2-2 
   [2XIsCongruenceSubgroupGamma1[102X 2.2-4 
   [2XIsCongruenceSubgroupGammaUpper0[102X 2.2-3 
   [2XIsCongruenceSubgroupGammaUpper1[102X 2.2-5 
-  [10XIsFareySymbol[110X 3. 
-  [10XIsFareySymbolDefaultRep[110X 3. 
+  [10XIsFareySymbol[110X 3.0 
+  [10XIsFareySymbolDefaultRep[110X 3.0 
   [2XIsIntersectionOfCongruenceSubgroups[102X 2.2-6 
   [2XIsPrincipalCongruenceSubgroup[102X 2.2-1 
   [2XIsSubset[102X 2.4-4 

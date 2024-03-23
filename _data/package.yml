@@ -1,7 +1,7 @@
 name: Congruence
-version: "1.2.5"
+version: "1.2.6"
 license: "GPL-2.0-or-later"
-date: 2023-02-25
+date: 2024-03-23
 description: |
     Congruence subgroups of SL(2,Integers)
 
@@ -28,7 +28,7 @@ GAP: ">=4.8"
 needed-pkgs:
     - name: "GAPDoc"
       version: ">= 1.5.1"
-      url: "http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc"
+      url: "https://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc"
 
 www: https://gap-packages.github.io/congruence
 readme: README.md
@@ -36,7 +36,7 @@ packageinfo: https://gap-packages.github.io/congruence/PackageInfo.g
 
 downloads:
     - name: .tar.gz
-      url: https://github.com/gap-packages/congruence/releases/download/v1.2.5/congruence-1.2.5.tar.gz
+      url: https://github.com/gap-packages/congruence/releases/download/v1.2.6/congruence-1.2.6.tar.gz
 
 abstract: |
     The <span class="pkgname">Congruence </span> package provides functions to construct several types of canonical congruence subgroups in SL_2(Z), and also intersections of a finite number of such subgroups. Furthermore, it implements the algorithm for generating Farey symbols for congruence subgroups and using them to produce a system of independent generators for these subgroups
@@ -48,28 +48,28 @@ keywords: |
     congruence subgroup, Farey symbol.
 citeas: |
     <p class='BibEntry'>
-    [<span class='BibKey'>DJKV23</span>]   <b class='BibAuthor'>Dooms, A., Jespers, E., Konovalov, O. and Verrill, H.</b>,
+    [<span class='BibKey'>DJKV24</span>]   <b class='BibAuthor'>Dooms, A., Jespers, E., Konovalov, O. and Verrill, H.</b>,
      <i class='BibTitle'>Congruence, Congruence subgroups of SL(2,Integers),
-             Version 1.2.5</i>
-     (<span class='BibYear'>2023</span>)<br />
-    (<span class='BibNote'>Refereed GAP package</span>),
+             Version 1.2.6</i>
+     (<span class='BibYear'>2024</span>)<br />
+    (<span class='BibNote'>GAP package</span>),
     <span class='BibHowpublished'><a href="https://gap-packages.github.io/congruence">https://gap-packages.github.io/congruence</a></span>.
     </p>
     
 
 bibtex: |
-    @misc{ Congruence1.2.5,
+    @misc{ Congruence,
       author =           {Dooms,  A.  and  Jespers,  E.  and  Konovalov,  O. and
                           Verrill, H.},
       title =            {{Congruence},  Congruence subgroups of SL(2,Integers),
-                          {V}ersion 1.2.5},
-      month =            {Feb},
-      year =             {2023},
-      note =             {Refereed GAP package},
+                          {V}ersion 1.2.6},
+      month =            {Mar},
+      year =             {2024},
+      note =             {GAP package},
       howpublished =     {\href      {https://gap-packages.github.io/congruence}
-                          {\texttt{https://gap-packages.github.io/}\discretionary
+                          {\texttt{https://gap\texttt{\symbol{45}}packages.github.io/}\discretionary
                           {}{}{}\texttt{congruence}}},
       keywords =         {congruence subgroup; Farey symbol},
-      printedkey =       {DJKV23}
+      printedkey =       {DJKV24}
     }
 
