@@ -2,7 +2,7 @@
 
 <!DOCTYPE Book SYSTEM "gapdoc.dtd"
     [ <!ENTITY Congruence "<Package>Congruence</Package>">
-      <#Include Label="PKGVERSIONDATA">      
+      <#Include SYSTEM "_entities.xml">
     ] >
     
 <Book Name="Congruence">
