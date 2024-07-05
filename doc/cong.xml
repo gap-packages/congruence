@@ -14,8 +14,7 @@ canonical congruence subgroups).
 
 To start to work with the package, you need first to load it as follows:
 
-<Log>
-<![CDATA[
+<Log><![CDATA[
 gap> LoadPackage("congruence");
 -----------------------------------------------------------------------------
 Loading Congruence 1.2.6 (Congruence subgroups of SL(2,Integers))
@@ -31,8 +30,7 @@ Homepage: https://gap-packages.github.io/congruence
 Report issues at https://github.com/gap-packages/congruence/issues
 -----------------------------------------------------------------------------
 true
-]]>
-</Log>
+]]></Log>
  
 <Section Label="CongConstr">
 <Heading>Construction of congruence subgroups</Heading>
@@ -68,8 +66,7 @@ where <M>a</M>,<M>b</M>,<M>c</M>,<M>d</M> are integers.
   </Description>
 </ManSection>       
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> G_8:=PrincipalCongruenceSubgroup(8);
 <principal congruence subgroup of level 8 in SL_2(Z)>
 gap> IsGroup(G_8);
@@ -90,8 +87,7 @@ gap> SL_2:=SL(2,Integers);
 SL(2,Integers)
 gap> IsSubgroup(SL_2,G_8);
 true
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -125,12 +121,10 @@ where <M>a</M>,<M>b</M>,<M>c</M>,<M>d</M> are integers.
   </Description>
 </ManSection> 
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> G0_4:=CongruenceSubgroupGamma0(4);
 <congruence subgroup CongruenceSubgroupGamma_0(4) in SL_2(Z)>
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -164,12 +158,10 @@ where <M>a</M>,<M>b</M>,<M>c</M>,<M>d</M> are integers.
   </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> GU0_2:=CongruenceSubgroupGammaUpper0(2);
 <congruence subgroup CongruenceSubgroupGamma^0(2) in SL_2(Z)>
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -203,12 +195,10 @@ where <M>a</M>,<M>b</M>,<M>c</M>,<M>d</M> are integers.
   </Description>
 </ManSection> 
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> G1_6:=CongruenceSubgroupGamma1(6);
 <congruence subgroup CongruenceSubgroupGamma_1(6) in SL_2(Z)>
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -242,12 +232,10 @@ where <M>a</M>,<M>b</M>,<M>c</M>,<M>d</M> are integers.
   </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> GU1_4:=CongruenceSubgroupGammaUpper1(4);
 <congruence subgroup CongruenceSubgroupGamma^1(4) in SL_2(Z)>
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -276,14 +264,12 @@ gap> GU1_4:=CongruenceSubgroupGammaUpper1(4);
   </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> I:=IntersectionOfCongruenceSubgroups(G0_4,GU1_4);
 <principal congruence subgroup of level 4 in SL_2(Z)>
 gap> J:=IntersectionOfCongruenceSubgroups(G0_4,G1_6);
 <intersection of congruence subgroups of resulting level 12 in SL_2(Z)>
-]]>
-</Example>
+]]></Example>
 
 </Section>
 
@@ -310,16 +296,14 @@ or not.
   </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> IsPrincipalCongruenceSubgroup(G_8);
 true
 gap> IsPrincipalCongruenceSubgroup(G0_4);
 false
 gap> IsPrincipalCongruenceSubgroup(I);
 true
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -383,14 +367,12 @@ true
   </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> IsIntersectionOfCongruenceSubgroups(I);
 false
 gap> IsIntersectionOfCongruenceSubgroups(J);
 true
-]]>
-</Example>
+]]></Example>
 
 </Section>
 
@@ -410,8 +392,7 @@ number N such that G contains the principal congruence subgroup of level N.
   </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> LevelOfCongruenceSubgroup(G_8);
 8
 gap> LevelOfCongruenceSubgroup(G1_6);
@@ -420,8 +401,7 @@ gap> LevelOfCongruenceSubgroup(I);
 4
 gap> LevelOfCongruenceSubgroup(J);
 12
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -432,8 +412,7 @@ gap> LevelOfCongruenceSubgroup(J);
   </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> IndexInSL2Z(G_8);
 384
 gap> G_2:=PrincipalCongruenceSubgroup(2);
@@ -442,8 +421,7 @@ gap> IndexInSL2Z(G_2);
 12
 gap> IndexInSL2Z(GU1_4);
 12
-]]>
-</Example>
+]]></Example>
 
 <ManSection>
   <Attr Name="DefiningCongruenceSubgroups" 
@@ -459,8 +437,7 @@ gap> IndexInSL2Z(GU1_4);
   </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> DefiningCongruenceSubgroups(J);
 [ <congruence subgroup CongruenceSubgroupGamma_0(4) in SL_2(Z)>,
   <congruence subgroup CongruenceSubgroupGamma_1(6) in SL_2(Z)> ]
@@ -472,8 +449,7 @@ gap> G:=IntersectionOfCongruenceSubgroups(Q,P);
 <principal congruence subgroup of level 30 in SL_2(Z)>
 gap> DefiningCongruenceSubgroups(G);
 [ <principal congruence subgroup of level 30 in SL_2(Z)> ] 
-]]>
-</Example>
+]]></Example>
 
 </Section>
 
@@ -500,14 +476,12 @@ available in &GAP;.
   </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> Random(G_2) in G_2;
 true
 gap> Random(G_8,2) in G_8;
 true
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -519,14 +493,12 @@ true
   </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> \in([ [ 21, 10 ], [ 2, 1 ] ],G_2);
 true
 gap> \in([ [ 21, 10 ], [ 2, 1 ] ],G_8);
 false
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -548,12 +520,10 @@ false
 </ManSection>
 
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> CanEasilyCompareCongruenceSubgroups(G_8,I);
 false
-]]>
-</Example>
+]]></Example>
 
 <ManSection>
   <Oper Name="IsSubset" 
@@ -567,8 +537,7 @@ false
 </ManSection>
 
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> IsSubset(G_2,G_8);
 true
 gap> IsSubset(G_8,G_2);
@@ -584,8 +553,7 @@ gap> for g in g2 do
 [ false, false, true, false, true ]
 [ false, false, false, true, false ]
 [ false, false, false, false, true ]
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -598,12 +566,10 @@ gap> for g in g2 do
   </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> Index(G_2,G_8);
 32
-]]>
-</Example>
+]]></Example>
 
 </Section>
  

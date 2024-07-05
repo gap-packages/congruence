@@ -49,11 +49,9 @@ Installation of the package is standard and follows the guidelines from the
 After the package is installed, you can start &GAP; and load 
 the &Congruence; package using the command:
 
-<Log>
-<![CDATA[
+<Log><![CDATA[
 gap> LoadPackage("congruence");
-]]>
-</Log>
+]]></Log>
 
 
 
