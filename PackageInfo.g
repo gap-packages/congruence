@@ -12,8 +12,8 @@ SetPackageInfo( rec(
 
 PackageName    := "Congruence",
 Subtitle       := "Congruence subgroups of SL(2,Integers)",
-Version        := "1.2.6",
-Date           := "23/03/2024", # dd/mm/yyyy format
+Version        := "1.2.7",
+Date           := "28/08/2024", # dd/mm/yyyy format
 License        := "GPL-2.0-or-later",
 
 SourceRepository := rec(
