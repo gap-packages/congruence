@@ -52,11 +52,9 @@
   [2XGeneralizedFareySequence[102X ([14X3.2-1[114X) and [2XLabelsOfFareySymbol[102X ([14X3.2-4[114X).[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
     [4X[25Xgap>[125X [27Xfs:=FareySymbolByData([infinity,0,1,2,infinity],[1,2,2,1]);                         [127X[104X
     [4X[28X[ infinity, 0, 1, 2, infinity ][128X[104X
     [4X[28X[ 1, 2, 2, 1 ][128X[104X
-    [4X[28X[128X[104X
   [4X[32X[104X
   
   [1X3.1-2 IsValidFareySymbol[101X
@@ -66,10 +64,8 @@
   [33X[0;0YThis function is used in [2XFareySymbolByData[102X ([14X3.1-1[114X) to validate its output.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
     [4X[25Xgap>[125X [27XIsValidFareySymbol(fs);[127X[104X
     [4X[28Xtrue[128X[104X
-    [4X[28X[128X[104X
   [4X[32X[104X
   
   
@@ -82,10 +78,8 @@
   [33X[0;0YReturns the generalized Farey sequence [3Xgfs[103X of the Farey symbol.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
     [4X[25Xgap>[125X [27XGeneralizedFareySequence(fs);[127X[104X
     [4X[28X[ infinity, 0, 1, 2, infinity ][128X[104X
-    [4X[28X[128X[104X
   [4X[32X[104X
   
   [1X3.2-2 NumeratorOfGFSElement[101X
@@ -98,10 +92,8 @@
   all other entries returns the usual numerator.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
     [4X[25Xgap>[125X [27XList([1..5], i -> NumeratorOfGFSElement(GeneralizedFareySequence(fs),i));[127X[104X
     [4X[28X[ -1, 0, 1, 2, 1 ][128X[104X
-    [4X[28X[128X[104X
   [4X[32X[104X
   
   [1X3.2-3 DenominatorOfGFSElement[101X
@@ -114,10 +106,8 @@
   usual denominator.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
     [4X[25Xgap>[125X [27XList([1..5], i -> DenominatorOfGFSElement(GeneralizedFareySequence(fs),i));         [127X[104X
     [4X[28X[ 0, 1, 1, 1, 0 ][128X[104X
-    [4X[28X[128X[104X
   [4X[32X[104X
   
   [1X3.2-4 LabelsOfFareySymbol[101X
@@ -128,9 +118,7 @@
   and paired integers as entries.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
     [4X[25Xgap>[125X [27XLabelsOfFareySymbol(fs);[127X[104X
     [4X[28X[ 1, 2, 2, 1 ][128X[104X
-    [4X[28X[128X[104X
   [4X[32X[104X
   

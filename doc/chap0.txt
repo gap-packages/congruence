@@ -6,10 +6,10 @@
                         [1XCongruence subgroups of [22XSL_2(ℤ)[122X[101X
   
   
-                                 Version 1.2.6
+                                 Version 1.2.7
   
   
-                                 23 March 2024
+                                 28 August 2024
   
   
                                    Ann Dooms
@@ -79,7 +79,7 @@
   [5XCongruence[105X, please cite it in the following form:[133X
   
   [33X[0;0YA. Dooms, E. Jespers, O. Konovalov and H. Verrill. [13XCongruence --- Congruence
-  subgroups        of        [22XSL_2(ℤ)[122X,        Version        1.2.6;[113X        2024
+  subgroups        of        [22XSL_2(ℤ)[122X,        Version        1.2.7;[113X        2024
   ([7Xhttps://gap-packages.github.io/congruence/[107X).[133X
   
   

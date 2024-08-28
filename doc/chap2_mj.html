@@ -69,10 +69,9 @@
 
 
 <div class="example"><pre>
-
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LoadPackage("congruence");</span>
 -----------------------------------------------------------------------------
-Loading Congruence 1.2.6 (Congruence subgroups of SL(2,Integers))
+Loading Congruence 1.2.7 (Congruence subgroups of SL(2,Integers))
 by Ann Dooms (http://homepages.vub.ac.be/~andooms),
    Eric Jespers (http://homepages.vub.ac.be/~efjesper),
    Olexandr Konovalov (https://olexandr-konovalov.github.io/), and
@@ -85,7 +84,6 @@ Homepage: https://gap-packages.github.io/congruence
 Report issues at https://github.com/gap-packages/congruence/issues
 -----------------------------------------------------------------------------
 true
-
 </pre></div>
 
 <p><a id="X7B010EE67FACF45E" name="X7B010EE67FACF45E"></a></p>
@@ -113,7 +111,6 @@ true
 
 
 <div class="example"><pre>
-
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G_8:=PrincipalCongruenceSubgroup(8);</span>
 &lt;principal congruence subgroup of level 8 in SL_2(Z)&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsGroup(G_8);</span>
@@ -134,7 +131,6 @@ true
 SL(2,Integers)
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsSubgroup(SL_2,G_8);</span>
 true
-
 </pre></div>
 
 <p><a id="X7B8DB77B81BE58D7" name="X7B8DB77B81BE58D7"></a></p>
@@ -158,10 +154,8 @@ true
 
 
 <div class="example"><pre>
-
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G0_4:=CongruenceSubgroupGamma0(4);</span>
 &lt;congruence subgroup CongruenceSubgroupGamma_0(4) in SL_2(Z)&gt;
-
 </pre></div>
 
 <p><a id="X7B4FBED17ECE2A7F" name="X7B4FBED17ECE2A7F"></a></p>
@@ -185,10 +179,8 @@ true
 
 
 <div class="example"><pre>
-
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GU0_2:=CongruenceSubgroupGammaUpper0(2);</span>
 &lt;congruence subgroup CongruenceSubgroupGamma^0(2) in SL_2(Z)&gt;
-
 </pre></div>
 
 <p><a id="X7CFDC47279AC0E85" name="X7CFDC47279AC0E85"></a></p>
@@ -212,10 +204,8 @@ true
 
 
 <div class="example"><pre>
-
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G1_6:=CongruenceSubgroupGamma1(6);</span>
 &lt;congruence subgroup CongruenceSubgroupGamma_1(6) in SL_2(Z)&gt;
-
 </pre></div>
 
 <p><a id="X7C3FCDD878FE57ED" name="X7C3FCDD878FE57ED"></a></p>
@@ -239,10 +229,8 @@ true
 
 
 <div class="example"><pre>
-
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GU1_4:=CongruenceSubgroupGammaUpper1(4);</span>
 &lt;congruence subgroup CongruenceSubgroupGamma^1(4) in SL_2(Z)&gt;
-
 </pre></div>
 
 <p><a id="X7FE839377D7F45EB" name="X7FE839377D7F45EB"></a></p>
@@ -259,12 +247,10 @@ true
 
 
 <div class="example"><pre>
-
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">I:=IntersectionOfCongruenceSubgroups(G0_4,GU1_4);</span>
 &lt;principal congruence subgroup of level 4 in SL_2(Z)&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">J:=IntersectionOfCongruenceSubgroups(G0_4,G1_6);</span>
 &lt;intersection of congruence subgroups of resulting level 12 in SL_2(Z)&gt;
-
 </pre></div>
 
 <p><a id="X8267F261874959E5" name="X8267F261874959E5"></a></p>
@@ -282,14 +268,12 @@ true
 
 
 <div class="example"><pre>
-
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsPrincipalCongruenceSubgroup(G_8);</span>
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsPrincipalCongruenceSubgroup(G0_4);</span>
 false
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsPrincipalCongruenceSubgroup(I);</span>
 true
-
 </pre></div>
 
 <p><a id="X85124A697E826AB4" name="X85124A697E826AB4"></a></p>
@@ -329,12 +313,10 @@ true
 
 
 <div class="example"><pre>
-
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsIntersectionOfCongruenceSubgroups(I);</span>
 false
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsIntersectionOfCongruenceSubgroups(J);</span>
 true
-
 </pre></div>
 
 <p><a id="X8664A60E875EA5DE" name="X8664A60E875EA5DE"></a></p>
@@ -352,7 +334,6 @@ true
 
 
 <div class="example"><pre>
-
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LevelOfCongruenceSubgroup(G_8);</span>
 8
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LevelOfCongruenceSubgroup(G1_6);</span>
@@ -361,7 +342,6 @@ true
 4
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LevelOfCongruenceSubgroup(J);</span>
 12
-
 </pre></div>
 
 <p><a id="X87302F8A7E44D67B" name="X87302F8A7E44D67B"></a></p>
@@ -373,7 +353,6 @@ true
 
 
 <div class="example"><pre>
-
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IndexInSL2Z(G_8);</span>
 384
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G_2:=PrincipalCongruenceSubgroup(2);</span>
@@ -382,7 +361,6 @@ true
 12
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IndexInSL2Z(GU1_4);</span>
 12
-
 </pre></div>
 
 <p><a id="X7BF57D157824FFC8" name="X7BF57D157824FFC8"></a></p>
@@ -396,7 +374,6 @@ true
 
 
 <div class="example"><pre>
-
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DefiningCongruenceSubgroups(J);</span>
 [ &lt;congruence subgroup CongruenceSubgroupGamma_0(4) in SL_2(Z)&gt;,
   &lt;congruence subgroup CongruenceSubgroupGamma_1(6) in SL_2(Z)&gt; ]
@@ -408,7 +385,6 @@ true
 &lt;principal congruence subgroup of level 30 in SL_2(Z)&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DefiningCongruenceSubgroups(G);</span>
 [ &lt;principal congruence subgroup of level 30 in SL_2(Z)&gt; ] 
-
 </pre></div>
 
 <p><a id="X7B15B49583DC9EF5" name="X7B15B49583DC9EF5"></a></p>
@@ -427,12 +403,10 @@ true
 
 
 <div class="example"><pre>
-
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Random(G_2) in G_2;</span>
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Random(G_8,2) in G_8;</span>
 true
-
 </pre></div>
 
 <p><a id="X87BDB89B7AAFE8AD" name="X87BDB89B7AAFE8AD"></a></p>
@@ -444,12 +418,10 @@ true
 
 
 <div class="example"><pre>
-
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">\in([ [ 21, 10 ], [ 2, 1 ] ],G_2);</span>
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">\in([ [ 21, 10 ], [ 2, 1 ] ],G_8);</span>
 false
-
 </pre></div>
 
 <p><a id="X7FC5BF527931FF4C" name="X7FC5BF527931FF4C"></a></p>
@@ -461,10 +433,8 @@ false
 
 
 <div class="example"><pre>
-
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CanEasilyCompareCongruenceSubgroups(G_8,I);</span>
 false
-
 </pre></div>
 
 <p><a id="X79CA175481F8105F" name="X79CA175481F8105F"></a></p>
@@ -476,7 +446,6 @@ false
 
 
 <div class="example"><pre>
-
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsSubset(G_2,G_8);</span>
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsSubset(G_8,G_2);</span>
@@ -492,7 +461,6 @@ false
 [ false, false, true, false, true ]
 [ false, false, false, true, false ]
 [ false, false, false, false, true ]
-
 </pre></div>
 
 <p><a id="X83A0356F839C696F" name="X83A0356F839C696F"></a></p>
@@ -504,10 +472,8 @@ false
 
 
 <div class="example"><pre>
-
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Index(G_2,G_8);</span>
 32
-
 </pre></div>
 
 

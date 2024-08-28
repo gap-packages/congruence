@@ -12,10 +12,9 @@
   you need first to load it as follows:[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
     [4X[25Xgap>[125X [27XLoadPackage("congruence");[127X[104X
     [4X[28X-----------------------------------------------------------------------------[128X[104X
-    [4X[28XLoading Congruence 1.2.6 (Congruence subgroups of SL(2,Integers))[128X[104X
+    [4X[28XLoading Congruence 1.2.7 (Congruence subgroups of SL(2,Integers))[128X[104X
     [4X[28Xby Ann Dooms (http://homepages.vub.ac.be/~andooms),[128X[104X
     [4X[28X   Eric Jespers (http://homepages.vub.ac.be/~efjesper),[128X[104X
     [4X[28X   Olexandr Konovalov (https://olexandr-konovalov.github.io/), and[128X[104X
@@ -28,7 +27,6 @@
     [4X[28XReport issues at https://github.com/gap-packages/congruence/issues[128X[104X
     [4X[28X-----------------------------------------------------------------------------[128X[104X
     [4X[28Xtrue[128X[104X
-    [4X[28X[128X[104X
   [4X[32X[104X
   
   
@@ -49,7 +47,6 @@
   [2XIsPrincipalCongruenceSubgroup[102X ([14X2.2-1[114X).[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
     [4X[25Xgap>[125X [27XG_8:=PrincipalCongruenceSubgroup(8);[127X[104X
     [4X[28X<principal congruence subgroup of level 8 in SL_2(Z)>[128X[104X
     [4X[25Xgap>[125X [27XIsGroup(G_8);[127X[104X
@@ -70,7 +67,6 @@
     [4X[28XSL(2,Integers)[128X[104X
     [4X[25Xgap>[125X [27XIsSubgroup(SL_2,G_8);[127X[104X
     [4X[28Xtrue[128X[104X
-    [4X[28X[128X[104X
   [4X[32X[104X
   
   [1X2.1-2 CongruenceSubgroupGamma0[101X
@@ -88,10 +84,8 @@
   [2XIsCongruenceSubgroupGamma0[102X ([14X2.2-2[114X).[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
     [4X[25Xgap>[125X [27XG0_4:=CongruenceSubgroupGamma0(4);[127X[104X
     [4X[28X<congruence subgroup CongruenceSubgroupGamma_0(4) in SL_2(Z)>[128X[104X
-    [4X[28X[128X[104X
   [4X[32X[104X
   
   [1X2.1-3 CongruenceSubgroupGammaUpper0[101X
@@ -109,10 +103,8 @@
   [2XIsCongruenceSubgroupGammaUpper0[102X ([14X2.2-3[114X).[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
     [4X[25Xgap>[125X [27XGU0_2:=CongruenceSubgroupGammaUpper0(2);[127X[104X
     [4X[28X<congruence subgroup CongruenceSubgroupGamma^0(2) in SL_2(Z)>[128X[104X
-    [4X[28X[128X[104X
   [4X[32X[104X
   
   [1X2.1-4 CongruenceSubgroupGamma1[101X
@@ -130,10 +122,8 @@
   [2XIsCongruenceSubgroupGamma1[102X ([14X2.2-4[114X).[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
     [4X[25Xgap>[125X [27XG1_6:=CongruenceSubgroupGamma1(6);[127X[104X
     [4X[28X<congruence subgroup CongruenceSubgroupGamma_1(6) in SL_2(Z)>[128X[104X
-    [4X[28X[128X[104X
   [4X[32X[104X
   
   [1X2.1-5 CongruenceSubgroupGammaUpper1[101X
@@ -151,10 +141,8 @@
   [2XIsCongruenceSubgroupGammaUpper1[102X ([14X2.2-5[114X).[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
     [4X[25Xgap>[125X [27XGU1_4:=CongruenceSubgroupGammaUpper1(4);[127X[104X
     [4X[28X<congruence subgroup CongruenceSubgroupGamma^1(4) in SL_2(Z)>[128X[104X
-    [4X[28X[128X[104X
   [4X[32X[104X
   
   [1X2.1-6 IntersectionOfCongruenceSubgroups[101X
@@ -176,12 +164,10 @@
   recognize this and will return a canonical subgroup of the appropriate type.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
     [4X[25Xgap>[125X [27XI:=IntersectionOfCongruenceSubgroups(G0_4,GU1_4);[127X[104X
     [4X[28X<principal congruence subgroup of level 4 in SL_2(Z)>[128X[104X
     [4X[25Xgap>[125X [27XJ:=IntersectionOfCongruenceSubgroups(G0_4,G1_6);[127X[104X
     [4X[28X<intersection of congruence subgroups of resulting level 12 in SL_2(Z)>[128X[104X
-    [4X[28X[128X[104X
   [4X[32X[104X
   
   
@@ -202,14 +188,12 @@
   to one as a result of an intersection) and returns [9Xfalse[109X otherwise.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
     [4X[25Xgap>[125X [27XIsPrincipalCongruenceSubgroup(G_8);[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XIsPrincipalCongruenceSubgroup(G0_4);[127X[104X
     [4X[28Xfalse[128X[104X
     [4X[25Xgap>[125X [27XIsPrincipalCongruenceSubgroup(I);[127X[104X
     [4X[28Xtrue[128X[104X
-    [4X[28X[128X[104X
   [4X[32X[104X
   
   [1X2.2-2 IsCongruenceSubgroupGamma0[101X
@@ -254,12 +238,10 @@
   returns [9Xfalse[109X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
     [4X[25Xgap>[125X [27XIsIntersectionOfCongruenceSubgroups(I);[127X[104X
     [4X[28Xfalse[128X[104X
     [4X[25Xgap>[125X [27XIsIntersectionOfCongruenceSubgroups(J);[127X[104X
     [4X[28Xtrue[128X[104X
-    [4X[28X[128X[104X
   [4X[32X[104X
   
   
@@ -276,7 +258,6 @@
   the principal congruence subgroup of level N.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
     [4X[25Xgap>[125X [27XLevelOfCongruenceSubgroup(G_8);[127X[104X
     [4X[28X8[128X[104X
     [4X[25Xgap>[125X [27XLevelOfCongruenceSubgroup(G1_6);[127X[104X
@@ -285,7 +266,6 @@
     [4X[28X4[128X[104X
     [4X[25Xgap>[125X [27XLevelOfCongruenceSubgroup(J);[127X[104X
     [4X[28X12[128X[104X
-    [4X[28X[128X[104X
   [4X[32X[104X
   
   [1X2.3-2 IndexInSL2Z[101X
@@ -295,7 +275,6 @@
   [33X[0;0YStores the index of the congruence subgroup [3XG[103X in [22XSL_2(ℤ)[122X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
     [4X[25Xgap>[125X [27XIndexInSL2Z(G_8);[127X[104X
     [4X[28X384[128X[104X
     [4X[25Xgap>[125X [27XG_2:=PrincipalCongruenceSubgroup(2);[127X[104X
@@ -304,7 +283,6 @@
     [4X[28X12[128X[104X
     [4X[25Xgap>[125X [27XIndexInSL2Z(GU1_4);[127X[104X
     [4X[28X12[128X[104X
-    [4X[28X[128X[104X
   [4X[32X[104X
   
   [1X2.3-3 DefiningCongruenceSubgroups[101X
@@ -317,7 +295,6 @@
   returns a list of length one containing that subgroup.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
     [4X[25Xgap>[125X [27XDefiningCongruenceSubgroups(J);[127X[104X
     [4X[28X[ <congruence subgroup CongruenceSubgroupGamma_0(4) in SL_2(Z)>,[128X[104X
     [4X[28X  <congruence subgroup CongruenceSubgroupGamma_1(6) in SL_2(Z)> ][128X[104X
@@ -329,7 +306,6 @@
     [4X[28X<principal congruence subgroup of level 30 in SL_2(Z)>[128X[104X
     [4X[25Xgap>[125X [27XDefiningCongruenceSubgroups(G);[127X[104X
     [4X[28X[ <principal congruence subgroup of level 30 in SL_2(Z)> ] [128X[104X
-    [4X[28X[128X[104X
   [4X[32X[104X
   
   
@@ -348,12 +324,10 @@
   the absolute value of randomly selected entries of the matrix.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
     [4X[25Xgap>[125X [27XRandom(G_2) in G_2;[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XRandom(G_8,2) in G_8;[127X[104X
     [4X[28Xtrue[128X[104X
-    [4X[28X[128X[104X
   [4X[32X[104X
   
   [1X2.4-2 \in[101X
@@ -364,12 +338,10 @@
   their intersections.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
     [4X[25Xgap>[125X [27X\in([ [ 21, 10 ], [ 2, 1 ] ],G_2);[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27X\in([ [ 21, 10 ], [ 2, 1 ] ],G_8);[127X[104X
     [4X[28Xfalse[128X[104X
-    [4X[28X[128X[104X
   [4X[32X[104X
   
   [1X2.4-3 CanEasilyCompareCongruenceSubgroups[101X
@@ -385,10 +357,8 @@
   otherwise it returns [9Xfalse[109X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
     [4X[25Xgap>[125X [27XCanEasilyCompareCongruenceSubgroups(G_8,I);[127X[104X
     [4X[28Xfalse[128X[104X
-    [4X[28X[128X[104X
   [4X[32X[104X
   
   [1X2.4-4 IsSubset[101X
@@ -400,7 +370,6 @@
   [10XIsSubgroup[110X operation for congruence subgroups.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
     [4X[25Xgap>[125X [27XIsSubset(G_2,G_8);[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XIsSubset(G_8,G_2);[127X[104X
@@ -416,7 +385,6 @@
     [4X[28X[ false, false, true, false, true ][128X[104X
     [4X[28X[ false, false, false, true, false ][128X[104X
     [4X[28X[ false, false, false, false, true ][128X[104X
-    [4X[28X[128X[104X
   [4X[32X[104X
   
   [1X2.4-5 Index[101X
@@ -428,9 +396,7 @@
   subgroups in [22XSL_2(ℤ)[122X.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
     [4X[25Xgap>[125X [27XIndex(G_2,G_8);[127X[104X
     [4X[28X32[128X[104X
-    [4X[28X[128X[104X
   [4X[32X[104X
   

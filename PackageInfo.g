@@ -12,14 +12,9 @@ SetPackageInfo( rec(
 
 PackageName    := "Congruence",
 Subtitle       := "Congruence subgroups of SL(2,Integers)",
-Version        := "1.2.6",
-Date           := "23/03/2024", # dd/mm/yyyy format
+Version        := "1.2.7",
+Date           := "28/08/2024", # dd/mm/yyyy format
 License        := "GPL-2.0-or-later",
-##  <#GAPDoc Label="PKGVERSIONDATA">
-##  <!ENTITY VERSION "1.2.6">
-##  <!ENTITY RELEASEDATE "23 March 2024">
-##  <!ENTITY RELEASEYEAR "2024">
-##  <#/GAPDoc>
 
 SourceRepository := rec(
     Type := "git",
@@ -122,5 +117,22 @@ Dependencies := rec(
 AvailabilityTest := ReturnTrue,
 TestFile := "tst/testall.g",
 
-Keywords := ["congruence subgroup", "Farey symbol"]
+Keywords := ["congruence subgroup", "Farey symbol"],
+
+AutoDoc := rec(
+    entities := rec(
+        VERSION := ~.Version,
+        RELEASEDATE := function(date)
+          local day, month, year, allMonths;
+          day := Int(date{[1,2]});
+          month := Int(date{[4,5]});
+          year := Int(date{[7..10]});
+          allMonths := [ "January", "February", "March", "April", "May", "June", "July",
+                         "August", "September", "October", "November", "December"];
+          return Concatenation(String(day)," ", allMonths[month], " ", String(year));
+        end(~.Date),
+        RELEASEYEAR := ~.Date{[7..10]},
+    ),
+),
+
 ));
