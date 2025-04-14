@@ -104,7 +104,6 @@ PackageDoc := rec(
   PDFFile := "doc/manual.pdf",
   SixFile := "doc/manual.six",
   LongTitle := "Congruence subgroups of SL(2,Integers)",
-  Autoload := true
 ),
 
 Dependencies := rec(
