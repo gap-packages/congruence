@@ -26,7 +26,7 @@ gap> FareySymbol(CongruenceSubgroupGamma0(20));
   infinity ]
 [ 1, 3, 4, 6, 7, 7, 5, 2, 2, 3, 6, 4, 5, 1 ]  
 
-# doc/gens.xml:126-136
+# doc/gens.xml:123-133
 gap> H:=CongruenceSubgroupGamma0(5); 
 <congruence subgroup CongruenceSubgroupGamma_0(5) in SL_2(Z)>
 gap> fs:=FareySymbol(H);
@@ -37,20 +37,20 @@ gap> gfs:=GeneralizedFareySequence(fs);
 gap> MatrixByEvenInterval(gfs,2);      
 [ [ 2, -1 ], [ 5, -2 ] ]
 
-# doc/gens.xml:148-154
+# doc/gens.xml:145-151
 gap> fs_oo:=FareySymbolByData([infinity,0,infinity],["odd","odd"]);;
 gap> gfs_oo:=GeneralizedFareySequence(fs_oo);
 [ infinity, 0, infinity ]
 gap> MatrixByOddInterval(gfs_oo,1);
 [ [ -1, -1 ], [ 1, 0 ] ]
 
-# doc/gens.xml:166-171
+# doc/gens.xml:163-168
 gap> fs_free:=FareySymbolByData([infinity,0,1,2,infinity],[1,2,2,1]);;
 gap> gfs_free:=GeneralizedFareySequence(fs_free);;
 gap> MatrixByFreePairOfIntervals(gfs_free,2,3);                                                        
 [ [ 3, -2 ], [ 2, -1 ] ]
 
-# doc/gens.xml:183-193
+# doc/gens.xml:180-190
 gap> fs_eo:=FareySymbolByData([infinity,0,infinity],["even","odd"]);;
 gap> GeneratorsByFareySymbol(last);                                  
 [ [ [ 0, -1 ], [ 1, 0 ] ], [ [ 0, -1 ], [ 1, -1 ] ] ]
@@ -61,7 +61,7 @@ gap> GeneratorsByFareySymbol(fs_oo);
 gap> GeneratorsByFareySymbol(fs_free);                                                        
 [ [ [ 1, 2 ], [ 0, 1 ] ], [ [ 3, -2 ], [ 2, -1 ] ] ]
 
-# doc/gens.xml:205-229
+# doc/gens.xml:202-226
 gap> G:=PrincipalCongruenceSubgroup(2);
 <principal congruence subgroup of level 2 in SL_2(Z)>
 gap> FareySymbol(G);
@@ -86,7 +86,7 @@ gap> GeneratorsOfGroup(I);
   [ [ 19, -8 ], [ 12, -5 ] ], [ [ 17, -10 ], [ 12, -7 ] ], 
   [ [ 7, -6 ], [ 6, -5 ] ] ]
 
-# doc/gens.xml:250-257
+# doc/gens.xml:247-254
 gap> IndexInPSL2ZByFareySymbol(fs);
 6
 gap> IndexInPSL2ZByFareySymbol(fs_oo);

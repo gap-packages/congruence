@@ -44,8 +44,7 @@ true
     in <M>SL_2(&ZZ;)</M>.<P/>
     This subgroup consists of 
     all matrices of the form
-<Alt Only="LaTeX">
-  <![CDATA[
+<Alt Only="LaTeX"><![CDATA[
   \[
         \left( 
            \begin{array}{rr}
@@ -54,8 +53,8 @@ true
            \end{array} 
         \right)
   \]
-  ]]>
-</Alt>
+  
+]]></Alt>
 <Alt Only="Text,HTML"><Verb><![CDATA[
                          [1+N*a    N*b]
                          [  N*c  1+N*d]
@@ -99,8 +98,7 @@ true
     of level <A>N</A> in <M>SL_2(&ZZ;)</M>.<P/>
     This subgroup consists of 
     all matrices of the form
-<Alt Only="LaTeX">
-  <![CDATA[
+<Alt Only="LaTeX"><![CDATA[
   \[
         \left( 
            \begin{array}{rr}
@@ -109,8 +107,8 @@ true
            \end{array} 
         \right)
   \]
-  ]]>
-</Alt>
+  
+]]></Alt>
 <Alt Only="Text,HTML"><Verb><![CDATA[
                          [a    b]
                          [N*c  d]
@@ -136,8 +134,7 @@ gap> G0_4:=CongruenceSubgroupGamma0(4);
     of level <A>N</A> in <M>SL_2(&ZZ;)</M>.<P/>
     This subgroup consists of 
     all matrices of the form
-<Alt Only="LaTeX">
-  <![CDATA[
+<Alt Only="LaTeX"><![CDATA[
   \[
         \left( 
            \begin{array}{rr}
@@ -146,8 +143,8 @@ gap> G0_4:=CongruenceSubgroupGamma0(4);
            \end{array} 
         \right)
   \]
-  ]]>
-</Alt>
+  
+]]></Alt>
 <Alt Only="Text,HTML"><Verb><![CDATA[
                          [a  N*b]
                          [c    d]
@@ -173,8 +170,7 @@ gap> GU0_2:=CongruenceSubgroupGammaUpper0(2);
     of level <A>N</A> in <M>SL_2(&ZZ;)</M>.<P/>
          This subgroup consists of 
     all matrices of the form
-<Alt Only="LaTeX">
-  <![CDATA[
+<Alt Only="LaTeX"><![CDATA[
   \[
         \left( 
            \begin{array}{rr}
@@ -183,8 +179,8 @@ gap> GU0_2:=CongruenceSubgroupGammaUpper0(2);
            \end{array} 
         \right)
   \]
-  ]]>
-</Alt>
+  
+]]></Alt>
 <Alt Only="Text,HTML"><Verb><![CDATA[
                          [1+N*a      b]
                          [  N*c  1+N*d]
@@ -210,8 +206,7 @@ gap> G1_6:=CongruenceSubgroupGamma1(6);
     of level <A>N</A> in <M>SL_2(&ZZ;)</M>.<P/>
          This subgroup consists of 
     all matrices of the form
-<Alt Only="LaTeX">
-  <![CDATA[
+<Alt Only="LaTeX"><![CDATA[
   \[
         \left( 
            \begin{array}{rr}
@@ -220,8 +215,8 @@ gap> G1_6:=CongruenceSubgroupGamma1(6);
            \end{array} 
         \right)
   \]
-  ]]>
-</Alt>
+  
+]]></Alt>
 <Alt Only="Text,HTML"><Verb><![CDATA[
                          [1+N*a    N*b]
                          [    c  1+N*d]
